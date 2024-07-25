@@ -1,11 +1,17 @@
 :root {
+  /**
+  * COLORS
+  */
+  /* main colors */
   --main-text-color: #336699;
   --secondary-text-color: #f77c29;
+  --scrim: #000000;
 
+  /* light colors */
   --light-site-background: #ffffff;
   --light-primary-color: #262626;
   --light-secondary-color: #8d8d8d;
-  --light-section-background: #f5f5f5;
+  --light-section-background: #f5f6f8;
   --light-border-color: #dadada;
   --light-divider-color: #262626;
   --light-overlay-background: rgba(15, 14, 55, 0.125);
@@ -14,6 +20,7 @@
   --light-button-hover-background: #262626;
   --light-default-text-color: #666666;
 
+  /* dark colors */
   --dark-site-background: #1c1c1c;
   --dark-section-background: #282828; /* 232323 */
   --dark-primary-color: #ffffff;
@@ -39,6 +46,9 @@
   **/
   /* font family */
   --ff-primary: 'Plus Jakarta Sans', sans-serif;
+  /* font sizes */
+  --fs-base: 62.5%;
+
   /* font weight */
   --weight-lighT: 300;
   --weight-regular: 400;
@@ -109,4 +119,88 @@
   --text-color: var(--dark-text-color);
   --default-text-color: var(--dark-default-text-color);
   --button-hover-background: var(--dark-button-hover-background);
+}
+/**
+* RESET
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a,
+img,
+input,
+button,
+span,
+video {
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  height: auto;
+}
+input,
+button {
+  background: none;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+input {
+  width: 100%;
+}
+html,
+#root {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-base);
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+.app {
+  background-color: var(--site-background);
+  color: var(--on-background);
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: opacity var(--motion-duration-medium-2) var(--motion-easing-linear);
+  opacity: 1;
+}
+/**
+* REUSED STYLES
+*/
+.container {
+  max-width: var(--mobile-container);
+  width: 100%;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+.divider {
+  background-color: var(--divider-color);
+  height: 1.5rem;
+  width: 1px;
+}
+[data-scheme='light'] .light-logo,
+[data-scheme='dark'] .dark-logo {
+  display: none;
+}
+[data-scheme='light'] .dark-logo,
+[data-scheme='dark'] .light-logo {
+  display: block;
 }
