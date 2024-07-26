@@ -69,7 +69,7 @@ const MobileDrawer = () => {
 
           <div className='tab-panel' id='categories' hidden={activeTab !== 'categories'}>
             <ul className='mobile-menu'>
-              <MobileItems dropdownList={Links} />
+              <MobileItems list={Links} />
               <li className='view-all-categories mobile-item'>
                 <Link to='#' className='link-item'>
                   <span>VIEW ALL CATEGORIES</span>
