@@ -4,6 +4,7 @@
   visibility: hidden;
   opacity: 0;
   transition: var(--motion-duration-long);
+  z-index: 20;
 
   .mobile-menu-container {
     max-width: 296px;
@@ -31,7 +32,7 @@
 
   .close-mobile-drawer {
     position: absolute;
-    right: 28px;
+    right: 0;
     top: 20px;
     width: 40px;
     height: 40px;
@@ -161,23 +162,38 @@
       }
     }
   }
-  .mobile-item:not(:last-child) {
+  .list-item:not(:last-child) {
     border-bottom: 1px solid var(--border-color);
   }
-  .mobile-item a {
-    padding: 14px 12px;
+  .list-item a {
+    padding: 12px 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    transition: color var(--motion-duration-short-2);
 
+    .btn {
+      padding: 6px;
+      width: 20px;
+      height: 20px;
+      svg {
+        transition: color var(--motion-duration-short-2);
+      }
+    }
     &:hover {
       color: var(--main-text-color);
+      .btn {
+        transition: color var(--motion-duration-short-2);
+        svg {
+          color: var(--main-text-color);
+        }
+      }
     }
 
     p {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       gap: 8px;
     }
   }
@@ -196,7 +212,7 @@
   visibility: hidden;
   transition: var(--motion-duration-short-2);
 
-  &[aria-expanded='true'] {
+  &.expaned {
     max-height: 1000px;
     height: 100%;
     opacity: 1;

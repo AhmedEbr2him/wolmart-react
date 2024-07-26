@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { MainContext } from '../../../context/MainContext';
 import { Links } from '../../../constants/mockData.jsx';
+import ListItem from '../../ListItem.jsx';
+import PropTypes from 'prop-types';
 
 const MobileDrawer = () => {
   const mainMenuList = ['Home', 'Blog', 'About us', 'Contact', 'FAQ', 'Pages'];
@@ -58,7 +60,7 @@ const MobileDrawer = () => {
           <div className='tab-panel' id='main-menu' hidden={activeTab !== 'main-menu'}>
             <ul className='mobile-menu'>
               {mainMenuList.map((item, index) => (
-                <li key={index} className='mobile-item'>
+                <li key={index} className='list-item'>
                   <Link to={'#'} role='link-item'>
                     {item}
                   </Link>
@@ -69,8 +71,19 @@ const MobileDrawer = () => {
 
           <div className='tab-panel' id='categories' hidden={activeTab !== 'categories'}>
             <ul className='mobile-menu'>
-              <MobileItems list={Links} />
-              <li className='view-all-categories mobile-item'>
+              <ListItem item={Links.fashion} />
+              <ListItem item={Links.homeAndGarden} />
+              <ListItem item={Links.electronics} />
+              <ListItem item={Links.furnaiture} />
+              <ListItem item={Links.healthAndBeauty} />
+              <ListItem item={Links.gifts} />
+              <ListItem item={Links.games} />
+              <ListItem item={Links.cooking} />
+              <ListItem item={Links.smartPhons} />
+              <ListItem item={Links.camera} />
+              <ListItem item={Links.accessories} />
+
+              <li className='view-all-categories list-item'>
                 <Link to='#' className='link-item'>
                   <span>VIEW ALL CATEGORIES</span>
                   <IoIosArrowForward size={16} />
@@ -99,61 +112,11 @@ const Tab = ({ id, activeTab, setActiveTab, label }) => {
   );
 };
 
-const MobileItems = ({ list }) => {
-  const [isDropdownMenuExp, setIsDropdownMenuExp] = useState(null);
-  const [isMegaMenuExpaned, setIsMegaMenuExpaned] = useState(null);
-
-  const toggleDropdownMenu = index => {
-    setIsDropdownMenuExp(isDropdownMenuExp === index ? null : index);
-    setIsMegaMenuExpaned(null);
-  };
-  const toggleMegaMenu = index => {
-    setIsMegaMenuExpaned(isMegaMenuExpaned === index ? null : index);
-  };
-
-  return list?.map((item, index) => {
-    return (
-      <li className='mobile-item' key={index}>
-        <Link role='link-item' to='#'>
-          <p>
-            {item.icon}
-            <span>{item.link}</span>
-          </p>
-          <button className='btn' aria-label='arrow link' onClick={() => toggleDropdownMenu(index)}>
-            {item.hasMenu && <IoIosArrowForward />}
-          </button>
-        </Link>
-
-        {item.dropdownMenu && (
-          <ul className='dropdown-menu' aria-expanded={isDropdownMenuExp === index}>
-            {item.dropdownMenu &&
-              item?.dropdownMenu.map((item, index) => (
-                <li key={index} className='dropdown-item'>
-                  <Link to={item.to}>
-                    <p>{item.label}</p>
-                    <button
-                      className='btn'
-                      aria-label='arrow link'
-                      onClick={() => toggleMegaMenu(index)}
-                    >
-                      <IoIosArrowForward />
-                    </button>
-                  </Link>
-
-                  <ul className='mega-menu' aria-expanded={isMegaMenuExpaned === index}>
-                    {item.megaMenu &&
-                      item.megaMenu.map((item, index) => (
-                        <li key={index} className='megamenu-item'>
-                          <Link to={item.to}>{item.label}</Link>
-                        </li>
-                      ))}
-                  </ul>
-                </li>
-              ))}
-          </ul>
-        )}
-      </li>
-    );
-  });
-};
 export default MobileDrawer;
+
+Tab.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  activeTab: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  setActiveTab: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
+};

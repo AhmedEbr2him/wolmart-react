@@ -10,9 +10,10 @@ import { SlScreenSmartphone } from 'react-icons/sl';
 import { MdOutlineCameraEnhance } from 'react-icons/md';
 import { BsGem } from 'react-icons/bs';
 
-export const Links = [
-  {
+export const Links = {
+  fashion: {
     link: 'Fashion',
+    to: '#',
     icon: <PiTShirtLight size={20} />,
     hasMenu: true,
     dropdownMenu: [
@@ -94,7 +95,7 @@ export const Links = [
       },
     ],
   },
-  {
+  homeAndGarden: {
     link: 'Home & Garden',
     hasMenu: true,
     icon: <TfiHome size={20} />,
@@ -226,7 +227,7 @@ export const Links = [
       },
     ],
   },
-  {
+  electronics: {
     link: 'Electronics',
     icon: <ImDisplay size={20} />,
     hasMenu: true,
@@ -339,7 +340,7 @@ export const Links = [
       },
     ],
   },
-  {
+  furnaiture: {
     link: 'Furniture',
     icon: <PiArmchairLight size={20} />,
     hasMenu: true,
@@ -459,39 +460,39 @@ export const Links = [
       },
     ],
   },
-  {
+  healthAndBeauty: {
     link: 'Healthy & Beauty',
     icon: <FiHeart size={20} />,
     hasMenu: false,
   },
-  {
+  gifts: {
     link: 'Gift Ideas',
     icon: <ImGift size={20} />,
     hasMenu: false,
   },
-  {
+  games: {
     link: 'Toy & Games',
     icon: <IoGameControllerOutline size={20} />,
     hasMenu: false,
   },
-  {
+  cooking: {
     link: 'Cooking',
     icon: <CiBowlNoodles size={20} />,
     hasMenu: false,
   },
-  {
+  smartPhons: {
     link: 'Smart Phones',
     icon: <SlScreenSmartphone size={20} />,
     hasMenu: false,
   },
-  {
+  camera: {
     link: 'Cameras & Photo',
     icon: <MdOutlineCameraEnhance size={20} />,
     hasMenu: false,
   },
-  {
+  accessories: {
     link: 'Accessories',
     icon: <BsGem size={20} />,
     hasMenu: false,
   },
-];
+};

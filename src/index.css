@@ -171,6 +171,7 @@ html,
   font-size: var(--fs-base);
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
 }
 .app {
   background-color: var(--site-background);
@@ -187,6 +188,7 @@ html,
   &.drawer-active {
     overflow: hidden;
     margin-left: 296px;
+    margin-right: -296px;
     transition: margin var(--motion-duration-long), opacity var(--motion-duration-long);
 
     .mobile-drawer-wrapper {

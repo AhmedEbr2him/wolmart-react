@@ -113,7 +113,7 @@
       width: 1.5rem;
       height: 1.5rem;
       background: var(--main-text-color);
-      color: var(--site-background);
+      color: #ffffff;
       border-radius: var(--circle-radius);
       display: grid;
       place-content: center;
