@@ -1,0 +1,211 @@
+.mobile-drawer-wrapper {
+  position: fixed;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--motion-duration-long);
+
+  .mobile-menu-container {
+    max-width: 296px;
+    height: 100%;
+    width: 100%;
+    background: var(--section-background);
+    border-right: 1px solid var(--border-color);
+    box-shadow: 1px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    transform: translateX(-296px);
+    transition: transform var(--motion-duration-long);
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: var(--site-background);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--text-color);
+      border-radius: var(--circle-radius);
+    }
+  }
+
+  .close-mobile-drawer {
+    position: absolute;
+    right: 28px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    transform: scale(0);
+    transition: transform var(--motion-duration-long);
+
+    svg {
+      color: #ffffff;
+    }
+  }
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+
+    .form-control {
+      border: 1px solid var(--border-color);
+      padding: 12px 20px;
+      width: 100%;
+      border-radius: var(--extra-small-radius);
+      padding-block-end: 0.8rem;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      &::placeholder {
+        font-size: 1.25rem;
+      }
+    }
+    .btn-search {
+      position: absolute;
+      right: 0;
+      height: 100%;
+    }
+  }
+}
+
+.scrim-overlay {
+  background: var(--scrim);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  cursor: pointer;
+  transition: opacity var(--motion-duration-long), visibility var(--motion-duration-long);
+  opacity: 0;
+  visibility: hidden;
+}
+.tab-panel[hidden] {
+  display: none;
+}
+.tab-panel {
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.tabs {
+  .nav {
+    display: flex;
+    align-items: center;
+    .nav-item {
+      width: 50%;
+    }
+    .nav-btn {
+      padding: 10px;
+      font-size: 1.35rem;
+      text-align: center;
+      font-weight: var(--weight-semi-bold);
+      position: relative;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: color var(--motion-duration-medium-2);
+      width: 100%;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary-color);
+        border-radius: var(--circle-radius);
+        transition: all var(--motion-duration-medium-2);
+      }
+
+      &.active,
+      &:hover {
+        color: var(--main-text-color);
+        transition: all var(--motion-duration-medium-2);
+      }
+
+      &.active::after,
+      &:hover::after {
+        background-color: var(--main-text-color);
+        transition: all var(--motion-duration-medium-2);
+      }
+    }
+  }
+}
+.tab-panel {
+  padding-block: 14px;
+
+  .mobile-menu {
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: var(--weight-semi-bold);
+    line-height: 1.5;
+
+    .view-all-categories {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5px;
+      color: var(--main-text-color);
+
+      svg {
+        color: var(--main-text-color);
+      }
+    }
+  }
+  .mobile-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+  }
+  .mobile-item a {
+    padding: 14px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+      color: var(--main-text-color);
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+.dropdown-menu {
+  .dropdown-item {
+    a {
+      padding-left: 24px;
+    }
+  }
+}
+.mega-menu,
+.dropdown-menu {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--motion-duration-short-2);
+
+  &[aria-expanded='true'] {
+    max-height: 1000px;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: var(--motion-duration-short-2);
+  }
+  .megamenu-item {
+    a {
+      padding-left: 32px;
+    }
+  }
+}

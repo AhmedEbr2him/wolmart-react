@@ -9,6 +9,8 @@ import Images from '../../../assets/images/images';
 import { Link } from 'react-router-dom';
 import { routesConstatns } from '../../../constants/routesConstants';
 import { StickyWrapperContent } from '../../';
+import { useContext } from 'react';
+import { MainContext } from '../../../context/MainContext';
 
 const Header = () => {
   const currencyList = ['USD', 'EUR', 'EGP'];
@@ -34,6 +36,7 @@ const Header = () => {
     'Kitchen',
     'Clothing',
   ];
+  const { openDrawer } = useContext(MainContext);
 
   return (
     <header className='header'>
@@ -101,7 +104,7 @@ const Header = () => {
       <div className='header-middle'>
         <div className='container'>
           <div className='left-part'>
-            <button aria-label='toggle menu button' className='btn'>
+            <button aria-label='toggle menu button' className='btn' onClick={() => openDrawer()}>
               <RiMenu2Fill size={24} />
             </button>
             <Link to={routesConstatns.HOME} className='logo' aria-label='site logo'>

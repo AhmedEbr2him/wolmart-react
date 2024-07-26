@@ -179,8 +179,32 @@ html,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  transition: opacity var(--motion-duration-medium-2) var(--motion-easing-linear);
+  transition: opacity var(--motion-duration-medium-1) var(--motion-easing-linear),
+    margin var(--motion-duration-medium-1) var(--motion-easing-linear);
   opacity: 1;
+  margin-left: 0;
+
+  &.drawer-active {
+    overflow: hidden;
+    margin-left: 296px;
+    transition: margin var(--motion-duration-long), opacity var(--motion-duration-long);
+
+    .mobile-drawer-wrapper {
+      opacity: 1;
+      visibility: visible;
+      transition: var(--motion-duration-long);
+    }
+    .mobile-menu-container {
+      transform: translateX(0);
+    }
+    .scrim-overlay {
+      opacity: 0.5;
+      visibility: visible;
+    }
+    .close-mobile-drawer {
+      transform: scale(1);
+    }
+  }
 }
 /**
 * REUSED STYLES
