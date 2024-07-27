@@ -72,17 +72,6 @@
   }
 }
 
-.scrim-overlay {
-  background: var(--scrim);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  cursor: pointer;
-  transition: opacity var(--motion-duration-long), visibility var(--motion-duration-long);
-  opacity: 0;
-  visibility: hidden;
-}
 .tab-panel[hidden] {
   display: none;
 }

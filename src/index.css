@@ -179,8 +179,8 @@ html,
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  transition: opacity var(--motion-duration-medium-1) var(--motion-easing-linear),
-    margin var(--motion-duration-medium-1) var(--motion-easing-linear);
+  transition: var(--motion-duration-medium-1) var(--motion-easing-linear);
+  transition-property: opactiy, margin;
   opacity: 1;
   margin-left: 0;
 
@@ -198,14 +198,19 @@ html,
     .mobile-menu-container {
       transform: translateX(0);
     }
-    .scrim-overlay {
-      opacity: 0.5;
-      visibility: visible;
-    }
+
     .close-mobile-drawer {
       transform: scale(1);
     }
   }
+}
+[data-scheme='light'] .light-logo,
+[data-scheme='dark'] .dark-logo {
+  display: none;
+}
+[data-scheme='light'] .dark-logo,
+[data-scheme='dark'] .light-logo {
+  display: block;
 }
 /**
 * REUSED STYLES
@@ -221,11 +226,46 @@ html,
   height: 1.5rem;
   width: 1px;
 }
-[data-scheme='light'] .light-logo,
-[data-scheme='dark'] .dark-logo {
-  display: none;
+
+.btn {
+  display: grid;
+  place-content: center;
+  font-weight: var(--weight-semi-bold);
+  text-transform: uppercase;
+  border-radius: var(--small-radius);
+  transition: var(--motion-duration-short-2);
 }
-[data-scheme='light'] .dark-logo,
-[data-scheme='dark'] .light-logo {
-  display: block;
+.btn-primary {
+  background-color: var(--main-text-color);
+  color: #ffffff;
+  border-color: var(--main-text-color);
+
+  &:hover {
+    background-color: #3c78b4;
+  }
+}
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--title-color);
+  &:hover {
+    background-color: var(--main-text-color);
+    border-color: var(--main-text-color);
+    color: #ffffff;
+  }
+}
+.scrim-overlay {
+  background: var(--scrim);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  cursor: pointer;
+  transition: opacity var(--motion-duration-long), visibility var(--motion-duration-long);
+  opacity: 0;
+  visibility: hidden;
+
+  &[data-active='true'] {
+    opacity: 0.5;
+    visibility: visible;
+  }
 }

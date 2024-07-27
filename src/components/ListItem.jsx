@@ -17,7 +17,7 @@ const ListItem = ({ item }) => {
     setIsMegaMenuExpaned(isMegaMenuExpaned === index ? null : index);
   };
   return (
-    <li className='list-item'>
+    <li className='list-item' role='button' aria-haspopup={item.hasMenu ? 'menu' : 'false'}>
       <Link to={to && to}>
         <p>
           {icon && icon}
@@ -46,7 +46,12 @@ const DropdownMenu = ({ menu, expanded, toggleFunc, megaExpanded }) => {
     <ul className={`dropdown-menu ${expanded ? 'expaned' : ''}`}>
       {menu &&
         menu?.map((item, index) => (
-          <li key={index} className='list-item dropdown-item'>
+          <li
+            key={index}
+            className='list-item dropdown-item'
+            role='button'
+            aria-haspopup={menu ? 'menu' : 'false'}
+          >
             <Link to={item.to}>
               <p>{item.label}</p>
               <button className='btn' aria-label='arrow link' onClick={() => toggleFunc(index)}>

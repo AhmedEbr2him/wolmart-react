@@ -36,7 +36,7 @@ const Header = () => {
     'Kitchen',
     'Clothing',
   ];
-  const { openDrawer } = useContext(MainContext);
+  const { openDrawer, handleCartStatus } = useContext(MainContext);
 
   return (
     <header className='header'>
@@ -167,7 +167,7 @@ const Header = () => {
               <FiHeart size={24} />
               <span className='wishlist-label'>Wishlist</span>
             </Link>
-            <Link to='#' className='btn cart-btn'>
+            <Link to='#' role='button' className='btn cart-btn' onClick={handleCartStatus}>
               <BiShoppingBag size={24} />
               <span className='cart-label'>Cart</span>
               <span className='badge'>0</span>

@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 import { Home } from './pages';
-import { Header, MobileDrawer, StickyFooter } from './components';
+import { CartDrawer, Header, MobileDrawer, StickyFooter } from './components';
 import { useContext } from 'react';
 import { MainContext } from './context/MainContext';
 
@@ -11,6 +11,7 @@ const App = () => {
     <div className={`app ${isDrawerActive ? 'drawer-active' : ''}`}>
       <MobileDrawer />
       <StickyFooter />
+      <CartDrawer />
       <Header />
       <main className='main'>
         <article>
