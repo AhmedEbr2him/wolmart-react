@@ -165,39 +165,40 @@
   .list-item:not(:last-child) {
     border-bottom: 1px solid var(--border-color);
   }
-  .list-item a {
-    padding: 12px 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    transition: color var(--motion-duration-short-2);
+}
+.list-item a {
+  padding: 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: color var(--motion-duration-short-2);
 
-    .btn {
-      padding: 6px;
-      width: 20px;
-      height: 20px;
-      svg {
-        transition: color var(--motion-duration-short-2);
-      }
-    }
-    &:hover {
-      color: var(--main-text-color);
-      .btn {
-        transition: color var(--motion-duration-short-2);
-        svg {
-          color: var(--main-text-color);
-        }
-      }
-    }
-
-    p {
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
+  .btn {
+    padding: 6px;
+    width: 20px;
+    height: 20px;
+    svg {
+      transition: color var(--motion-duration-short-2);
     }
   }
+  &:hover {
+    color: var(--main-text-color);
+    .btn {
+      transition: color var(--motion-duration-short-2);
+      svg {
+        color: var(--main-text-color);
+      }
+    }
+  }
+
+  p {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
 }
+
 .dropdown-menu {
   .dropdown-item {
     a {

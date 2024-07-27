@@ -103,7 +103,7 @@ const Tab = ({ id, activeTab, setActiveTab, label }) => {
       <button
         id={id}
         className={`nav-btn ${activeTab === id ? 'active' : ''}`}
-        role='navItem'
+        role='link'
         onClick={() => setActiveTab(id)}
       >
         {label}
