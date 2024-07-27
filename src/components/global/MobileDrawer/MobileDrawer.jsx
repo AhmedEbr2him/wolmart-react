@@ -8,6 +8,7 @@ import { MainContext } from '../../../context/MainContext';
 import { Links } from '../../../constants/mockData.jsx';
 import ListItem from '../../ListItem.jsx';
 import PropTypes from 'prop-types';
+import { Theme } from '../../';
 
 const MobileDrawer = () => {
   const mainMenuList = ['Home', 'Blog', 'About us', 'Contact', 'FAQ', 'Pages'];
@@ -17,7 +18,6 @@ const MobileDrawer = () => {
   return (
     <>
       <div className='mobile-drawer-wrapper'>
-        <div className='scrim-overlay' onClick={() => closeDrawer()}></div>
         <button
           className='close-mobile-drawer'
           aria-label='close mobile drawer button'
@@ -35,7 +35,11 @@ const MobileDrawer = () => {
               placeholder='Search'
               className='form-control'
             />
-            <button className='btn btn-search' type='submit' aria-label='submit search button'>
+            <button
+              className='small-btn btn-search'
+              type='submit'
+              aria-label='submit search button'
+            >
               <FiSearch size={20} />
             </button>
           </form>
@@ -93,11 +97,15 @@ const MobileDrawer = () => {
               </ul>
             </div>
           </div>
+          <Theme />
         </div>
       </div>
-
       {isDrawerActive && (
-        <div className='scrim-overlay' data-active={isDrawerActive} onClick={closeDrawer}></div>
+        <div
+          className='scrim-overlay'
+          data-active={isDrawerActive}
+          onClick={() => closeDrawer()}
+        ></div>
       )}
     </>
   );

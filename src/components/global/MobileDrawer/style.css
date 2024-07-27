@@ -17,6 +17,8 @@
     overflow-y: auto;
     transform: translateX(-296px);
     transition: transform var(--motion-duration-long);
+    display: flex;
+    flex-direction: column;
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -69,6 +71,10 @@
       right: 0;
       height: 100%;
     }
+  }
+
+  .tab-content {
+    flex: 1;
   }
 }
 

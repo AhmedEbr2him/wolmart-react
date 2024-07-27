@@ -7,3 +7,4 @@ export { default as CartDrawer } from './global/CartDrawer/CartDrawer';
 
 /* COMMON */
 export { default as ListItem } from './ListItem';
+export { default as Theme } from './Theme';

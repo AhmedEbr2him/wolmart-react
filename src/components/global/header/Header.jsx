@@ -104,7 +104,11 @@ const Header = () => {
       <div className='header-middle'>
         <div className='container'>
           <div className='left-part'>
-            <button aria-label='toggle menu button' className='btn' onClick={() => openDrawer()}>
+            <button
+              aria-label='toggle menu button'
+              className='small-btn has-state'
+              onClick={() => openDrawer()}
+            >
               <RiMenu2Fill size={24} />
             </button>
             <Link to={routesConstatns.HOME} className='logo' aria-label='site logo'>
@@ -163,11 +167,16 @@ const Header = () => {
               </div>
             </div>
 
-            <Link to='#' className='btn wishlist-btn'>
+            <Link to='#' className='small-btn wishlist-btn'>
               <FiHeart size={24} />
               <span className='wishlist-label'>Wishlist</span>
             </Link>
-            <Link to='#' role='button' className='btn cart-btn' onClick={handleCartStatus}>
+            <Link
+              to='#'
+              role='button'
+              className='small-btn has-state cart-btn'
+              onClick={handleCartStatus}
+            >
               <BiShoppingBag size={24} />
               <span className='cart-label'>Cart</span>
               <span className='badge'>0</span>

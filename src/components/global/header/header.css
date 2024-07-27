@@ -126,8 +126,3 @@
 .sticky-content-wrapper {
   display: none;
 }
-.btn {
-  width: 40px;
-  display: grid;
-  place-content: center;
-}

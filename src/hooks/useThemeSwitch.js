@@ -7,9 +7,9 @@ export const useThemeSwitch = () => {
     const HTML = document.documentElement;
 
     if (sessionStorage.getItem('theme')) {
-      HTML.dataset.theme = sessionStorage.getItem('theme');
+      HTML.dataset.scheme = sessionStorage.getItem('theme');
     } else {
-      HTML.dataset.theme = isDark ? 'dark' : 'light';
+      HTML.dataset.scheme = isDark ? 'dark' : 'light';
     }
   }, [isDark]);
 
