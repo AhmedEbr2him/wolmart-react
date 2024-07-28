@@ -5,6 +5,8 @@ import { CartDrawer, Footer, Header, MobileDrawer, StickyFooter } from './compon
 import { useContext } from 'react';
 import { MainContext } from './context/MainContext';
 import React, { Suspense, lazy } from 'react';
+import Shop from './pages/shop';
+import { Cart } from './pages';
 
 const LazyHome = lazy(() => import('./pages/home/index'));
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
@@ -34,6 +36,8 @@ const App = () => {
                 </Suspense>
               }
             />
+            <Route path={routesConstatns.SHOP} element={<Shop />} />
+            <Route path={routesConstatns.CART} element={<Cart />} />
           </Routes>
         </article>
       </main>
