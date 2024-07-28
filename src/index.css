@@ -190,11 +190,11 @@ html,
   transition-property: opactiy, margin;
   opacity: 1;
   margin-left: 0;
+  padding-bottom: 80px;
 
   &[data-drawer_active='true'] {
-    overflow: hidden;
     margin-left: 296px;
-    /* margin-right: -296px; */
+    margin-right: -296px;
     transition: margin var(--motion-duration-long), opacity var(--motion-duration-long);
 
     .mobile-drawer-wrapper {
@@ -227,6 +227,9 @@ html,
   width: 100%;
   padding-inline: 15px;
   margin-inline: auto;
+}
+.main {
+  padding-top: 115px;
 }
 .has-state {
   position: relative;
@@ -296,6 +299,16 @@ html,
   &[data-active='true'] {
     opacity: 0.5;
     visibility: visible;
+  }
+}
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  p {
+    font-size: 1.4rem;
+    font-weight: var(--weight-medium);
   }
 }
 .toggle-switch {

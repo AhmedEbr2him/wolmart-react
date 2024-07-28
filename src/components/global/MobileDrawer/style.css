@@ -4,7 +4,7 @@
   visibility: hidden;
   opacity: 0;
   transition: var(--motion-duration-long);
-  z-index: 20;
+  z-index: 22;
 
   .mobile-menu-container {
     max-width: 296px;

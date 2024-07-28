@@ -4,9 +4,12 @@ import lightLogo from './light-logo.png';
 import darkLogo from './dark-logo.png';
 import cartProductOne from './products/cart-products/product-1.jpg';
 import cartProductTwo from './products/cart-products/product-2.jpg';
+import payment from './payment.png';
+
 const Images = {
   flags: { en, fr },
   logo: { lightLogo, darkLogo },
+  payment: { payment },
   products: {
     cartProducts: { cartProductOne, cartProductTwo },
   },

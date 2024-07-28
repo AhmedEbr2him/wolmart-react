@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 // import { Home } from './pages';
-import { CartDrawer, Header, MobileDrawer, StickyFooter } from './components';
+import { CartDrawer, Footer, Header, MobileDrawer, StickyFooter } from './components';
 import { useContext } from 'react';
 import { MainContext } from './context/MainContext';
 import React, { Suspense, lazy } from 'react';
@@ -37,6 +37,7 @@ const App = () => {
           </Routes>
         </article>
       </main>
+      <Footer />
     </div>
   );
 };

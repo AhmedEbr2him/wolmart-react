@@ -1,0 +1,196 @@
+.sticky-content-wrapper {
+  height: 70px;
+  position: fixed;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  transition: bottom var(--motion-duration-medium-1) var(--motion-easing-standard);
+  transition-delay: var(--motion-duration-short-2);
+  background-color: var(--site-background);
+  z-index: 20;
+  &[data-scroll='true'] {
+    bottom: 0;
+  }
+}
+.sticky-footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid var(--border-color);
+  border-top-left-radius: var(--large-radius);
+  border-top-right-radius: var(--large-radius);
+
+  & > * {
+    flex: 1;
+  }
+
+  .sticky-link {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    & :where(svg, p) {
+      transition: color var(--motion-duration-medium-1);
+    }
+    &:hover :where(svg, p) {
+      color: var(--main-text-color);
+      transition: color var(--motion-duration-medium-1);
+    }
+  }
+
+  p {
+    margin-top: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+  }
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .logo {
+    margin-block-end: 10px;
+  }
+  .widget-title {
+    margin-bottom: 1rem;
+    padding-block-end: 6px;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: var(--weight-semi-bold);
+  }
+  .tel {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: var(--weight-semi-bold);
+    line-height: 1.5rem;
+  }
+  .desc {
+    max-width: 28rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-list {
+    display: inline-flex;
+    gap: 10px;
+
+    .social-item {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-content: center;
+      border-radius: var(--circle-radius);
+      color: #ffffff;
+    }
+
+    .facebook-link {
+      background-color: #1b4f9b;
+    }
+    .x-link {
+      background-color: #000000;
+    }
+    .pin-link {
+      background-color: #bd081c;
+    }
+    .instagram-link {
+      background-color: #f5604d;
+    }
+    .youtube-link {
+      background-color: #333a2f;
+    }
+  }
+  .widget {
+    margin-bottom: 4rem;
+  }
+  .widget:not(:first-child) {
+    .widget-body {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    li {
+      transition: var(--motion-duration-short-2);
+      a {
+        font-size: 1.3rem;
+        font-weight: var(--weight-medium);
+        text-transform: capitalize;
+        color: var(--default-text-color);
+        transition: var(--motion-duration-short-2);
+      }
+      &:hover a {
+        color: var(--main-text-color);
+      }
+    }
+  }
+}
+
+.footer-middle {
+  padding-block-start: 45px;
+  padding-block-end: 38px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  .widget {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .category-box {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .category-name {
+    font-size: 14px;
+    font-weight: var(--weight-bold);
+    color: var(--default-text-color);
+  }
+  .category-link {
+    font-size: 1.25rem;
+    line-height: 1;
+    position: relative;
+    transition: var(--motion-duration-short-2);
+    &:hover {
+      color: var(--main-text-color);
+    }
+    &:not(:last-child)::after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 13px;
+      background-color: var(--border-color);
+      vertical-align: bottom;
+      margin-left: 0.8rem;
+    }
+  }
+}
+.footer-bottom {
+  padding-block: 30px;
+  color: var(--default-text-color);
+  font-weight: var(--weight-medium);
+  .footer-left {
+    text-align: center;
+    margin-bottom: 0.2rem;
+
+    p {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+    }
+  }
+}

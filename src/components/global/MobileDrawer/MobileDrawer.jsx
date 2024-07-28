@@ -3,17 +3,26 @@ import { TfiClose } from 'react-icons/tfi';
 import { FiSearch } from 'react-icons/fi';
 import { IoIosArrowForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MainContext } from '../../../context/MainContext';
 import { Links } from '../../../constants/mockData.jsx';
 import ListItem from '../../ListItem.jsx';
 import PropTypes from 'prop-types';
 import { Theme } from '../../';
+import { useStopDocScroll } from '../../../hooks/useStopDocScroll.js';
 
 const MobileDrawer = () => {
   const mainMenuList = ['Home', 'Blog', 'About us', 'Contact', 'FAQ', 'Pages'];
   const [activeTab, setActiveTab] = useState('main-menu');
   const { isDrawerActive, closeDrawer } = useContext(MainContext);
+  const { startScroll, stopScroll } = useStopDocScroll();
+  useEffect(() => {
+    if (isDrawerActive) {
+      stopScroll();
+    } else {
+      startScroll();
+    }
+  }, [isDrawerActive, startScroll, stopScroll]);
 
   return (
     <>

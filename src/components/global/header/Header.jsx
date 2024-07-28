@@ -7,10 +7,10 @@ import { LuUser } from 'react-icons/lu';
 import { RiMenu2Fill } from 'react-icons/ri';
 import Images from '../../../assets/images/images';
 import { Link } from 'react-router-dom';
-import { routesConstatns } from '../../../constants/routesConstants';
-import { StickyWrapperContent } from '../../';
+import { Logo, StickyWrapperContent } from '../../';
 import { useContext } from 'react';
 import { MainContext } from '../../../context/MainContext';
+import { useIsScroll } from '../../../hooks/useIsScroll';
 
 const Header = () => {
   const currencyList = ['USD', 'EUR', 'EGP'];
@@ -37,69 +37,72 @@ const Header = () => {
     'Clothing',
   ];
   const { openDrawer, handleCartStatus } = useContext(MainContext);
-
+  const { isScroll } = useIsScroll();
+  const { isDrawerActive } = useContext(MainContext);
   return (
-    <header className='header'>
-      <div className='header-top'>
-        <div className='container'>
-          <div className='left-part'>
-            <marquee>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</marquee>
-          </div>
-          <div className='right-part'>
-            <div className='menu'>
-              <div className='dropdown'>
-                <button className='dropdown-button' aria-label='dropdown list button'>
-                  <span>USD</span>
-                  <IoIosArrowDown />
-                </button>
-                <div className='dropdown-list'>
-                  {currencyList.map((currency, index) => (
-                    <button key={index} className='dropdown-item'>
-                      {currency}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div className='dropdown'>
-                <button className='dropdown-button' aria-label='dropdown list button'>
-                  <span>EN</span>
-                  <img src={Images.flags.en} alt='language' />
-                  <IoIosArrowDown />
-                </button>
-                <div className='dropdown-list'>
-                  {langList.map((lang, index) => (
-                    <button key={index} className='dropdown-item'>
-                      <img src={lang.img} alt='language' />
-                      <span>{lang.title}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
+    <header className={`header ${isScroll ? 'scroll' : ''}`}>
+      {!isDrawerActive && (
+        <div className='header-top'>
+          <div className='container'>
+            <div className='left-part'>
+              <marquee>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</marquee>
             </div>
-            <span className='divider'></span>
-            <div className='top-links'>
-              <Link to='#' aria-label='blog link'>
-                <span> Blog</span>
-              </Link>
-              <Link to='#' aria-label='content us link'>
-                <span>Content Us</span>
-              </Link>
-              <Link to='#' aria-label='account link'>
-                <span>My Account</span>
-              </Link>
-              <Link to='#' aria-label='sign in link'>
-                <span>Sign In</span>
-                <LuUser />
-              </Link>
-              <span className='delimiter'>/</span>
-              <Link to='#' aria-label='sign in link'>
-                <span>Register</span>
-              </Link>
+            <div className='right-part'>
+              <div className='menu'>
+                <div className='dropdown'>
+                  <button className='dropdown-button' aria-label='dropdown list button'>
+                    <span>USD</span>
+                    <IoIosArrowDown />
+                  </button>
+                  <div className='dropdown-list'>
+                    {currencyList.map((currency, index) => (
+                      <button key={index} className='dropdown-item'>
+                        {currency}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className='dropdown'>
+                  <button className='dropdown-button' aria-label='dropdown list button'>
+                    <span>EN</span>
+                    <img src={Images.flags.en} alt='language' />
+                    <IoIosArrowDown />
+                  </button>
+                  <div className='dropdown-list'>
+                    {langList.map((lang, index) => (
+                      <button key={index} className='dropdown-item'>
+                        <img src={lang.img} alt='language' />
+                        <span>{lang.title}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <span className='divider'></span>
+              <div className='top-links'>
+                <Link to='#' aria-label='blog link'>
+                  <span> Blog</span>
+                </Link>
+                <Link to='#' aria-label='content us link'>
+                  <span>Content Us</span>
+                </Link>
+                <Link to='#' aria-label='account link'>
+                  <span>My Account</span>
+                </Link>
+                <Link to='#' aria-label='sign in link'>
+                  <span>Sign In</span>
+                  <LuUser />
+                </Link>
+                <span className='delimiter'>/</span>
+                <Link to='#' aria-label='sign in link'>
+                  <span>Register</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
       <div className='header-middle'>
         <div className='container'>
@@ -111,22 +114,8 @@ const Header = () => {
             >
               <RiMenu2Fill size={24} />
             </button>
-            <Link to={routesConstatns.HOME} className='logo' aria-label='site logo'>
-              <img
-                src={Images.logo.lightLogo}
-                className='light-logo'
-                alt='site logo'
-                width='130'
-                height='28'
-              />
-              <img
-                src={Images.logo.darkLogo}
-                className='dark-logo'
-                alt='site logo'
-                width='130'
-                height='28'
-              />
-            </Link>
+            {/* LOGO */}
+            <Logo />
 
             <form action='#' className='header-search'>
               <div className='select-box'>
