@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 // import { Home } from './pages';
-import { CartDrawer, Footer, Header, MobileDrawer, StickyFooter } from './components';
+import { Footer, Header, StickyFooter } from './components';
 import { useContext } from 'react';
 import { MainContext } from './context/MainContext';
 import React, { Suspense, lazy } from 'react';
@@ -11,18 +11,20 @@ import { Cart } from './pages';
 const LazyHome = lazy(() => import('./pages/home/index'));
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
 const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDrawer'));
+const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
 
 const App = () => {
-  const { isDrawerActive } = useContext(MainContext);
+  const { isDrawerActive, isCartActive } = useContext(MainContext);
+
   return (
     <div className={'app'} data-drawer_active={isDrawerActive}>
-      <Suspense>
+      <Suspense fallback={null}>
         <LazyMobileDrawer />
-      </Suspense>
-      <StickyFooter />
-      <Suspense>
         <LazyCartDrawer />
+        {(isDrawerActive || isCartActive) && <LazyScrimOverlay />}
       </Suspense>
+
+      <StickyFooter />
       <Header />
 
       <main className='main'>

@@ -16,6 +16,7 @@ const MobileDrawer = () => {
   const [activeTab, setActiveTab] = useState('main-menu');
   const { isDrawerActive, closeDrawer } = useContext(MainContext);
   const { startScroll, stopScroll } = useStopDocScroll();
+
   useEffect(() => {
     if (isDrawerActive) {
       stopScroll();
@@ -109,13 +110,6 @@ const MobileDrawer = () => {
           <Theme />
         </div>
       </div>
-      {isDrawerActive && (
-        <div
-          className='scrim-overlay'
-          data-active={isDrawerActive}
-          onClick={() => closeDrawer()}
-        ></div>
-      )}
     </>
   );
 };

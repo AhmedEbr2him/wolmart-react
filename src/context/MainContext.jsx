@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const MainContext = createContext(null);
 
@@ -8,16 +9,24 @@ const MainProviderContext = ({ children }) => {
 
   const openDrawer = () => {
     setIsDrawerActive(true);
+    setIsCartActive(false);
   };
+
   const closeDrawer = () => {
     setIsDrawerActive(false);
   };
-  const handleCartStatus = () => {
-    setIsCartActive(!isCartActive);
+
+  const openCart = () => {
+    setIsCartActive(true);
+    setIsDrawerActive(false);
+  };
+
+  const closeCart = () => {
+    setIsCartActive(false);
   };
   return (
     <MainContext.Provider
-      value={{ isDrawerActive, openDrawer, closeDrawer, isCartActive, handleCartStatus }}
+      value={{ isDrawerActive, openDrawer, closeDrawer, isCartActive, openCart, closeCart }}
     >
       {children}
     </MainContext.Provider>
@@ -25,3 +34,7 @@ const MainProviderContext = ({ children }) => {
 };
 
 export { MainContext, MainProviderContext };
+
+MainProviderContext.propTypes = {
+  children: PropTypes.node,
+};

@@ -1,12 +1,12 @@
 import './style.css';
 import { Link, useLocation } from 'react-router-dom';
-import { TfiHome } from 'react-icons/tfi';
 import { BsShop } from 'react-icons/bs';
 import { LuUser } from 'react-icons/lu';
 import { BiShoppingBag } from 'react-icons/bi';
 import { FiSearch } from 'react-icons/fi';
 import { useIsScroll } from '../../../hooks/useIsScroll';
 import { routesConstatns } from '../../../constants/routesConstants';
+import { SlHome } from 'react-icons/sl';
 
 const StickyFooter = () => {
   const { isScroll } = useIsScroll();
@@ -16,7 +16,7 @@ const StickyFooter = () => {
     {
       label: 'Home',
       to: routesConstatns.HOME,
-      icon: <TfiHome size={size} />,
+      icon: <SlHome size={size} />,
     },
     {
       label: 'Shop',

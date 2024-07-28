@@ -7,14 +7,14 @@ import { useContext } from 'react';
 import { MainContext } from '../../../context/MainContext';
 
 const CartDrawer = () => {
-  const { isCartActive, handleCartStatus } = useContext(MainContext);
+  const { isCartActive, closeCart } = useContext(MainContext);
 
   return (
     <>
       <div className='cart-drawer' data-active={isCartActive}>
         <div className='cart-header'>
           <h4>shopping cart</h4>
-          <button aria-label='close cart' className='btn-close' onClick={handleCartStatus}>
+          <button aria-label='close cart' className='btn-close' onClick={closeCart}>
             <span>Close</span>
             <FaArrowRight />
           </button>
@@ -55,18 +55,15 @@ const CartDrawer = () => {
             <span className='price'>$10.00</span>
           </div>
           <div className='cart-action'>
-            <Link to='#' className='btn btn-outline' onClick={handleCartStatus}>
+            <Link to='#' className='btn btn-outline' onClick={closeCart}>
               view cart
             </Link>
-            <Link to='#' className='btn btn-primary' onClick={handleCartStatus}>
+            <Link to='#' className='btn btn-primary' onClick={closeCart}>
               checkout
             </Link>
           </div>
         </div>
       </div>
-      {isCartActive && (
-        <div className='scrim-overlay' data-active={isCartActive} onClick={handleCartStatus}></div>
-      )}
     </>
   );
 };
