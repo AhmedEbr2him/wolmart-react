@@ -8,6 +8,7 @@ import { SiInstagram } from 'react-icons/si';
 import { SlSocialYoutube } from 'react-icons/sl';
 import { categories, linksList } from '../../../constants/mockData';
 import Images from '../../../assets/images/images';
+import FooterNewsletter from './FooterNewsletter';
 
 const Footer = () => {
   const iconSize = 16;
@@ -15,6 +16,7 @@ const Footer = () => {
 
   return (
     <footer className='footer'>
+      <FooterNewsletter />
       <div className='container'>
         <div className='footer-top'>
           <div className='widget'>

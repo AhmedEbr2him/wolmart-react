@@ -228,9 +228,7 @@ html,
   padding-inline: 15px;
   margin-inline: auto;
 }
-.main {
-  padding-top: 115px;
-}
+
 .has-state {
   position: relative;
   transition: var(--motion-duration-short-2);
@@ -252,8 +250,10 @@ html,
 }
 
 .btn {
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
   font-weight: var(--weight-semi-bold);
   text-transform: uppercase;
   border-radius: var(--small-radius);
@@ -263,7 +263,6 @@ html,
   background-color: var(--main-text-color);
   color: #ffffff;
   border-color: var(--main-text-color);
-
   &:hover {
     background-color: #3c78b4;
   }
@@ -275,6 +274,16 @@ html,
     background-color: var(--main-text-color);
     border-color: var(--main-text-color);
     color: #ffffff;
+  }
+}
+.btn-dark {
+  background-color: #333333;
+  border: 2px solid #333333;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #3e3e3e;
+    border-color: #3e3e3e;
   }
 }
 .small-btn {
