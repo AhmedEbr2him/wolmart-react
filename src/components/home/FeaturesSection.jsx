@@ -2,6 +2,7 @@ import { TbTruckDelivery } from 'react-icons/tb';
 import { RiSecurePaymentLine } from 'react-icons/ri';
 import { TbCreditCardRefund } from 'react-icons/tb';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
+
 const FeaturesSection = () => {
   return (
     <div className='features'>

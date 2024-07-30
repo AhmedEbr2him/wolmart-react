@@ -16,3 +16,4 @@ export { default as SwiperNavButtons } from './common/SwiperNavButtons.jsx';
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';
 export { default as FeaturesSection } from './home/FeaturesSection';
+export { default as CategoryBanner } from './home/CategoryBanner';
