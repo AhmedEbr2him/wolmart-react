@@ -39,6 +39,7 @@ const CartDrawer = () => {
                     alt='product one'
                     width='84'
                     height='94'
+                    loading='lazy'
                   />
                 </Link>
               </figure>

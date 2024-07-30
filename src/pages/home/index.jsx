@@ -1,4 +1,10 @@
+import IntroSection from './IntroSection';
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <article>
+      <IntroSection />
+    </article>
+  );
 };
 export default Home;

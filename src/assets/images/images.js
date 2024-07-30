@@ -6,12 +6,34 @@ import cartProductOne from './products/cart-products/product-1.jpg';
 import cartProductTwo from './products/cart-products/product-2.jpg';
 import payment from './payment.png';
 
+import banner_1 from './slides/slide-1.jpg';
+import banner_2 from './slides/slide-2.jpg';
+import banner_3 from './slides/slide-3.jpg';
+import banner_dark_1 from './slides/slide-dark-1.jpg';
+import banner_dark_2 from './slides/slide-dark-2.jpg';
+import banner_dark_3 from './slides/slide-dark-3.jpg';
+import skate from './slides/skate.png';
+import shoe from './slides/shoes.png';
+import climbing from './slides/men.png';
+
 const Images = {
   flags: { en, fr },
   logo: { lightLogo, darkLogo },
   payment: { payment },
   products: {
     cartProducts: { cartProductOne, cartProductTwo },
+  },
+
+  introSection: {
+    banner_1,
+    banner_2,
+    banner_3,
+    banner_dark_1,
+    banner_dark_2,
+    banner_dark_3,
+    skate,
+    shoe,
+    climbing,
   },
 };
 

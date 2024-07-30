@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 
 export const useThemeSwitch = () => {
-  const [isDark, setIsDark] = useState(window.matchMedia('prefers-color-scheme'));
+  const [isDark, setIsDark] = useState(
+    () =>
+      sessionStorage.getItem('theme') === 'light' ||
+      window.matchMedia('(prefers-color-scheme: light)').matches
+  );
 
   useEffect(() => {
     const HTML = document.documentElement;

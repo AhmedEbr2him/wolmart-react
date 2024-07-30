@@ -7,17 +7,19 @@ const Logo = () => {
     <Link to={routesConstatns.HOME} className='logo' aria-label='site logo'>
       <img
         src={Images.logo.lightLogo}
-        className='light-logo'
         alt='site logo'
         width='130'
         height='28'
+        loading='lazy'
+        className='light-logo'
       />
       <img
         src={Images.logo.darkLogo}
-        className='dark-logo'
         alt='site logo'
         width='130'
         height='28'
+        loading='lazy'
+        className='dark-logo'
       />
     </Link>
   );

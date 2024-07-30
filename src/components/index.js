@@ -10,3 +10,5 @@ export { default as Footer } from './global/footer/';
 export { default as ListItem } from './ListItem';
 export { default as Theme } from './Theme';
 export { default as Logo } from './common/Logo';
+export { default as LinkBtn } from './common/LinkBtn';
+export { default as SwiperNavButtons } from './common/SwiperNavButtons.jsx';
