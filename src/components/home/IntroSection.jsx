@@ -1,16 +1,13 @@
-import './style.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Images from '../../assets/images/images';
-import LinkBtn from '../../components/common/LinkBtn';
+import LinkBtn from '../common/LinkBtn';
 import { useState } from 'react';
 import Slider from 'react-slick';
 
 const IntroSection = () => {
   const [activeIndex, setActiveIndexs] = useState(0);
-  const handleSlideChange = swiper => {
-    setActiveIndexs(swiper.activeIndex);
-  };
+
   const settings = {
     dots: true,
     infinite: true,

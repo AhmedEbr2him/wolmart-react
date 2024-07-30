@@ -12,3 +12,7 @@ export { default as Theme } from './Theme';
 export { default as Logo } from './common/Logo';
 export { default as LinkBtn } from './common/LinkBtn';
 export { default as SwiperNavButtons } from './common/SwiperNavButtons.jsx';
+
+/* HOME */
+export { default as IntroSection } from './home/IntroSection';
+export { default as FeaturesSection } from './home/FeaturesSection';

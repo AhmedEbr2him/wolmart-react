@@ -1,9 +1,10 @@
-import IntroSection from './IntroSection';
-
+import './style.css';
+import { IntroSection, FeaturesSection } from '../../components';
 const Home = () => {
   return (
     <article>
       <IntroSection />
+      <FeaturesSection />
     </article>
   );
 };
