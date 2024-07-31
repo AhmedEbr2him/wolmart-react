@@ -1,0 +1,150 @@
+{
+  "deals_products": [
+    {
+      "id": "1",
+      "name": "Coat Pool Comfort Jacket",
+      "description": "A brief description of the product.",
+      "price": "180",
+      "old_price": "150",
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/1-1-600x675.jpg",
+          "width": 60,
+          "height": 68
+        },
+        {
+          "src": "./public/products/1-2-600x675.jpg",
+          "width": 60,
+          "height": 68
+        },
+        {
+          "src": "./public/products/1-3-600x675.jpg",
+          "width": 60,
+          "height": 68
+        },
+        {
+          "src": "./public/products/1-4-600x675.jpg",
+          "width": 60,
+          "height": 68
+        }
+      ],
+      "category": "shirt",
+      "stock": 100,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 25
+    },
+    {
+      "id": "2",
+      "name": "Coat Pool Comfort Shirt",
+      "description": "A brief description of the product.",
+      "price": "180",
+      "old_price": "150",
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-1-600x675.jpg",
+          "width": 60,
+          "height": 68
+        },
+        {
+          "src": "./public/products/2-2-600x675.jpg",
+          "width": 60,
+          "height": 68
+        },
+        {
+          "src": "./public/products/2-3-600x675.jpg",
+          "width": 60,
+          "height": 68
+        },
+        {
+          "src": "./public/products/2-4-600x675.jpg",
+          "width": 60,
+          "height": 68
+        }
+      ],
+      "category": "shirt",
+      "stock": 100,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 25
+    }
+  ]
+}

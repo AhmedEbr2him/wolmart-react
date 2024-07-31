@@ -294,9 +294,13 @@
 }
 .category-banner {
   position: relative;
-  img {
-    min-height: 20rem;
+  figure {
     border-radius: var(--small-radius);
+
+    img {
+      min-height: 20rem;
+      border-radius: var(--small-radius);
+    }
   }
   .category-banner-content {
     position: absolute;
