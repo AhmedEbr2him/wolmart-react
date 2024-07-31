@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import { FiPlus } from 'react-icons/fi';
 import { FiMinus } from 'react-icons/fi';
@@ -5,17 +7,15 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { LiaBalanceScaleSolid } from 'react-icons/lia';
 import { useState } from 'react';
-import { GoStarFill } from 'react-icons/go';
 import { FaFacebookF } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { FaPinterestP } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { SlSocialInstagram } from 'react-icons/sl';
-import PropTypes from 'prop-types';
+import Rating from './Rating';
 
-const SingleProduct = ({ headTitle, data }) => {
+const SingleProduct = ({ data }) => {
   const {
-    id = '',
     name = '',
     description = '',
     images = [{}],
@@ -29,15 +29,11 @@ const SingleProduct = ({ headTitle, data }) => {
     sizes = [{}],
   } = data;
 
-  // RATING VARIABLES
-  const maxRating = 5;
-  const fillStars = Math.round(rating);
-
   const [mainImage, setMainImage] = useState(images[0]?.src);
   const [checkedState, setIsCheckedState] = useState(new Array(sizes.length).fill(false));
   const [size, setSize] = useState({});
   const [checkboxIndex, setCheckIndex] = useState('');
-  const [productQty, setProductQty] = useState(0);
+  const [productQty, setProductQty] = useState(1);
 
   const handleSizeOption = (position, size) => {
     const updatedChecked = checkedState.map((item, index) => (index === position ? !item : false));
@@ -46,7 +42,7 @@ const SingleProduct = ({ headTitle, data }) => {
     setCheckIndex(position);
   };
   const handleDecreaseQty = () => {
-    if (productQty > 0) {
+    if (productQty > 1) {
       setProductQty(productQty - 1);
     }
   };
@@ -70,8 +66,6 @@ const SingleProduct = ({ headTitle, data }) => {
 
   return (
     <div className='single-product'>
-      {headTitle && <h4 className='title'>{headTitle}</h4>}
-
       <div className='product product-single'>
         <div className='product-media'>
           <figure className='product-image' aria-hidden='false'>
@@ -116,17 +110,7 @@ const SingleProduct = ({ headTitle, data }) => {
             <p>Offer ends in :</p>
             <div className='product-countdown'>0 days, 00 : 00 : 00</div>
           </div>
-          <div className='rating-container'>
-            <div className='rating-list'>
-              {Array.from({ length: maxRating }).map((_, index) => (
-                <Star key={index} filled={index < fillStars} />
-              ))}
-              <span className='tooltip'>{rating}</span>
-            </div>
-            <Link className='rating-reviews'>
-              <span>{`(${reviews.length} Reviews)`}</span>
-            </Link>
-          </div>
+          <Rating rating={rating} reviews={reviews} />
 
           <div className='product-form product-variation-form product-size-swatch'>
             <p>Size:</p>
@@ -191,23 +175,14 @@ const SingleProduct = ({ headTitle, data }) => {
                 <span>Add to Cart</span>
               </button>
             </div>
-
-            <SocialList />
           </div>
+          <SocialList />
         </div>
       </div>
     </div>
   );
 };
 export default SingleProduct;
-
-const Star = ({ filled }) => {
-  return (
-    <span className='rating-item'>
-      <GoStarFill style={{ color: filled ? 'var(--secondary-text-color)' : 'lightgray' }} />
-    </span>
-  );
-};
 
 const SocialList = () => {
   const socialLinks = [
@@ -240,6 +215,7 @@ const SocialList = () => {
     </div>
   );
 };
+
 const Discount = ({ price, discount, calculateDiscount }) => {
   const discountAmount = calculateDiscount(price, discount);
 
@@ -248,8 +224,4 @@ const Discount = ({ price, discount, calculateDiscount }) => {
       <span>{discountAmount}% off</span>
     </div>
   );
-};
-SingleProduct.propTypes = {
-  headTitle: PropTypes.string,
-  data: PropTypes.object.isRequired,
 };

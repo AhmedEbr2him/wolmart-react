@@ -146,5 +146,537 @@
       ],
       "discount": 25
     }
+  ],
+  "best_selling": [
+    {
+      "id": 1,
+      "name": "Kitchen Cooker",
+      "description": "A brief description of the product.",
+      "price": 150.6,
+      "old_price": 0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-1.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 3.3,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "name": "Professional Pixel Camera",
+      "description": "A brief description of the product.",
+      "price": 95.99,
+      "old_price": 125,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.3,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 3,
+      "name": "Sport Women’s Wear",
+      "description": "A brief description of the product.",
+      "price": 30.99,
+      "old_price": 40.99,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-3.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "name": "Latest Speaker",
+      "description": "A brief description of the product.",
+      "price": 20.99,
+      "old_price": 0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-4.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 5,
+      "name": "Men's Black Wrist Watch",
+      "description": "A brief description of the product.",
+      "price": 135.99,
+      "old_price": 155.7,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-5.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 6,
+      "name": "Wash Machine",
+      "description": "A brief description of the product.",
+      "price": 320.99,
+      "old_price": 399.0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-6.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 7,
+      "name": "Security Guard",
+      "description": "A brief description of the product.",
+      "price": 50.99,
+      "old_price": 60.0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-7.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 8,
+      "name": "Apple Super Notecom",
+      "description": "A brief description of the product.",
+      "price": 250.99,
+      "old_price": 285.0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-8.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": 9,
+      "name": "HD Television",
+      "description": "A brief description of the product.",
+      "price": 250.99,
+      "old_price": 300.99,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-9.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    }
   ]
 }

@@ -13,6 +13,9 @@ export { default as Logo } from './common/Logo';
 export { default as LinkBtn } from './common/LinkBtn';
 export { default as SwiperNavButtons } from './common/SwiperNavButtons.jsx';
 export { default as SingleProduct } from './common/SingleProduct';
+export { default as Rating } from './common/Rating';
+export { default as CustomPrevArrow } from './common/CustomArrows/CustomPrevArrow';
+export { default as CustomNextArrow } from './common/CustomArrows/CustomNextArrow';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';

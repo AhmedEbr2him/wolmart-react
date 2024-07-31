@@ -1,6 +1,11 @@
 import { useEffect, useState } from 'react';
 import SingleProduct from '../common/SingleProduct';
 import Slider from 'react-slick';
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowBack } from 'react-icons/io';
+import BestSelling from './BestSelling';
+import CustomPrevArrow from '../common/CustomArrows/CustomPrevArrow';
+import CustomNextArrow from '../common/CustomArrows/CustomNextArrow';
 
 const Deals = () => {
   const [products, setProducts] = useState([]);
@@ -26,11 +31,13 @@ const Deals = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <div className='deals-wrapper'>
       <div className='container'>
-        <div className='single-product-wrapper'>
-          <Slider {...settings}>
+        <div className='product-wrapper'>
+          <h4 className='head-title'>Deals Hot of The Day</h4>
+          <Slider {...settings} prevArrow={<CustomPrevArrow />} nextArrow={<CustomNextArrow />}>
             {products.deals_products &&
               products?.deals_products?.map((product, index) => (
                 <SingleProduct
@@ -41,6 +48,11 @@ const Deals = () => {
                 />
               ))}
           </Slider>
+        </div>
+
+        <div className='product-wrapper'>
+          <h4 className='head-title'>Top 20 Best Seller</h4>
+          <BestSelling data={products.best_selling} />
         </div>
       </div>
     </div>
