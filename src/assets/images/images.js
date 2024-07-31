@@ -19,15 +19,13 @@ import climbing from './slides/men.png';
 import categoryBanner_1 from './banners/category-banner-1.jpg';
 import categoryBanner_2 from './banners/cateogry-banner-2.jpg';
 
-/* DEALS SECTION */
-import product_1_1 from './products/products/1-1-600x675.jpg';
-import product_1_2 from './products/products/1-2-600x675.jpg';
-import product_1_3 from './products/products/1-3-600x675.jpg';
-import product_1_4 from './products/products/1-4-600x675.jpg';
-import product_2_1 from './products/products/2-1-600x675.jpg';
-import product_2_2 from './products/products/2-2-600x675.jpg';
-import product_2_3 from './products/products/2-3-600x675.jpg';
-import product_2_4 from './products/products/2-4-600x675.jpg';
+/* CATEGORIES */
+import category_1 from './categories/2-1.jpg';
+import category_2 from './categories/2-2.jpg';
+import category_3 from './categories/2-3.jpg';
+import category_4 from './categories/2-4.jpg';
+import category_5 from './categories/2-5.jpg';
+import category_6 from './categories/2-6.jpg';
 
 const Images = {
   flags: { en, fr },
@@ -54,15 +52,13 @@ const Images = {
     categoryBanner_2,
   },
 
-  dealsProducts: {
-    product_1_1,
-    product_1_2,
-    product_1_3,
-    product_1_4,
-    product_2_1,
-    product_2_2,
-    product_2_3,
-    product_2_4,
+  categories: {
+    category_1,
+    category_2,
+    category_3,
+    category_4,
+    category_5,
+    category_6,
   },
 };
 

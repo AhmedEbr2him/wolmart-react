@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { IoIosArrowBack } from 'react-icons/io';
 
 const CustomNextArrow = ({ onClick }) => {

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { IoIosArrowForward } from 'react-icons/io';
 
 const CustomPrevArrow = ({ onClick }) => {

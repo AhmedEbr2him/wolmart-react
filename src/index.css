@@ -22,6 +22,7 @@
   --light-default-text-color: #666666;
   --light-alpha-10: hsla(0, 0%, 0%, 0.1);
   --light-alpha-20: hsla(0, 0%, 0%, 0.2);
+  --light-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
   /* dark colors */
   --dark-site-background: #1c1c1c;
@@ -37,6 +38,7 @@
   --dark-default-text-color: #999999;
   --dark-alpha-10: hsla(0, 0%, 100%, 0.1);
   --dark-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --dark-box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08);
   /**
   * CONTAINERS
   */
@@ -111,6 +113,7 @@
   --default-text-color: var(--light-default-text-color);
   --alpha-10: var(--light-alpha-10);
   --alpha-20: var(--light-alpha-20);
+  --box-shadow: var(--light-box-shadow);
 }
 [data-scheme='dark'] {
   color-scheme: dark;
@@ -127,6 +130,7 @@
   --button-hover-background: var(--dark-button-hover-background);
   --alpha-10: var(--dark-alpha-10);
   --alpha-20: var(--dark-alpha-20);
+  --box-shadow: var(--dark-box-shadow);
 }
 /**
 * RESET

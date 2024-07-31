@@ -1,5 +1,11 @@
 import './style.css';
-import { IntroSection, FeaturesSection, CategoryBanner, Deals } from '../../components';
+import {
+  IntroSection,
+  FeaturesSection,
+  CategoryBanner,
+  Deals,
+  CategorySection,
+} from '../../components';
 const Home = () => {
   return (
     <article>
@@ -7,6 +13,7 @@ const Home = () => {
       <FeaturesSection />
       <CategoryBanner />
       <Deals />
+      <CategorySection />
     </article>
   );
 };

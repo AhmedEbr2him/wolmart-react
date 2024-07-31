@@ -16,9 +16,11 @@ export { default as SingleProduct } from './common/SingleProduct';
 export { default as Rating } from './common/Rating';
 export { default as CustomPrevArrow } from './common/CustomArrows/CustomPrevArrow';
 export { default as CustomNextArrow } from './common/CustomArrows/CustomNextArrow';
+export { default as SectionTitle } from './common/SectionTitle';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';
 export { default as FeaturesSection } from './home/FeaturesSection';
 export { default as CategoryBanner } from './home/CategoryBanner';
 export { default as Deals } from './home/Deals';
+export { default as CategorySection } from './home/CategorySection';

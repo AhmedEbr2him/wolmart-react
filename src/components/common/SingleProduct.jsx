@@ -33,7 +33,8 @@ const SingleProduct = ({ data }) => {
 
   const [mainImage, setMainImage] = useState(images[0]?.src);
   const { handleDecreaseQty, handleIncreaseQty, handleOnChangeQty, productQty } = useProductQty();
-  const { handleSizeOption, checkedState, size, checkboxIndex } = useCheckboxState(sizes);
+  const { handleSizeOption, checkedState, size, checkboxIndex, setIsCheckedState } =
+    useCheckboxState({ sizes });
 
   return (
     <div className='single-product'>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useCheckboxState = sizes => {
+export const useCheckboxState = ({ sizes }) => {
   const [checkedState, setIsCheckedState] = useState(new Array(sizes?.length).fill(false));
   const [size, setSize] = useState({});
   const [checkboxIndex, setCheckIndex] = useState('');
@@ -12,5 +12,5 @@ export const useCheckboxState = sizes => {
     setCheckIndex(position);
   };
 
-  return { handleSizeOption, checkedState, size, checkboxIndex };
+  return { handleSizeOption, checkedState, size, checkboxIndex, setIsCheckedState };
 };

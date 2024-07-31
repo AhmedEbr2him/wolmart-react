@@ -350,6 +350,7 @@
   }
 }
 .deals-wrapper {
+  margin-block-end: 4rem;
   .container {
     display: flex;
     flex-direction: column;
@@ -443,6 +444,97 @@
         }
         del {
           color: var(--text-color);
+        }
+      }
+    }
+  }
+}
+/* CATEGORY SECTION */
+.category-section {
+  background: var(--section-background);
+  padding-block: 5rem;
+
+  .title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .slick-track {
+    display: flex;
+    .slick-slide:not(:last-child) {
+      margin-right: 10px;
+    }
+    .slick-slide {
+      outline: none;
+      border: none;
+    }
+  }
+  .category-item {
+    position: relative;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    &:hover {
+      .category-media img {
+        transform: scale(1.1);
+      }
+      .category-content {
+        .category-name {
+          transform: translateY(-100%);
+          z-index: -1;
+        }
+        .shop-btn {
+          transform: translate(-50%, -100%);
+        }
+      }
+    }
+    .category-media img {
+      transition: transform var(--motion-duration-short-2);
+    }
+    .category-content {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 1rem;
+      text-align: center;
+      overflow: hidden;
+      height: 25px;
+
+      :where(h4, a) {
+        font-weight: var(--weight-extra-bold);
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        line-height: 1.45;
+        transition: var(--motion-duration-short-2);
+      }
+      .category-name {
+        color: #262626;
+        transform: translateY(0);
+      }
+      .shop-btn {
+        color: var(--main-text-color);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        width: max-content;
+
+        &:hover {
+          &::after {
+            width: 100%;
+            left: 50%;
+          }
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 3px;
+          background-color: var(--main-text-color);
+          transition: var(--motion-duration-short-2);
+          position: inherit;
+          left: 0;
+          bottom: -4px;
+          transform: translateX(-50%);
         }
       }
     }
