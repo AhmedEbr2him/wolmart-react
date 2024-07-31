@@ -43,7 +43,7 @@ const BestSelling = ({ data }) => {
 };
 
 const BestSellingProduct = ({ product }) => {
-  const { name = '', price = '', old_price = '', rating = '', images = [{}] } = product;
+  const { name = '', price = {}, rating = '', images = [{}] } = product;
 
   return (
     <div className='product'>
@@ -63,8 +63,8 @@ const BestSellingProduct = ({ product }) => {
         </h4>
         <Rating rating={rating} />
         <div className='product-price'>
-          <ins className='new-price'>${price}</ins>
-          {old_price > 0 && <del className='old-price'>${old_price}</del>}
+          <ins className='new-price'>${price.old}</ins>
+          {price.old > 0 && <del className='old-price'>${price.new}</del>}
         </div>
       </div>
     </div>

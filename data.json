@@ -4,8 +4,10 @@
       "id": "1",
       "name": "Coat Pool Comfort Jacket",
       "description": "A brief description of the product.",
-      "price": "180",
-      "old_price": "150",
+      "price": {
+        "old": 180,
+        "new": 150
+      },
       "currency": "USD",
       "images": [
         {
@@ -70,15 +72,16 @@
           "label": "Small",
           "price": 180
         }
-      ],
-      "discount": 25
+      ]
     },
     {
       "id": "2",
       "name": "Coat Pool Comfort Shirt",
       "description": "A brief description of the product.",
-      "price": "180",
-      "old_price": "150",
+      "price": {
+        "old": 180,
+        "new": 150
+      },
       "currency": "USD",
       "images": [
         {
@@ -152,8 +155,10 @@
       "id": 1,
       "name": "Kitchen Cooker",
       "description": "A brief description of the product.",
-      "price": 150.6,
-      "old_price": 0,
+      "price": {
+        "old": 150.6,
+        "new": 0
+      },
       "currency": "USD",
       "images": [
         {
@@ -210,8 +215,11 @@
       "id": 2,
       "name": "Professional Pixel Camera",
       "description": "A brief description of the product.",
-      "price": 95.99,
-      "old_price": 125,
+      "price": {
+        "old": 95.99,
+        "new": 125
+      },
+
       "currency": "USD",
       "images": [
         {
@@ -269,8 +277,11 @@
       "id": 3,
       "name": "Sport Women’s Wear",
       "description": "A brief description of the product.",
-      "price": 30.99,
-      "old_price": 40.99,
+      "price": {
+        "old": 40.99,
+        "new": 95.99
+      },
+
       "currency": "USD",
       "images": [
         {
@@ -328,7 +339,11 @@
       "id": 4,
       "name": "Latest Speaker",
       "description": "A brief description of the product.",
-      "price": 20.99,
+      "price": {
+        "old": 20.99,
+        "new": 0
+      },
+
       "old_price": 0,
       "currency": "USD",
       "images": [
@@ -387,8 +402,11 @@
       "id": 5,
       "name": "Men's Black Wrist Watch",
       "description": "A brief description of the product.",
-      "price": 135.99,
-      "old_price": 155.7,
+      "price": {
+        "old": 155.7,
+        "new": 135.99
+      },
+
       "currency": "USD",
       "images": [
         {
@@ -446,8 +464,10 @@
       "id": 6,
       "name": "Wash Machine",
       "description": "A brief description of the product.",
-      "price": 320.99,
-      "old_price": 399.0,
+      "price": {
+        "old": 399.0,
+        "new": 320.99
+      },
       "currency": "USD",
       "images": [
         {
@@ -505,8 +525,10 @@
       "id": 7,
       "name": "Security Guard",
       "description": "A brief description of the product.",
-      "price": 50.99,
-      "old_price": 60.0,
+      "price": {
+        "old": 60.0,
+        "new": 50.99
+      },
       "currency": "USD",
       "images": [
         {
@@ -564,8 +586,10 @@
       "id": 8,
       "name": "Apple Super Notecom",
       "description": "A brief description of the product.",
-      "price": 250.99,
-      "old_price": 285.0,
+      "price": {
+        "old": 285.99,
+        "new": 250.99
+      },
       "currency": "USD",
       "images": [
         {
@@ -623,8 +647,10 @@
       "id": 9,
       "name": "HD Television",
       "description": "A brief description of the product.",
-      "price": 250.99,
-      "old_price": 300.99,
+      "price": {
+        "old": 300.99,
+        "new": 250.99
+      },
       "currency": "USD",
       "images": [
         {

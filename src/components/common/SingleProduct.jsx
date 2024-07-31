@@ -13,14 +13,16 @@ import { FaPinterestP } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { SlSocialInstagram } from 'react-icons/sl';
 import Rating from './Rating';
+import calculateDiscount from '../../utils/calculateDiscount';
+import { useProductQty } from '../../hooks/useProductQty';
+import { useCheckboxState } from '../../hooks/useCheckboxState';
 
 const SingleProduct = ({ data }) => {
   const {
     name = '',
     description = '',
     images = [{}],
-    price = '',
-    old_price = '',
+    price = {},
     category = '',
     rating = '',
     reviews = '',
@@ -30,39 +32,8 @@ const SingleProduct = ({ data }) => {
   } = data;
 
   const [mainImage, setMainImage] = useState(images[0]?.src);
-  const [checkedState, setIsCheckedState] = useState(new Array(sizes.length).fill(false));
-  const [size, setSize] = useState({});
-  const [checkboxIndex, setCheckIndex] = useState('');
-  const [productQty, setProductQty] = useState(1);
-
-  const handleSizeOption = (position, size) => {
-    const updatedChecked = checkedState.map((item, index) => (index === position ? !item : false));
-    setIsCheckedState(updatedChecked);
-    setSize(size);
-    setCheckIndex(position);
-  };
-  const handleDecreaseQty = () => {
-    if (productQty > 1) {
-      setProductQty(productQty - 1);
-    }
-  };
-  const handleIncreaseQty = () => {
-    if (productQty < 9) {
-      setProductQty(productQty + 1);
-    }
-  };
-  const handleOnChangeQty = e => {
-    const value = e.target.value;
-    if (value === '' || (value >= 0 && value <= 9)) {
-      setProductQty(Number(value));
-    }
-  };
-  const calculateDiscount = (price, discount) => {
-    if (price <= 0 || discount <= 0) return 0;
-
-    const disocuntPercentage = (price * discount) / 100;
-    return disocuntPercentage;
-  };
+  const { handleDecreaseQty, handleIncreaseQty, handleOnChangeQty, productQty } = useProductQty();
+  const { handleSizeOption, checkedState, size, checkboxIndex } = useCheckboxState(sizes);
 
   return (
     <div className='single-product'>
@@ -71,7 +42,11 @@ const SingleProduct = ({ data }) => {
           <figure className='product-image' aria-hidden='false'>
             <img src={mainImage} alt={name} loading='lazy' className='object-cover' />
           </figure>
-          <Discount price={price} discount={discount} calculateDiscount={calculateDiscount} />
+          <Discount
+            newPrice={price.new}
+            oldPrice={price.old}
+            calculateDiscount={calculateDiscount}
+          />
         </div>
 
         <div className='product-thumb'>
@@ -102,9 +77,9 @@ const SingleProduct = ({ data }) => {
           </h2>
           <hr className='horizontal-divider' />
           <div className='product-price'>
-            <del>${old_price}.00</del>
+            <del>${price.old}.00</del>
             <span>-</span>
-            <ins className='new-price'>${price}.00</ins>
+            <ins className='new-price'>${price.new}.00</ins>
           </div>
           <div className='product-countdown-container'>
             <p>Offer ends in :</p>
@@ -216,8 +191,8 @@ const SocialList = () => {
   );
 };
 
-const Discount = ({ price, discount, calculateDiscount }) => {
-  const discountAmount = calculateDiscount(price, discount);
+const Discount = ({ oldPrice, newPrice, calculateDiscount }) => {
+  const discountAmount = calculateDiscount(oldPrice, newPrice);
 
   return (
     <div className='product-badge'>

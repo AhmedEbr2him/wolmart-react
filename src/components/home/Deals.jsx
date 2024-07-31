@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import SingleProduct from '../common/SingleProduct';
 import Slider from 'react-slick';
-import { IoIosArrowForward } from 'react-icons/io';
-import { IoIosArrowBack } from 'react-icons/io';
 import BestSelling from './BestSelling';
 import CustomPrevArrow from '../common/CustomArrows/CustomPrevArrow';
 import CustomNextArrow from '../common/CustomArrows/CustomNextArrow';
@@ -22,6 +20,7 @@ const Deals = () => {
     };
     fetchProducts();
   }, []);
+
   const settings = {
     dots: false,
     draggable: true,
