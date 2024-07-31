@@ -11,6 +11,7 @@ import { BsTwitterX } from 'react-icons/bs';
 import { FaPinterestP } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { SlSocialInstagram } from 'react-icons/sl';
+import PropTypes from 'prop-types';
 
 const SingleProduct = ({ headTitle, data }) => {
   const {
@@ -27,15 +28,11 @@ const SingleProduct = ({ headTitle, data }) => {
     discount = '',
     sizes = [{}],
   } = data;
-  const socialLinks = [
-    { label: 'facebook', link: '#', icon: <FaFacebookF /> },
-    { label: 'X', link: '#', icon: <BsTwitterX /> },
-    { label: 'Pinterest', link: '#', icon: <FaPinterestP /> },
-    { label: "What's app", link: '#', icon: <FaWhatsapp /> },
-    { label: 'Inestagram', link: '#', icon: <SlSocialInstagram /> },
-  ];
+
+  // RATING VARIABLES
   const maxRating = 5;
   const fillStars = Math.round(rating);
+
   const [mainImage, setMainImage] = useState(images[0]?.src);
   const [checkedState, setIsCheckedState] = useState(new Array(sizes.length).fill(false));
   const [size, setSize] = useState({});
@@ -64,15 +61,24 @@ const SingleProduct = ({ headTitle, data }) => {
       setProductQty(Number(value));
     }
   };
+  const calculateDiscount = (price, discount) => {
+    if (price <= 0 || discount <= 0) return 0;
+
+    const disocuntPercentage = (price * discount) / 100;
+    return disocuntPercentage;
+  };
 
   return (
     <div className='single-product'>
       {headTitle && <h4 className='title'>{headTitle}</h4>}
 
       <div className='product product-single'>
-        <figure className='product-image' aria-hidden='false'>
-          <img src={mainImage} alt={name} className='object-cover' />
-        </figure>
+        <div className='product-media'>
+          <figure className='product-image' aria-hidden='false'>
+            <img src={mainImage} alt={name} loading='lazy' className='object-cover' />
+          </figure>
+          <Discount price={price} discount={discount} calculateDiscount={calculateDiscount} />
+        </div>
 
         <div className='product-thumb'>
           <div className='thumb-list'>
@@ -95,6 +101,7 @@ const SingleProduct = ({ headTitle, data }) => {
             ))}
           </div>
         </div>
+
         <div className='prodcut-details'>
           <h2 className='product-title'>
             <Link to='#'>{name}</Link>
@@ -114,9 +121,10 @@ const SingleProduct = ({ headTitle, data }) => {
               {Array.from({ length: maxRating }).map((_, index) => (
                 <Star key={index} filled={index < fillStars} />
               ))}
+              <span className='tooltip'>{rating}</span>
             </div>
             <Link className='rating-reviews'>
-              <span className='tooltip'>{`(${rating} Reviews)`}</span>
+              <span>{`(${reviews.length} Reviews)`}</span>
             </Link>
           </div>
 
@@ -184,23 +192,7 @@ const SingleProduct = ({ headTitle, data }) => {
               </button>
             </div>
 
-            <div className='social-links-wrapper'>
-              <div className='social-links'>
-                {socialLinks.map((link, index) => (
-                  <Link key={index} to={link.link} className='btn'>
-                    {link.icon}
-                  </Link>
-                ))}
-              </div>
-              <div className='product-links-wrapper'>
-                <button aria-label='favorite' className='favorite-btn'>
-                  <IoMdHeartEmpty />
-                </button>
-                <button aria-label='compare' className='compare-btn'>
-                  <LiaBalanceScaleSolid />
-                </button>
-              </div>
-            </div>
+            <SocialList />
           </div>
         </div>
       </div>
@@ -208,10 +200,56 @@ const SingleProduct = ({ headTitle, data }) => {
   );
 };
 export default SingleProduct;
+
 const Star = ({ filled }) => {
   return (
     <span className='rating-item'>
-      <GoStarFill style={{ color: filled ? 'gold' : 'lightgray' }} />
+      <GoStarFill style={{ color: filled ? 'var(--secondary-text-color)' : 'lightgray' }} />
     </span>
   );
+};
+
+const SocialList = () => {
+  const socialLinks = [
+    { label: 'facebook', link: '#', icon: <FaFacebookF /> },
+    { label: 'X', link: '#', icon: <BsTwitterX /> },
+    { label: 'Pinterest', link: '#', icon: <FaPinterestP /> },
+    { label: "What's app", link: '#', icon: <FaWhatsapp /> },
+    { label: 'Inestagram', link: '#', icon: <SlSocialInstagram /> },
+  ];
+
+  return (
+    <div className='social-links-wrapper'>
+      <div className='social-links'>
+        {socialLinks.map((link, index) => (
+          <Link key={index} to={link.link} className='btn'>
+            {link.icon}
+          </Link>
+        ))}
+      </div>
+      <div className='product-links-wrapper'>
+        <button aria-label='favorite' className='favorite-btn'>
+          <IoMdHeartEmpty />
+          <span className='tooltip'>Add to Favorite</span>
+        </button>
+        <button aria-label='compare' className='compare-btn'>
+          <LiaBalanceScaleSolid />
+          <span className='tooltip'>Add to Comparison</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+const Discount = ({ price, discount, calculateDiscount }) => {
+  const discountAmount = calculateDiscount(price, discount);
+
+  return (
+    <div className='product-badge'>
+      <span>{discountAmount}% off</span>
+    </div>
+  );
+};
+SingleProduct.propTypes = {
+  headTitle: PropTypes.string,
+  data: PropTypes.object.isRequired,
 };

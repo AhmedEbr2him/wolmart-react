@@ -402,6 +402,27 @@ input[type='number']::-webkit-outer-spin-button {
   object-fit: cover;
   height: auto;
 }
+.tooltip {
+  position: absolute;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  width: max-content;
+  transform: translate(-50%, -50%);
+  background: var(--primary-color);
+  color: var(--site-background);
+  padding: 2px 5px;
+  transition: var(--motion-duration-short-2);
+  opacity: 0;
+  visibility: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: var(--primary-color);
+    width: 15px;
+    height: 10px;
+  }
+}
 
 /**
 * COMPONENTS
@@ -411,6 +432,7 @@ input[type='number']::-webkit-outer-spin-button {
   border: 1px solid var(--border-color);
   border-radius: var(--small-radius);
   margin-inline: 10px;
+  position: relative;
 
   .title {
     padding: 0 3rem 1.8rem 0;
@@ -506,6 +528,29 @@ input[type='number']::-webkit-outer-spin-button {
       display: flex;
       align-items: center;
       gap: 1px;
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .tooltip {
+        left: 50%;
+        top: -2rem;
+        font-size: 1.25rem;
+        padding: 4px 8px;
+
+        &::before {
+          clip-path: polygon(50% 50%, 0 0, 100% 0);
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
     a {
       font-size: 1.2rem;
@@ -674,11 +719,50 @@ input[type='number']::-webkit-outer-spin-button {
       > * {
         font-size: 2.5rem;
         transition: var(--motion-duration-short-2);
+        position: relative;
+
+        .tooltip {
+          top: 45%;
+          right: 0;
+          &::before {
+            clip-path: polygon(50% 50%, 0 100%, 0 0);
+            right: -13px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
 
         &:hover {
           color: var(--main-text-color);
+
+          .tooltip {
+            opacity: 1;
+            visibility: visible;
+          }
         }
       }
+      .favorite-btn:hover .tooltip {
+        right: -1rem;
+      }
+      .compare-btn:hover .tooltip {
+        right: -2rem;
+      }
+    }
+  }
+  .product-media {
+    position: relative;
+  }
+  .product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    span {
+      background: var(--secondary-text-color);
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      border-radius: var(--small-radius);
     }
   }
 }
