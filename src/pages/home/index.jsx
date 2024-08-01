@@ -12,29 +12,35 @@ import {
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
 const Home = () => {
+  const [dealProducts, setDealProducts] = useState([]);
   const [products, setProducts] = useState([]);
 
+  console.log(products);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await fetch('/data.json');
         const data = await response.json();
-        setProducts(data);
+        setDealProducts(data);
+        setProducts(data.products);
       } catch (error) {
         console.log(error);
       }
     };
     fetchProducts();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const topProducts 
   return (
     <>
       <IntroSection />
       <FeaturesSection />
       <CategoryBanner />
-      {products && <Deals products={products} />}
+      {dealProducts && <Deals products={dealProducts} />}
       <CategorySection />
-      {products && <PopularDepartments products={products} />}
+      {products && <PopularDepartments products='' />}
 
       <div className='banner-wrapper'>
         <Banner
@@ -52,8 +58,7 @@ const Home = () => {
           underline='true'
         />
       </div>
-
-      {products && <ClothingAndApparel products={products} />}
+      {products && <ClothingAndApparel products={''} />}
     </>
   );
 };

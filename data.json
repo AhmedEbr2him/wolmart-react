@@ -1,4 +1,3214 @@
 {
+  "products": [
+    {
+      "id": "",
+      "name": "Kitchen Cooker",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 150.69,
+        "new": 0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-1.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 3.3,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Professional Pixel Camera",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 95.99,
+        "new": 125.0
+      },
+
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.3,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Sport Women’s Wear",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 40.99,
+        "new": 95.99
+      },
+
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-3.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "sport",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Latest Speaker",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 20.99,
+        "new": 0
+      },
+
+      "old_price": 0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-4.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Men's Black Wrist Watch",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 155.99,
+        "new": 135.99
+      },
+
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-5.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Wash Machine",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 399.0,
+        "new": 320.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-6.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Security Guard",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 60.0,
+        "new": 50.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-7.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Apple Super Notecom",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 285.99,
+        "new": 250.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-8.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "HD Television",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 300.99,
+        "new": 250.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-9.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Kitchen Cooker",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 150.69,
+        "new": 0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-1.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 3.3,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Professional Pixel Camera",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 95.99,
+        "new": 125.0
+      },
+
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.3,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Sport Women’s Wear",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 40.99,
+        "new": 95.99
+      },
+
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-3.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "sports",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Latest Speaker",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 20.99,
+        "new": 0
+      },
+
+      "old_price": 0,
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-4.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Men's Black Wrist Watch",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 155.99,
+        "new": 135.99
+      },
+
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-5.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "shirt",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Wash Machine",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 399.0,
+        "new": 320.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-6.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Security Guard",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 60.0,
+        "new": 50.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-7.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Apple Super Notecom",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 285.99,
+        "new": 250.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-8.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "HD Television",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 300.99,
+        "new": 250.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src": "./public/products/2-9.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 4.4,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Classic Hat",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 53.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-1-1.jpg",
+          "src_2": "./public/products/3-1-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        },
+        {
+          "value": "5",
+          "label": "5",
+          "price": 53
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Women’s White Handbag",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 26.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-2.jpg",
+          "src_2": "./public/products/3-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": 1,
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "price": 53
+        },
+        {
+          "value": 5,
+          "label": "5",
+          "price": 53
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Multi Funtional Apple iPhone",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 145.99,
+        "new": 136.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-3.jpg",
+          "src_2": "./public/products/3-3.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 20,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": 1,
+          "price": 136.99
+        },
+        {
+          "value": 2,
+          "price": 136.99
+        },
+        {
+          "value": 3,
+          "price": 136.99
+        },
+        {
+          "value": 4,
+          "price": 136.99
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Fashion Blue Towel",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 26.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-4-1.jpg",
+          "src_2": "./public/products/3-4-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 20,
+      "rating": 3.5,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Apple Super Notecom",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 445.99,
+        "new": 420.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-5.jpg",
+          "src_2": "./public/products/3-5.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Women’s Comforter",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": "23.33"
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-6-1.jpg",
+          "src_2": "./public/products/3-6-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+      "category": "fashion",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": 1,
+          "label": "1",
+          "price": 23.25
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "price": 25.99
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "price": 28.99
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "price": 30.99
+        },
+        {
+          "value": 5,
+          "label": "5",
+          "price": 33.63
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Multi-colorful Music",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 160.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-7.jpg",
+          "src_2": "./public/products/3-7.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+      "category": "home",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User6",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User7",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": 1,
+          "label": "1",
+          "price": 160.99
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "price": 25.99
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "price": 180.99
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "price": 200.99
+        },
+        {
+          "value": 5,
+          "label": "5",
+          "price": 299.99
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Comfortable Backpack",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": "45.59"
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-8-1.jpg",
+          "src_2": "./public/products/3-8-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+      "category": "fashion",
+      "stock": 120,
+      "rating": 3.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User6",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User7",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User8",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": 1,
+          "price": 45.95
+        },
+        {
+          "value": 2,
+          "price": 45.95
+        },
+        {
+          "value": 3,
+          "price": 45.95
+        },
+        {
+          "value": 4,
+          "price": 45.95
+        },
+        {
+          "value": 5,
+          "price": 45.95
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Data Transformer Tool",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 25.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-9.jpg",
+          "src_2": "./public/products/3-9.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 10,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Women’s hairdye",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 35.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-10.jpg",
+          "src_2": "./public/products/3-10.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 120,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Classic Hat",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 53.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-1-1.jpg",
+          "src_2": "./public/products/3-1-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        },
+        {
+          "value": "5",
+          "label": "5",
+          "price": 53
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Women’s White Handbag",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 26.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-2.jpg",
+          "src_2": "./public/products/3-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": 1,
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "price": 53
+        },
+        {
+          "value": 5,
+          "label": "5",
+          "price": 53
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Multi Funtional Apple iPhone",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 145.99,
+        "new": 136.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-3.jpg",
+          "src_2": "./public/products/3-3.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 20,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": 1,
+          "price": 136.99
+        },
+        {
+          "value": 2,
+          "price": 136.99
+        },
+        {
+          "value": 3,
+          "price": 136.99
+        },
+        {
+          "value": 4,
+          "price": 136.99
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Fashion Blue Towel",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 26.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-4-1.jpg",
+          "src_2": "./public/products/3-4-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 20,
+      "rating": 3.5,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Apple Super Notecom",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 445.99,
+        "new": 420.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-5.jpg",
+          "src_2": "./public/products/3-5.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Women’s Comforter",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": "23.33"
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-6-1.jpg",
+          "src_2": "./public/products/3-6-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+      "category": "fashion",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": 1,
+          "label": "1",
+          "price": 23.25
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "price": 25.99
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "price": 28.99
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "price": 30.99
+        },
+        {
+          "value": 5,
+          "label": "5",
+          "price": 33.63
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Multi-colorful Music",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 160.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-7.jpg",
+          "src_2": "./public/products/3-7.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+      "category": "home",
+      "stock": 20,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User6",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User7",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": 1,
+          "label": "1",
+          "price": 160.99
+        },
+        {
+          "value": 2,
+          "label": "2",
+          "price": 25.99
+        },
+        {
+          "value": 3,
+          "label": "3",
+          "price": 180.99
+        },
+        {
+          "value": 4,
+          "label": "4",
+          "price": 200.99
+        },
+        {
+          "value": 5,
+          "label": "5",
+          "price": 299.99
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Comfortable Backpack",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": "45.59"
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-8-1.jpg",
+          "src_2": "./public/products/3-8-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+      "category": "fashion",
+      "stock": 120,
+      "rating": 3.7,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User6",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User7",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User8",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": 1,
+          "price": 45.95
+        },
+        {
+          "value": 2,
+          "price": 45.95
+        },
+        {
+          "value": 3,
+          "price": 45.95
+        },
+        {
+          "value": 4,
+          "price": 45.95
+        },
+        {
+          "value": 5,
+          "price": 45.95
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Data Transformer Tool",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 25.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-9.jpg",
+          "src_2": "./public/products/3-9.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "home",
+      "stock": 10,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": 0,
+      "name": "Women’s hairdye",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 35.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/3-10.jpg",
+          "src_2": "./public/products/3-10.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 120,
+      "rating": 4.15,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Men’s Coat",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 25.99,
+        "new": 23.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-1.jpg",
+          "src_2": "./public/products/4-1.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.25,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "extra large",
+          "label": "xl",
+          "price": 53
+        },
+        {
+          "value": "large",
+          "label": "x",
+          "price": 53
+        },
+        {
+          "value": "medium",
+          "label": "m",
+          "price": 53
+        },
+        {
+          "value": "small",
+          "label": "s",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Women’s Fashion Handbag",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 29.99,
+        "new": 25.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-2-1.jpg",
+          "src_2": "./public/products/4-2-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "extra large",
+          "label": "xl",
+          "price": 53
+        },
+        {
+          "value": "large",
+          "label": "x",
+          "price": 53
+        },
+        {
+          "value": "medium",
+          "label": "m",
+          "price": 53
+        },
+        {
+          "value": "small",
+          "label": "s",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Black Winter Skating",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 40.99,
+        "new": 45.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/7-3.jpg",
+          "src_2": "./public/products/7-3.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User6",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        },
+        {
+          "value": "5",
+          "label": "5",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Sport Women's Wear",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 26.99,
+        "new": 22.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-4-1.jpg",
+          "src_2": "./public/products/4-4-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "extra large",
+          "label": "xl",
+          "price": 53
+        },
+        {
+          "value": "large",
+          "label": "x",
+          "price": 53
+        },
+        {
+          "value": "medium",
+          "label": "m",
+          "price": 53
+        },
+        {
+          "value": "small",
+          "label": "s",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Best Travel Bag",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 140.99,
+        "new": 122.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-5-1.jpg",
+          "src_2": "./public/products/4-5-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Gray Leather Shoes",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 25.99,
+        "new": 19.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-6.jpg",
+          "src_2": "./public/products/4-6.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Men's Black Wrist Watch",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 135.99,
+        "new": 123.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-7.jpg",
+          "src_2": "./public/products/4-7.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Women’s Hiking Hat",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 53.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-8.jpg",
+          "src_2": "./public/products/4-8.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.55,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Professional Pixel Camera",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 215.69,
+        "new": 245.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/5-1-1.jpg",
+          "src_2": "./public/products/5-1-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.88,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Wash Machine",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 325.69,
+        "new": 299.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/5-2-1.jpg",
+          "src_2": "./public/products/5-2-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "home",
+      "stock": 100,
+      "rating": 3.58,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "HD Television",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 450.59,
+        "new": 395.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/5-3.jpg",
+          "src_2": "./public/products/5-3.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 3.98,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Appel Macbook",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 950.59,
+        "new": 950.59
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/5-4.jpg",
+          "src_2": "./public/products/5-4.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.98,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "HD Headphoe",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 25.59,
+        "new": 30.59
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/5-7.jpg",
+          "src_2": "./public/products/5-7.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.98,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "Multi Functional Powebank 5000 AMP",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 24.59,
+        "new": 16.44
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/5-8.jpg",
+          "src_2": "./public/products/5-8.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "tech",
+      "stock": 100,
+      "rating": 4.98,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ]
+    }
+  ],
+
   "deals_products": [
     {
       "id": "1",
@@ -148,2346 +3358,6 @@
         }
       ],
       "discount": 25
-    }
-  ],
-  "best_selling": [
-    {
-      "id": 1,
-      "name": "Kitchen Cooker",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 150.69,
-        "new": 0
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-1.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-      "category": "home",
-      "stock": 100,
-      "rating": 3.3,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 2,
-      "name": "Professional Pixel Camera",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 95.99,
-        "new": 125.0
-      },
-
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-2.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "tech",
-      "stock": 100,
-      "rating": 4.3,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 3,
-      "name": "Sport Women’s Wear",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 40.99,
-        "new": 95.99
-      },
-
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-3.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "tech",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 4,
-      "name": "Latest Speaker",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 20.99,
-        "new": 0
-      },
-
-      "old_price": 0,
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-4.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "tech",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 5,
-      "name": "Men's Black Wrist Watch",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 155.99,
-        "new": 135.99
-      },
-
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-5.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "home",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 6,
-      "name": "Wash Machine",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 399.0,
-        "new": 320.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-6.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "home",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 7,
-      "name": "Security Guard",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 60.0,
-        "new": 50.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-7.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "home",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 8,
-      "name": "Apple Super Notecom",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 285.99,
-        "new": 250.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-8.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "home",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 9,
-      "name": "HD Television",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 300.99,
-        "new": 250.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src": "./public/products/2-9.jpg",
-          "width": 105,
-          "height": 118
-        }
-      ],
-
-      "category": "home",
-      "stock": 100,
-      "rating": 4.4,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        },
-        {
-          "user": "User3",
-          "comment": "Satisfactory quality.",
-          "rating": 4
-        }
-      ],
-      "sizes": [
-        {
-          "value": "xl",
-          "label": "Extra-Large",
-          "price": 214
-        },
-        {
-          "value": "x",
-          "label": "Large",
-          "price": 200
-        },
-        {
-          "value": "m",
-          "label": "medium",
-          "price": 180
-        },
-        {
-          "value": "s",
-          "label": "Small",
-          "price": 180
-        }
-      ],
-      "discount": 0
-    }
-  ],
-
-  "new_arrivals": [
-    {
-      "id": 1,
-      "name": "Classic Hat",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 53.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-1-1.jpg",
-          "src_2": "./public/products/3-1-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 3.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        },
-        {
-          "value": "5",
-          "label": "5",
-          "price": 53
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 2,
-      "name": "Women’s White Handbag",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 26.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-2.jpg",
-          "src_2": "./public/products/3-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": 1,
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": 2,
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": 3,
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": 4,
-          "label": "4",
-          "price": 53
-        },
-        {
-          "value": 5,
-          "label": "5",
-          "price": 53
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 3,
-      "name": "Multi Funtional Apple iPhone",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 145.99,
-        "new": 136.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-3.jpg",
-          "src_2": "./public/products/3-3.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": 1,
-          "price": 136.99
-        },
-        {
-          "value": 2,
-          "price": 136.99
-        },
-        {
-          "value": 3,
-          "price": 136.99
-        },
-        {
-          "value": 4,
-          "price": 136.99
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Fashion Blue Towel",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 26.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-4-1.jpg",
-          "src_2": "./public/products/3-4-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "home",
-      "stock": 20,
-      "rating": 3.5,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Apple Super Notecom",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 445.99,
-        "new": 420.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-5.jpg",
-          "src_2": "./public/products/3-5.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Women’s Comforter",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": "23.33"
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-6-1.jpg",
-          "src_2": "./public/products/3-6-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": 1,
-          "label": "1",
-          "price": 23.25
-        },
-        {
-          "value": 2,
-          "label": "2",
-          "price": 25.99
-        },
-        {
-          "value": 3,
-          "label": "3",
-          "price": 28.99
-        },
-        {
-          "value": 4,
-          "label": "4",
-          "price": 30.99
-        },
-        {
-          "value": 5,
-          "label": "5",
-          "price": 33.63
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Multi-colorful Music",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 160.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-7.jpg",
-          "src_2": "./public/products/3-7.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User6",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User7",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": 1,
-          "label": "1",
-          "price": 160.99
-        },
-        {
-          "value": 2,
-          "label": "2",
-          "price": 25.99
-        },
-        {
-          "value": 3,
-          "label": "3",
-          "price": 180.99
-        },
-        {
-          "value": 4,
-          "label": "4",
-          "price": 200.99
-        },
-        {
-          "value": 5,
-          "label": "5",
-          "price": 299.99
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Comfortable Backpack",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": "45.59"
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-8-1.jpg",
-          "src_2": "./public/products/3-8-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-      "category": "tech",
-      "stock": 120,
-      "rating": 3.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User6",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User7",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User8",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": 1,
-          "price": 45.95
-        },
-        {
-          "value": 2,
-          "price": 45.95
-        },
-        {
-          "value": 3,
-          "price": 45.95
-        },
-        {
-          "value": 4,
-          "price": 45.95
-        },
-        {
-          "value": 5,
-          "price": 45.95
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Data Transformer Tool",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 25.0
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-9.jpg",
-          "src_2": "./public/products/3-9.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 10,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "Women’s hairdye",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 35.0
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-10.jpg",
-          "src_2": "./public/products/3-10.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 120,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    }
-  ],
-  "best_seller": [
-    {
-      "id": 1,
-      "name": "Classic Hat",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 53.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-1-1.jpg",
-          "src_2": "./public/products/3-1-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 3.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        },
-        {
-          "value": "5",
-          "label": "5",
-          "price": 53
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 2,
-      "name": "Women’s White Handbag",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 26.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-2.jpg",
-          "src_2": "./public/products/3-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": 1,
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": 2,
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": 3,
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": 4,
-          "label": "4",
-          "price": 53
-        },
-        {
-          "value": 5,
-          "label": "5",
-          "price": 53
-        }
-      ],
-      "discount": 0
-    },
-    {
-      "id": 3,
-      "name": "Multi Funtional Apple iPhone",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 145.99,
-        "new": 136.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-3.jpg",
-          "src_2": "./public/products/3-3.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": 1,
-          "price": 136.99
-        },
-        {
-          "value": 2,
-          "price": 136.99
-        },
-        {
-          "value": 3,
-          "price": 136.99
-        },
-        {
-          "value": 4,
-          "price": 136.99
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Fashion Blue Towel",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 26.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-4-1.jpg",
-          "src_2": "./public/products/3-4-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "home",
-      "stock": 20,
-      "rating": 3.5,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Apple Super Notecom",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 445.99,
-        "new": 420.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-5.jpg",
-          "src_2": "./public/products/3-5.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Women’s Comforter",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": "23.33"
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-6-1.jpg",
-          "src_2": "./public/products/3-6-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": 1,
-          "label": "1",
-          "price": 23.25
-        },
-        {
-          "value": 2,
-          "label": "2",
-          "price": 25.99
-        },
-        {
-          "value": 3,
-          "label": "3",
-          "price": 28.99
-        },
-        {
-          "value": 4,
-          "label": "4",
-          "price": 30.99
-        },
-        {
-          "value": 5,
-          "label": "5",
-          "price": 33.63
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Multi-colorful Music",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 160.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-7.jpg",
-          "src_2": "./public/products/3-7.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-      "category": "tech",
-      "stock": 20,
-      "rating": 4.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User6",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User7",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": 1,
-          "label": "1",
-          "price": 160.99
-        },
-        {
-          "value": 2,
-          "label": "2",
-          "price": 25.99
-        },
-        {
-          "value": 3,
-          "label": "3",
-          "price": 180.99
-        },
-        {
-          "value": 4,
-          "label": "4",
-          "price": 200.99
-        },
-        {
-          "value": 5,
-          "label": "5",
-          "price": 299.99
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Comfortable Backpack",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": "45.59"
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-8-1.jpg",
-          "src_2": "./public/products/3-8-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-      "category": "tech",
-      "stock": 120,
-      "rating": 3.7,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User6",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User7",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User8",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": 1,
-          "price": 45.95
-        },
-        {
-          "value": 2,
-          "price": 45.95
-        },
-        {
-          "value": 3,
-          "price": 45.95
-        },
-        {
-          "value": 4,
-          "price": 45.95
-        },
-        {
-          "value": 5,
-          "price": 45.95
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "Data Transformer Tool",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 25.0
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-9.jpg",
-          "src_2": "./public/products/3-9.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 10,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "Women’s hairdye",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 35.0
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/3-10.jpg",
-          "src_2": "./public/products/3-10.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 120,
-      "rating": 4.15,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ]
-    }
-  ],
-
-  "new_arrivals_collection": [
-    {
-      "id": 1,
-      "name": "Men’s Coat",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 25.99,
-        "new": 23.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-1.jpg",
-          "src_2": "./public/products/4-1.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 4.25,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": "extra large",
-          "label": "xl",
-          "price": 53
-        },
-        {
-          "value": "large",
-          "label": "x",
-          "price": 53
-        },
-        {
-          "value": "medium",
-          "label": "m",
-          "price": 53
-        },
-        {
-          "value": "small",
-          "label": "s",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Women’s Fashion Handbag",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 29.99,
-        "new": 25.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-2-1.jpg",
-          "src_2": "./public/products/4-2-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 3.99,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": "extra large",
-          "label": "xl",
-          "price": 53
-        },
-        {
-          "value": "large",
-          "label": "x",
-          "price": 53
-        },
-        {
-          "value": "medium",
-          "label": "m",
-          "price": 53
-        },
-        {
-          "value": "small",
-          "label": "s",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Black Winter Skating",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 40.99,
-        "new": 45.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/7-3.jpg",
-          "src_2": "./public/products/7-3.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 3.99,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User2",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User3",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User4",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User5",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User6",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        },
-        {
-          "value": "5",
-          "label": "5",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "Sport Women's Wear",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 26.99,
-        "new": 22.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-4-1.jpg",
-          "src_2": "./public/products/4-4-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 4.99,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "sizes": [
-        {
-          "value": "extra large",
-          "label": "xl",
-          "price": 53
-        },
-        {
-          "value": "large",
-          "label": "x",
-          "price": 53
-        },
-        {
-          "value": "medium",
-          "label": "m",
-          "price": 53
-        },
-        {
-          "value": "small",
-          "label": "s",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "Best Travel Bag",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 140.99,
-        "new": 122.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-5-1.jpg",
-          "src_2": "./public/products/4-5-2.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 4.99,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Gray Leather Shoes",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 25.99,
-        "new": 19.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-6.jpg",
-          "src_2": "./public/products/4-6.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 3.99,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "Men's Black Wrist Watch",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 135.99,
-        "new": 123.99
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-7.jpg",
-          "src_2": "./public/products/4-7.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 3.99,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "Women’s Hiking Hat",
-      "description": "A brief description of the product.",
-      "price": {
-        "old": 0,
-        "new": 53.0
-      },
-      "currency": "USD",
-      "images": [
-        {
-          "src_1": "./public/products/4-8.jpg",
-          "src_2": "./public/products/4-8.jpg",
-          "width": 300,
-          "height": 338
-        }
-      ],
-
-      "category": "fashion",
-      "stock": 100,
-      "rating": 4.55,
-      "reviews": [
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        },
-        {
-          "user": "User1",
-          "comment": "Great product!",
-          "rating": 5
-        }
-      ],
-      "colors": [
-        {
-          "value": "1",
-          "label": "1",
-          "price": 53
-        },
-        {
-          "value": "2",
-          "label": "2",
-          "price": 53
-        },
-        {
-          "value": "3",
-          "label": "3",
-          "price": 53
-        },
-        {
-          "value": "4",
-          "label": "4",
-          "price": 53
-        }
-      ]
     }
   ]
 }
