@@ -23,6 +23,7 @@ const Home = () => {
     };
     fetchProducts();
   }, []);
+
   return (
     <article>
       <IntroSection />

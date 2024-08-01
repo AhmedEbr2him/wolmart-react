@@ -24,6 +24,7 @@ const Product = ({ data }) => {
       icon: <TbGitCompare />,
     },
   ];
+
   return (
     <div className='popular-product'>
       <figure className='product-media'>
@@ -48,6 +49,7 @@ const Product = ({ data }) => {
           </Link>
         ))}
       </figure>
+
       <div className='product-action-vertical'>
         {actionList.map((item, index) => (
           <button
@@ -60,6 +62,7 @@ const Product = ({ data }) => {
           </button>
         ))}
       </div>
+
       <div className='product-details'>
         <h4 className='product-name'>
           <Link to='#'>{name}</Link>
