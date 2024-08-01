@@ -329,7 +329,6 @@ html,
     color: #262626;
   }
 }
-
 .small-btn {
   width: 40px;
   height: 40px;
@@ -337,7 +336,41 @@ html,
   place-content: center;
   border-radius: var(--circle-radius) !important;
 }
+.link-underline {
+  position: relative;
+  width: fit-content;
+  font-weight: var(--weight-bold);
+  font-size: 1.4rem;
+  line-height: 2.24rem;
 
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    right: 0;
+    transition: var(--motion-duration-medium-1);
+  }
+  &.active {
+    &::after {
+      left: 0;
+      width: 100%;
+    }
+  }
+  &:hover::after {
+    width: 100%;
+    right: auto;
+    left: 0;
+  }
+
+  svg {
+    font-size: 1.8rem;
+    vertical-align: middle;
+    margin-left: 2px;
+  }
+}
 .scrim-overlay {
   background: var(--scrim);
   width: 100%;

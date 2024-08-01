@@ -19,6 +19,7 @@ export { default as CustomNextArrow } from './common/CustomArrows/CustomNextArro
 export { default as SectionTitle } from './common/SectionTitle';
 export { default as Product } from './common/Product';
 export { default as ProductPrice } from './common/ProductPrice';
+export { default as Banner } from './common/Banner';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';

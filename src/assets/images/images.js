@@ -15,9 +15,11 @@ import banner_dark_3 from './slides/slide-dark-3.jpg';
 import skate from './slides/skate.png';
 import shoe from './slides/shoes.png';
 import climbing from './slides/men.png';
-/* CATEGORY BANNER SECTION */
+/* BANNERS */
 import categoryBanner_1 from './banners/category-banner-1.jpg';
 import categoryBanner_2 from './banners/cateogry-banner-2.jpg';
+import Banenr_1 from './banners/3-1.jpg';
+import Banenr_2 from './banners/3-2.jpg';
 
 /* CATEGORIES */
 import category_1 from './categories/2-1.jpg';
@@ -47,9 +49,11 @@ const Images = {
     climbing,
   },
 
-  categoryBanner: {
+  banners: {
     categoryBanner_1,
     categoryBanner_2,
+    Banenr_1,
+    Banenr_2,
   },
 
   categories: {

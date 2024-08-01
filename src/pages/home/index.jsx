@@ -6,8 +6,10 @@ import {
   Deals,
   CategorySection,
   PopularDepartments,
+  Banner,
 } from '../../components';
 import { useEffect, useState } from 'react';
+import Images from '../../assets/images/images';
 const Home = () => {
   const [products, setProducts] = useState([]);
 
@@ -32,6 +34,23 @@ const Home = () => {
       {products && <Deals products={products} />}
       <CategorySection />
       {products && <PopularDepartments products={products} />}
+
+      <div className='banner-wrapper'>
+        <Banner
+          image={Images.banners.Banenr_1}
+          backgroundColor={'#3B4B48'}
+          h5={'Natural Process'}
+          h3={'Cosmetic Makeup Professional'}
+          underline='true'
+        />
+        <Banner
+          image={Images.banners.Banenr_2}
+          backgroundColor={'#E5E5E5'}
+          h5={'Trending Now'}
+          h3={"Women's Lifestyle Collection"}
+          underline='true'
+        />
+      </div>
     </article>
   );
 };

@@ -2,12 +2,12 @@ import Images from '../../assets/images/images';
 
 const CategoryBanner = () => {
   return (
-    <div className='category-banner-wrapper'>
+    <div className='fixed-banner-wrapper'>
       <div className='container'>
-        <div className='category-banner first-banner'>
+        <div className='fixed-banner first-banner'>
           <figure>
             <img
-              src={Images.categoryBanner.categoryBanner_1}
+              src={Images.banners.categoryBanner_1}
               alt='Category Banner'
               width='610'
               height='160'
@@ -16,7 +16,7 @@ const CategoryBanner = () => {
               className='object-cover'
             />
           </figure>
-          <div className='category-banner-content'>
+          <div className='fixed-banner-content'>
             <h5>
               Get up to <span>20% Off</span>
             </h5>
@@ -26,10 +26,10 @@ const CategoryBanner = () => {
             </p>
           </div>
         </div>
-        <div className='category-banner second-banner'>
+        <div className='fixed-banner second-banner'>
           <figure>
             <img
-              src={Images.categoryBanner.categoryBanner_2}
+              src={Images.banners.categoryBanner_2}
               alt='Category Banner'
               width='610'
               height='160'
@@ -38,7 +38,7 @@ const CategoryBanner = () => {
               className='object-cover'
             />
           </figure>
-          <div className='category-banner-content'>
+          <div className='fixed-banner-content'>
             <h5>New Arrivals</h5>
             <h3>Accessories collection</h3>
             <p className='banner-price'>

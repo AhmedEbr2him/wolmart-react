@@ -41,68 +41,66 @@ const Header = () => {
   const { isDrawerActive } = useContext(MainContext);
   return (
     <header className={`header ${isScroll ? 'scroll' : ''}`}>
-      {!isDrawerActive && (
-        <div className='header-top'>
-          <div className='container'>
-            <div className='left-part'>
-              <marquee>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</marquee>
-            </div>
-            <div className='right-part'>
-              <div className='menu'>
-                <div className='dropdown'>
-                  <button className='dropdown-button' aria-label='dropdown list button'>
-                    <span>USD</span>
-                    <IoIosArrowDown />
-                  </button>
-                  <div className='dropdown-list'>
-                    {currencyList.map((currency, index) => (
-                      <button key={index} className='dropdown-item'>
-                        {currency}
-                      </button>
-                    ))}
-                  </div>
+      <div className='header-top'>
+        <div className='container'>
+          <div className='left-part'>
+            <marquee>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</marquee>
+          </div>
+          <div className='right-part'>
+            <div className='menu'>
+              <div className='dropdown'>
+                <button className='dropdown-button' aria-label='dropdown list button'>
+                  <span>USD</span>
+                  <IoIosArrowDown />
+                </button>
+                <div className='dropdown-list'>
+                  {currencyList.map((currency, index) => (
+                    <button key={index} className='dropdown-item'>
+                      {currency}
+                    </button>
+                  ))}
                 </div>
+              </div>
 
-                <div className='dropdown'>
-                  <button className='dropdown-button' aria-label='dropdown list button'>
-                    <span>EN</span>
-                    <img src={Images.flags.en} alt='language' />
-                    <IoIosArrowDown />
-                  </button>
-                  <div className='dropdown-list'>
-                    {langList.map((lang, index) => (
-                      <button key={index} className='dropdown-item'>
-                        <img src={lang.img} alt='language' />
-                        <span>{lang.title}</span>
-                      </button>
-                    ))}
-                  </div>
+              <div className='dropdown'>
+                <button className='dropdown-button' aria-label='dropdown list button'>
+                  <span>EN</span>
+                  <img src={Images.flags.en} alt='language' />
+                  <IoIosArrowDown />
+                </button>
+                <div className='dropdown-list'>
+                  {langList.map((lang, index) => (
+                    <button key={index} className='dropdown-item'>
+                      <img src={lang.img} alt='language' />
+                      <span>{lang.title}</span>
+                    </button>
+                  ))}
                 </div>
               </div>
-              <span className='divider'></span>
-              <div className='top-links'>
-                <Link to='#' aria-label='blog link'>
-                  <span> Blog</span>
-                </Link>
-                <Link to='#' aria-label='content us link'>
-                  <span>Content Us</span>
-                </Link>
-                <Link to='#' aria-label='account link'>
-                  <span>My Account</span>
-                </Link>
-                <Link to='#' aria-label='sign in link'>
-                  <span>Sign In</span>
-                  <LuUser />
-                </Link>
-                <span className='delimiter'>/</span>
-                <Link to='#' aria-label='sign in link'>
-                  <span>Register</span>
-                </Link>
-              </div>
+            </div>
+            <span className='divider'></span>
+            <div className='top-links'>
+              <Link to='#' aria-label='blog link'>
+                <span> Blog</span>
+              </Link>
+              <Link to='#' aria-label='content us link'>
+                <span>Content Us</span>
+              </Link>
+              <Link to='#' aria-label='account link'>
+                <span>My Account</span>
+              </Link>
+              <Link to='#' aria-label='sign in link'>
+                <span>Sign In</span>
+                <LuUser />
+              </Link>
+              <span className='delimiter'>/</span>
+              <Link to='#' aria-label='sign in link'>
+                <span>Register</span>
+              </Link>
             </div>
           </div>
         </div>
-      )}
+      </div>
 
       <div className='header-middle'>
         <div className='container'>
