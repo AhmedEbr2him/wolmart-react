@@ -5,12 +5,12 @@ export const useCheckboxState = ({ sizes }) => {
   const [size, setSize] = useState({});
   const [checkboxIndex, setCheckIndex] = useState('');
 
-  const handleSizeOption = (position, size) => {
+  const handleOption = (position, size) => {
     const updatedChecked = checkedState.map((item, index) => (index === position ? !item : false));
     setIsCheckedState(updatedChecked);
     setSize(size);
     setCheckIndex(position);
   };
 
-  return { handleSizeOption, checkedState, size, checkboxIndex, setIsCheckedState };
+  return { handleOption, checkedState, size, checkboxIndex, setIsCheckedState };
 };

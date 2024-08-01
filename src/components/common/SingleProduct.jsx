@@ -33,8 +33,9 @@ const SingleProduct = ({ data }) => {
 
   const [mainImage, setMainImage] = useState(images[0]?.src);
   const { handleDecreaseQty, handleIncreaseQty, handleOnChangeQty, productQty } = useProductQty();
-  const { handleSizeOption, checkedState, size, checkboxIndex, setIsCheckedState } =
-    useCheckboxState({ sizes });
+  const { handleOption, checkedState, size, checkboxIndex, setIsCheckedState } = useCheckboxState({
+    sizes,
+  });
 
   return (
     <div className='single-product'>
@@ -91,23 +92,9 @@ const SingleProduct = ({ data }) => {
           <div className='product-form product-variation-form product-size-swatch'>
             <p>Size:</p>
             <div className='product-variations'>
-              {sizes.map((size, index) => (
-                <label
-                  className='variations-item'
-                  key={index}
-                  data-selected={checkedState[index] ? 'true' : 'false'}
-                >
-                  {size.label}
-                  <input
-                    type='checkbox'
-                    name={size.label}
-                    value={size.value}
-                    aria-label={size.label}
-                    checked={checkedState[index]}
-                    onChange={() => handleSizeOption(index, size)}
-                  />
-                </label>
-              ))}
+              {sizes && (
+                <Sizes sizes={sizes} checkedState={checkedState} handleOption={handleOption} />
+              )}
             </div>
 
             <div className={`size-price ${checkedState[checkboxIndex] ? 'active' : ''}`}>
@@ -200,4 +187,26 @@ const Discount = ({ oldPrice, newPrice, calculateDiscount }) => {
       <span>{discountAmount}% off</span>
     </div>
   );
+};
+
+const Sizes = ({ sizes, checkedState, handleOption }) => {
+  {
+    return sizes.map((size, index) => (
+      <label
+        className='variations-item'
+        key={index}
+        data-selected={checkedState[index] ? 'true' : 'false'}
+      >
+        {size.label}
+        <input
+          type='checkbox'
+          name={size.label}
+          value={size.value}
+          aria-label={size.label}
+          checked={checkedState[index]}
+          onChange={() => handleOption(index, size)}
+        />
+      </label>
+    ));
+  }
 };

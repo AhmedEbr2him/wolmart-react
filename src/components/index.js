@@ -24,3 +24,4 @@ export { default as FeaturesSection } from './home/FeaturesSection';
 export { default as CategoryBanner } from './home/CategoryBanner';
 export { default as Deals } from './home/Deals';
 export { default as CategorySection } from './home/CategorySection';
+export { default as PopularDepartments } from './home/PopularDepartments';

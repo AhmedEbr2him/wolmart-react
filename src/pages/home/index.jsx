@@ -5,6 +5,7 @@ import {
   CategoryBanner,
   Deals,
   CategorySection,
+  PopularDepartments,
 } from '../../components';
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <CategoryBanner />
       <Deals />
       <CategorySection />
+      <PopularDepartments />
     </article>
   );
 };

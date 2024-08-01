@@ -350,7 +350,7 @@
   }
 }
 .deals-wrapper {
-  margin-block-end: 4rem;
+  margin-bottom: 4rem;
   .container {
     display: flex;
     flex-direction: column;
@@ -453,12 +453,7 @@
 .category-section {
   background: var(--section-background);
   padding-block: 5rem;
-
-  .title {
-    text-align: center;
-    margin-bottom: 2.5rem;
-    font-size: 2rem;
-  }
+  margin-block-end: 4rem;
 
   .slick-track {
     display: flex;
@@ -536,6 +531,43 @@
           bottom: -4px;
           transform: translateX(-50%);
         }
+      }
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: var(--weight-extra-bold);
+}
+
+/* POPULAR DEPATMENTS */
+.popular-departments {
+  .tab-nav {
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+
+      .nav-item {
+        border: 1px solid var(--alpha-20);
+        border-radius: var(--small-radius);
+        transition: var(--motion-duration-short-2);
+
+        &:hover {
+          border-color: var(--main-text-color);
+          color: var(--main-text-color);
+        }
+      }
+      .nav-link {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+        font-weight: var(--weight-bold);
+        text-transform: uppercase;
       }
     }
   }
