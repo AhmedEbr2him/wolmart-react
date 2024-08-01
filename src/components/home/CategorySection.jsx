@@ -40,7 +40,7 @@ const CategorySection = () => {
   };
 
   return (
-    <section className='category-section'>
+    <section className='section category-section'>
       <div className='container'>
         <SectionTitle title='Top Categories Of The Month' />
         <div className='category-list'>

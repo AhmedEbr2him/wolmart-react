@@ -7,6 +7,7 @@ import {
   CategorySection,
   PopularDepartments,
   Banner,
+  ClothingAndApparel,
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
@@ -27,7 +28,7 @@ const Home = () => {
   }, []);
 
   return (
-    <article>
+    <>
       <IntroSection />
       <FeaturesSection />
       <CategoryBanner />
@@ -51,7 +52,9 @@ const Home = () => {
           underline='true'
         />
       </div>
-    </article>
+
+      {products && <ClothingAndApparel products={products} />}
+    </>
   );
 };
 export default Home;

@@ -8,7 +8,6 @@
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  width: 445px;
   background-color: rgb(240, 241, 242);
   width: 100%;
 
@@ -253,7 +252,6 @@
 
 /* FEATURE */
 .features {
-  margin-block: 4rem;
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -282,9 +280,12 @@
     font-size: 1.25rem;
   }
 }
+.section {
+  margin-block-end: 4rem;
+}
 /* CATEGORY BANNER */
 .banner-wrapper {
-  padding-block-end: 4rem;
+  margin-block-end: 4rem;
 }
 .fixed-banner-wrapper {
   &:not(:last-child) {
@@ -299,6 +300,7 @@
 }
 .fixed-banner {
   position: relative;
+
   figure {
     border-radius: var(--small-radius);
 
@@ -456,7 +458,6 @@
 .category-section {
   background: var(--section-background);
   padding-block: 5rem;
-  margin-block-end: 4rem;
 
   .slick-track {
     display: flex;
@@ -545,6 +546,7 @@
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: var(--weight-extra-bold);
+  text-transform: capitalize;
 }
 
 /* POPULAR DEPATMENTS */
@@ -582,8 +584,6 @@
 
 /* POPULAR DEPARTMENTS */
 .popular-departments {
-  padding-block-end: 4rem;
-
   .tab-content {
     padding-block-start: 2rem;
     animation: fade-in 0.25s ease-in forwards;
@@ -605,5 +605,74 @@
   }
   100% {
     opacity: 1;
+  }
+}
+/* CLOTHING AND APPAREL */
+.banner-products {
+  .section-banner {
+    padding-block-start: 2rem;
+
+    .banner {
+      min-height: 21rem;
+      padding: 2rem;
+    }
+    .banner-background-content {
+      .horizontal-divider {
+        margin-block: 1.4rem;
+        border: 2px solid #262626;
+        width: 4rem;
+        margin-block: 1rem;
+      }
+      .small-head {
+        font-size: 1.4rem;
+        font-weight: var(--weight-semi-bold);
+        line-height: 2.4rem;
+      }
+      h3 {
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: var(--weight-extra-bold);
+        margin-bottom: 2.3rem;
+
+        span {
+          font-weight: var(--weight-medium);
+          text-transform: capitalize;
+        }
+      }
+      .btn {
+        width: fit-content;
+        height: fit-content;
+        padding: 8px 12px;
+        font-size: 1.3rem;
+        font-weight: var(--weight-extra-bold);
+        border: 2px solid #262626;
+        span {
+          margin-right: 5px;
+        }
+        :where(span, svg) {
+          color: #262626 !important;
+        }
+
+        &:hover {
+          background-color: #262626;
+          border-color: #262626;
+          :where(span, svg) {
+            color: #ffffff !important;
+          }
+        }
+      }
+    }
+  }
+
+  .products-list-wrapper {
+    padding-block-start: 2rem;
+
+    .popular-product {
+      margin-inline: 0.8rem;
+    }
+  }
+  .slick-slider .slick-dots {
+    bottom: -35px;
+    width: 100%;
   }
 }

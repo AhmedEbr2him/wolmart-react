@@ -1933,5 +1933,561 @@
         }
       ]
     }
+  ],
+
+  "new_arrivals_collection": [
+    {
+      "id": 1,
+      "name": "Men’s Coat",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 25.99,
+        "new": 23.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-1.jpg",
+          "src_2": "./public/products/4-1.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.25,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "extra large",
+          "label": "xl",
+          "price": 53
+        },
+        {
+          "value": "large",
+          "label": "x",
+          "price": 53
+        },
+        {
+          "value": "medium",
+          "label": "m",
+          "price": 53
+        },
+        {
+          "value": "small",
+          "label": "s",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Women’s Fashion Handbag",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 29.99,
+        "new": 25.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-2-1.jpg",
+          "src_2": "./public/products/4-2-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "extra large",
+          "label": "xl",
+          "price": 53
+        },
+        {
+          "value": "large",
+          "label": "x",
+          "price": 53
+        },
+        {
+          "value": "medium",
+          "label": "m",
+          "price": 53
+        },
+        {
+          "value": "small",
+          "label": "s",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Black Winter Skating",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 40.99,
+        "new": 45.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/7-3.jpg",
+          "src_2": "./public/products/7-3.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User3",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User4",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User5",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User6",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        },
+        {
+          "value": "5",
+          "label": "5",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sport Women's Wear",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 26.99,
+        "new": 22.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-4-1.jpg",
+          "src_2": "./public/products/4-4-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "sizes": [
+        {
+          "value": "extra large",
+          "label": "xl",
+          "price": 53
+        },
+        {
+          "value": "large",
+          "label": "x",
+          "price": 53
+        },
+        {
+          "value": "medium",
+          "label": "m",
+          "price": 53
+        },
+        {
+          "value": "small",
+          "label": "s",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Best Travel Bag",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 140.99,
+        "new": 122.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-5-1.jpg",
+          "src_2": "./public/products/4-5-2.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Gray Leather Shoes",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 25.99,
+        "new": 19.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-6.jpg",
+          "src_2": "./public/products/4-6.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Men's Black Wrist Watch",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 135.99,
+        "new": 123.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-7.jpg",
+          "src_2": "./public/products/4-7.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 3.99,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Women’s Hiking Hat",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 53.0
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/4-8.jpg",
+          "src_2": "./public/products/4-8.jpg",
+          "width": 300,
+          "height": 338
+        }
+      ],
+
+      "category": "fashion",
+      "stock": 100,
+      "rating": 4.55,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        }
+      ],
+      "colors": [
+        {
+          "value": "1",
+          "label": "1",
+          "price": 53
+        },
+        {
+          "value": "2",
+          "label": "2",
+          "price": 53
+        },
+        {
+          "value": "3",
+          "label": "3",
+          "price": 53
+        },
+        {
+          "value": "4",
+          "label": "4",
+          "price": 53
+        }
+      ]
+    }
   ]
 }

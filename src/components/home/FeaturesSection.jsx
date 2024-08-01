@@ -5,7 +5,7 @@ import { TfiHeadphoneAlt } from 'react-icons/tfi';
 
 const FeaturesSection = () => {
   return (
-    <div className='features'>
+    <section className='section features'>
       <div className='container'>
         <div className='feature-box'>
           <div className='icon'>
@@ -36,7 +36,7 @@ const FeaturesSection = () => {
           <p>Call or email us 24/7</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default FeaturesSection;

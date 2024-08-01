@@ -20,6 +20,8 @@ export { default as SectionTitle } from './common/SectionTitle';
 export { default as Product } from './common/Product';
 export { default as ProductPrice } from './common/ProductPrice';
 export { default as Banner } from './common/Banner';
+export { default as LinkUnderline } from './common/LinkUnderline';
+export { default as TitleLink } from './common/TitleLink';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';
@@ -28,3 +30,4 @@ export { default as CategoryBanner } from './home/CategoryBanner';
 export { default as Deals } from './home/Deals';
 export { default as CategorySection } from './home/CategorySection';
 export { default as PopularDepartments } from './home/PopularDepartments';
+export { default as ClothingAndApparel } from './home/ClothingAndApparel';

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react';
 import SingleProduct from '../common/SingleProduct';
 import Slider from 'react-slick';
 import BestSelling from './BestSelling';
@@ -18,7 +17,7 @@ const Deals = ({ products }) => {
   };
 
   return (
-    <div className='deals-wrapper'>
+    <section className='section deals-wrapper'>
       <div className='container'>
         <div className='product-wrapper'>
           <h4 className='head-title'>Deals Hot of The Day</h4>
@@ -40,7 +39,7 @@ const Deals = ({ products }) => {
           <BestSelling data={products.best_selling} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Deals;

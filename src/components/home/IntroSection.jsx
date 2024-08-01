@@ -21,13 +21,13 @@ const IntroSection = () => {
     },
   };
   return (
-    <div className='intro-section'>
+    <section className='section intro-section'>
       <Slider {...settings}>
         <FirstSlide />
         <SecondSlide />
         <ThirdSlide />
       </Slider>
-    </div>
+    </section>
   );
 };
 
