@@ -79,9 +79,9 @@ const SingleProduct = ({ data }) => {
           </h2>
           <hr className='horizontal-divider' />
           <div className='product-price'>
-            <del>${price.old}.00</del>
+            {price.old > 0 && <del>${price.old}.00</del>}
             <span>-</span>
-            <ins className='new-price'>${price.new}.00</ins>
+            {price.new > 0 && <ins className='new-price'>${price.new}.00</ins>}
           </div>
           <div className='product-countdown-container'>
             <p>Offer ends in :</p>

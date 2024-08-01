@@ -434,18 +434,6 @@
           font-size: 1.3rem;
         }
       }
-      .product-price {
-        margin-block-start: 0.6rem;
-        font-size: 1.4rem;
-        font-weight: var(--weight-bold);
-
-        ins {
-          margin-right: 0.8rem;
-        }
-        del {
-          color: var(--text-color);
-        }
-      }
     }
   }
 }
@@ -569,6 +557,22 @@
         font-weight: var(--weight-bold);
         text-transform: uppercase;
       }
+    }
+  }
+}
+
+/* POPULAR DEPARTMENTS */
+.popular-departments {
+  .tab-content {
+    padding-block-start: 2rem;
+  }
+  .products-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .product-price {
+      margin-block-start: 0;
     }
   }
 }

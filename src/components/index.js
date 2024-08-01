@@ -17,6 +17,8 @@ export { default as Rating } from './common/Rating';
 export { default as CustomPrevArrow } from './common/CustomArrows/CustomPrevArrow';
 export { default as CustomNextArrow } from './common/CustomArrows/CustomNextArrow';
 export { default as SectionTitle } from './common/SectionTitle';
+export { default as Product } from './common/Product';
+export { default as ProductPrice } from './common/ProductPrice';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import SingleProduct from '../common/SingleProduct';
 import Slider from 'react-slick';
@@ -5,22 +6,7 @@ import BestSelling from './BestSelling';
 import CustomPrevArrow from '../common/CustomArrows/CustomPrevArrow';
 import CustomNextArrow from '../common/CustomArrows/CustomNextArrow';
 
-const Deals = () => {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch('/data.json');
-        const data = await response.json();
-        setProducts(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchProducts();
-  }, []);
-
+const Deals = ({ products }) => {
   const settings = {
     dots: false,
     draggable: true,

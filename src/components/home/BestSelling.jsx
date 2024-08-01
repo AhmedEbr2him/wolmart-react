@@ -63,8 +63,8 @@ const BestSellingProduct = ({ product }) => {
         </h4>
         <Rating rating={rating} />
         <div className='product-price'>
-          <ins className='new-price'>${price.old}</ins>
-          {price.old > 0 && <del className='old-price'>${price.new}</del>}
+          {price.old > 0 && <ins className='new-price'>${price.old}</ins>}
+          {price.new > 0 && <del className='old-price'>${price.new}</del>}
         </div>
       </div>
     </div>
