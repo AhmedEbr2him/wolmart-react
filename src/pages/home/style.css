@@ -621,6 +621,21 @@
     .banner {
       min-height: 21rem;
       padding: 2rem;
+      position: relative;
+      z-index: 3;
+      backdrop-filter: blur(25px);
+
+      &::after {
+        content: '';
+        position: absolute;
+        background: #232323;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        opacity: 0.3;
+      }
     }
     .banner-background-content {
       .horizontal-divider {
@@ -634,11 +649,7 @@
         font-weight: var(--weight-semi-bold);
         line-height: 2.4rem;
       }
-      :where(h5, h3) {
-        &.white {
-          color: #ffffff;
-        }
-      }
+
       h5 {
         text-transform: capitalize;
       }
@@ -651,6 +662,7 @@
         span {
           font-weight: var(--weight-medium);
           text-transform: capitalize;
+          color: #ffffff;
         }
       }
       .btn {
@@ -680,6 +692,9 @@
       &.white {
         :where(h5, hr, h3, span, ) {
           color: #ffffff;
+        }
+        .horizontal-divider {
+          border-color: #ffffff;
         }
         .btn {
           border-color: #ffffff;
@@ -713,5 +728,79 @@
   .slick-slider .slick-dots {
     bottom: -35px;
     width: 100%;
+  }
+}
+
+.banner-fashion-wrapper {
+  margin-block-end: 4rem;
+}
+
+.banner-fashion {
+  padding: 3rem;
+
+  :where(h3, p, .btn) {
+    color: #ffffff;
+  }
+
+  .banner-price-info {
+    color: var(--secondary-text-color);
+    font-size: 5.6rem;
+    font-weight: var(--weight-extra-bold);
+    text-transform: uppercase;
+    margin-block-end: 1.5rem;
+
+    sup {
+      font-size: 0.64em;
+      line-height: 0;
+      position: relative;
+      top: 0.15em;
+    }
+    sub {
+      font-size: 0.28em;
+      vertical-align: baseline;
+      position: relative;
+      margin-left: -3.6rem;
+    }
+  }
+
+  .banner-info {
+    margin-block-end: 1.5rem;
+
+    .banner-title {
+      font-size: 2.4rem;
+      font-weight: var(--weight-extra-bold);
+      text-transform: uppercase;
+      line-height: 2.2rem;
+      margin-block-end: 1rem;
+    }
+    p {
+      font-size: 1.4rem;
+      line-height: 2.4rem;
+      font-weight: var(--weight-medium);
+
+      span {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #232323;
+        text-transform: capitalize;
+        font-weight: var(--weight-extra-bold);
+        margin-inline: 0.5rem;
+        padding-inline: 0.5rem;
+      }
+    }
+  }
+  .btn {
+    background-color: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+    width: fit-content;
+    padding: 1.4rem 2.8rem;
+    font-size: 1.4rem;
+
+    &:hover {
+      background-color: #ffffff;
+      border-color: #232323;
+      color: var(--main-text-color);
+    }
   }
 }

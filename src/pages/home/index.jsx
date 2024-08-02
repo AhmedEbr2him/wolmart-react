@@ -8,9 +8,11 @@ import {
   PopularDepartments,
   Banner,
   ProductsListBanner,
+  LinkBtn,
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [dealProducts, setDealProducts] = useState([]);
@@ -19,6 +21,7 @@ const Home = () => {
   const [popularProducts, setPopularProduct] = useState([]);
   const [fashionProducts, setFashionProducts] = useState([]);
   const [techProducts, setTechProducts] = useState([]);
+  const [homeProduct, setHomeProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -41,10 +44,12 @@ const Home = () => {
     const popularProducts = products.filter(product => product.rating >= 4);
     const fashionProducts = products.filter(product => product.category === 'fashion');
     const techProducts = products.filter(product => product.category === 'tech');
+    const homeProducts = products.filter(product => product.category === 'home');
     setTopProducts(topProductsFilter);
     setPopularProduct(popularProducts);
     setFashionProducts(fashionProducts);
     setTechProducts(techProducts);
+    setHomeProducts(homeProducts);
   }, [products]);
 
   return (
@@ -93,7 +98,46 @@ const Home = () => {
           h3='top Camera'
           span='mirrorless'
           products={techProducts}
-          white={true}
+          white={'true'}
+        />
+      )}
+
+      <div className='banner-fashion-wrapper'>
+        <div className='container'>
+          <div
+            className='banner banner-fashion'
+            style={{
+              backgroundImage: `url(${Images.banners.Banner_fashion})`,
+              backgroundColor: 'rgb(56, 56, 57)',
+            }}
+          >
+            <div className='banner-price-info'>
+              25
+              <sup>%</sup>
+              <sub>OFF</sub>
+            </div>
+            <div className='banner-info'>
+              <h3 className='banner-title'>for today&apos;s fashion</h3>
+              <p>
+                Use code
+                <span>black 1234</span>
+                to get best offer.
+              </p>
+            </div>
+            <LinkBtn className='btn btn-outline' label='shop now' classType='btn-outline' />
+          </div>
+        </div>
+      </div>
+
+      {products && (
+        <ProductsListBanner
+          sectionTitle='Home Garden & Kitchen'
+          banner={Images.banners.Banenr_5}
+          to='#'
+          h5='Deals And Promotions '
+          h3='Trending'
+          span='House Utensil'
+          products={homeProduct}
         />
       )}
     </article>

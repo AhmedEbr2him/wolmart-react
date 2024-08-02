@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const LinkBtn = ({ label, classType, animate }) => {
   return (
     <Link role='button' className={`btn ${classType ? classType : ''} ${animate ? 'fade-in' : ''}`}>
-      <span>{label}</span>
+      <span>{label}</span>&nbsp;&nbsp;
       <FaArrowRight />
     </Link>
   );

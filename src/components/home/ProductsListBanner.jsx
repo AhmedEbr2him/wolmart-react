@@ -21,7 +21,7 @@ const ProductsListBanner = ({ sectionTitle, to, banner, h5, h3, span, products, 
       </div>
       <div className='section-banner'>
         <div className='container'>
-          <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={{ white }} />
+          <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={white} />
 
           <div className='products-list-wrapper'>
             <div className='products-list'>
