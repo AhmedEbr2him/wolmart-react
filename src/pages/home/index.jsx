@@ -9,10 +9,10 @@ import {
   Banner,
   ProductsListBanner,
   LinkBtn,
+  Clients,
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [dealProducts, setDealProducts] = useState([]);
@@ -140,6 +140,8 @@ const Home = () => {
           products={homeProduct}
         />
       )}
+
+      <Clients />
     </article>
   );
 };

@@ -804,3 +804,43 @@
     }
   }
 }
+/* CLIENTS SECTION */
+.client-section-wrapper {
+  .title {
+    text-align: left;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2rem;
+      width: 15%;
+      height: 4px;
+      background-color: var(--border-color);
+    }
+  }
+
+  .client-section-content {
+    padding-block-start: 1rem;
+    .brand-wrapper {
+      border: 1px solid var(--border-color);
+
+      &:not(:last-child) {
+        border-right-width: 0;
+      }
+      &:where(:focus-within) {
+        outline: none;
+      }
+    }
+  }
+  .slick-list {
+    padding-bottom: 5px;
+  }
+  .slick-slide > div {
+    margin-bottom: -0.5rem;
+  }
+}
+[data-scheme='dark'] .client-section-wrapper .brand-wrapper img {
+  filter: invert(1) brightness(2);
+}

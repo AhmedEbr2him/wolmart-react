@@ -33,6 +33,20 @@ import category_4 from './categories/2-4.jpg';
 import category_5 from './categories/2-5.jpg';
 import category_6 from './categories/2-6.jpg';
 
+/* CLIENTS */
+import client_1 from './clients/1.png';
+import client_2 from './clients/2.png';
+import client_3 from './clients/3.png';
+import client_4 from './clients/4.png';
+import client_5 from './clients/5.png';
+import client_6 from './clients/6.png';
+import client_7 from './clients/7.png';
+import client_8 from './clients/8.png';
+import client_9 from './clients/9.png';
+import client_10 from './clients/10.png';
+import client_11 from './clients/11.png';
+import client_12 from './clients/12.png';
+
 const Images = {
   flags: { en, fr },
   logo: { lightLogo, darkLogo },
@@ -72,6 +86,21 @@ const Images = {
     category_5,
     category_6,
   },
+
+  clients: [
+    client_1,
+    client_2,
+    client_3,
+    client_4,
+    client_5,
+    client_6,
+    client_7,
+    client_8,
+    client_9,
+    client_10,
+    client_11,
+    client_12,
+  ],
 };
 
 export default Images;

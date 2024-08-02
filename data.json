@@ -2,11 +2,613 @@
   "products": [
     {
       "id": "",
+      "name": "Home Sofa",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": "",
+        "new": 75.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/6-1.jpg",
+          "src_2": "./public/products/6-1.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 4.88,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Kitchen Table",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 65.99,
+        "new": 55.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/6-2-1.jpg",
+          "src_2": "./public/products/6-2-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 4.88,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Table Lamp",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 45.69
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/6-3-1.jpg",
+          "src_2": "./public/products/6-3-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 4.28,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Comfortable Chair",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 90.55
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/6-4.jpg",
+          "src_2": "./public/products/6-4.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 4.28,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Electric Rice-Cooker",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 215.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/6-5.jpg",
+          "src_2": "./public/products/6-5.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 4.28,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Electric Frying Pan",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 67.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/7-2.jpg",
+          "src_2": "./public/products/7-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 3.44,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
+      "name": "Automatic Crusher",
+      "description": "A brief description of the product.",
+      "price": {
+        "old": 0,
+        "new": 225.99
+      },
+      "currency": "USD",
+      "images": [
+        {
+          "src_1": "./public/products/6-8-1.jpg",
+          "src_2": "./public/products/6-8-2.jpg",
+          "width": 105,
+          "height": 118
+        }
+      ],
+      "category": "home",
+      "stock": 100,
+      "rating": 4.56,
+      "reviews": [
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User1",
+          "comment": "Great product!",
+          "rating": 5
+        },
+        {
+          "user": "User2",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        },
+        {
+          "user": "User3",
+          "comment": "Satisfactory quality.",
+          "rating": 4
+        }
+      ],
+      "sizes": [
+        {
+          "value": "xl",
+          "label": "Extra-Large",
+          "price": 214
+        },
+        {
+          "value": "x",
+          "label": "Large",
+          "price": 200
+        },
+        {
+          "value": "m",
+          "label": "medium",
+          "price": 180
+        },
+        {
+          "value": "s",
+          "label": "Small",
+          "price": 180
+        }
+      ],
+      "discount": 0
+    },
+    {
+      "id": "",
       "name": "Kitchen Cooker",
       "description": "A brief description of the product.",
       "price": {
-        "old": 150.69,
-        "new": 0
+        "old": "",
+        "new": 150.69
       },
       "currency": "USD",
       "images": [

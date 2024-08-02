@@ -31,3 +31,4 @@ export { default as Deals } from './home/Deals';
 export { default as CategorySection } from './home/CategorySection';
 export { default as PopularDepartments } from './home/PopularDepartments';
 export { default as ProductsListBanner } from './home/ProductsListBanner.jsx';
+export { default as Clients } from './home/Clients';
