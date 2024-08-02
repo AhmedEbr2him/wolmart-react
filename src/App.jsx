@@ -28,20 +28,18 @@ const App = () => {
       <Header />
 
       <main className='main'>
-        <article>
-          <Routes>
-            <Route
-              path={routesConstatns.HOME}
-              element={
-                <Suspense fallback={<div>...Loading</div>}>
-                  <LazyHome />
-                </Suspense>
-              }
-            />
-            <Route path={routesConstatns.SHOP} element={<Shop />} />
-            <Route path={routesConstatns.CART} element={<Cart />} />
-          </Routes>
-        </article>
+        <Routes>
+          <Route
+            path={routesConstatns.HOME}
+            element={
+              <Suspense fallback={<div>...Loading</div>}>
+                <LazyHome />
+              </Suspense>
+            }
+          />
+          <Route path={routesConstatns.SHOP} element={<Shop />} />
+          <Route path={routesConstatns.CART} element={<Cart />} />
+        </Routes>
       </main>
       <Footer />
     </div>

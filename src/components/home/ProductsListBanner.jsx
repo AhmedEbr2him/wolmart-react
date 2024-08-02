@@ -1,12 +1,10 @@
 /* eslint-disable react/prop-types */
 import Slider from 'react-slick';
-import Images from '../../assets/images/images';
 import LinkBtn from '../common/LinkBtn';
 import Product from '../common/Product';
 import TitleLink from '../common/TitleLink';
 
-const ClothingAndApparel = ({ products }) => {
-  console.log(products);
+const ProductsListBanner = ({ sectionTitle, to, banner, h5, h3, span, products, white }) => {
   const settings = {
     className: 'center',
     slidesToShow: 2,
@@ -19,16 +17,11 @@ const ClothingAndApparel = ({ products }) => {
   return (
     <section className='section banner-products'>
       <div className='container'>
-        <TitleLink title='clothing & apparel' to='#' />
+        <TitleLink title={sectionTitle} to={to} />
       </div>
       <div className='section-banner'>
         <div className='container'>
-          <BannerBackground
-            image={Images.banners.Banenr_3}
-            h5='Weekend Sale'
-            h3='New Arrivals'
-            span='collection'
-          />
+          <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={{ white }} />
 
           <div className='products-list-wrapper'>
             <div className='products-list'>
@@ -44,12 +37,12 @@ const ClothingAndApparel = ({ products }) => {
     </section>
   );
 };
-export default ClothingAndApparel;
+export default ProductsListBanner;
 
-const BannerBackground = ({ image, h5, h3, span }) => {
+const BannerBackground = ({ image, h5, h3, span, white }) => {
   return (
     <div className='banner' style={{ backgroundImage: `url(${image})` }}>
-      <div className='banner-background-content'>
+      <div className={`banner-background-content ${white ? 'white' : ''}`}>
         <h5 className='small-head'>{h5}</h5>
         <hr className='horizontal-divider' />
         <h3>

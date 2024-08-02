@@ -823,6 +823,14 @@ ins {
         transform: translateX(0);
         opacity: 1;
         visibility: visible;
+        transition: var(--motion-duration-short-2);
+
+        &:hover {
+          background-color: var(--main-text-color);
+          color: #ffffff;
+          transition: var(--motion-duration-short-2);
+          transition-delay: 0;
+        }
       }
     }
   }

@@ -7,7 +7,7 @@ import {
   CategorySection,
   PopularDepartments,
   Banner,
-  ClothingAndApparel,
+  ProductsListBanner,
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
@@ -18,6 +18,7 @@ const Home = () => {
   const [topProducts, setTopProducts] = useState([]);
   const [popularProducts, setPopularProduct] = useState([]);
   const [fashionProducts, setFashionProducts] = useState([]);
+  const [techProducts, setTechProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -39,14 +40,15 @@ const Home = () => {
     const topProductsFilter = products.filter(product => product.rating >= 4.5);
     const popularProducts = products.filter(product => product.rating >= 4);
     const fashionProducts = products.filter(product => product.category === 'fashion');
-
+    const techProducts = products.filter(product => product.category === 'tech');
     setTopProducts(topProductsFilter);
     setPopularProduct(popularProducts);
     setFashionProducts(fashionProducts);
+    setTechProducts(techProducts);
   }, [products]);
 
   return (
-    <>
+    <article className='home'>
       <IntroSection />
       <FeaturesSection />
       <CategoryBanner />
@@ -70,8 +72,31 @@ const Home = () => {
           underline='true'
         />
       </div>
-      {products && <ClothingAndApparel products={fashionProducts} />}
-    </>
+      {products && (
+        <ProductsListBanner
+          sectionTitle='Clothing & Apparel'
+          banner={Images.banners.Banenr_3}
+          to='#'
+          h5='Weekend Sale'
+          h3='New Arrivals'
+          span='collection'
+          products={fashionProducts}
+          style={'white'}
+        />
+      )}
+      {products && (
+        <ProductsListBanner
+          sectionTitle='Consumer Electric'
+          banner={Images.banners.Banenr_4}
+          to='#'
+          h5='new collection'
+          h3='top Camera'
+          span='mirrorless'
+          products={techProducts}
+          white={true}
+        />
+      )}
+    </article>
   );
 };
 export default Home;

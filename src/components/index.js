@@ -30,4 +30,4 @@ export { default as CategoryBanner } from './home/CategoryBanner';
 export { default as Deals } from './home/Deals';
 export { default as CategorySection } from './home/CategorySection';
 export { default as PopularDepartments } from './home/PopularDepartments';
-export { default as ClothingAndApparel } from './home/ClothingAndApparel';
+export { default as ProductsListBanner } from './home/ProductsListBanner.jsx';

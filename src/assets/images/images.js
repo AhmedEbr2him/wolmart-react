@@ -21,6 +21,8 @@ import categoryBanner_2 from './banners/cateogry-banner-2.jpg';
 import Banenr_1 from './banners/3-1.jpg';
 import Banenr_2 from './banners/3-2.jpg';
 import Banenr_3 from './banners/2.jpg';
+import Banenr_4 from './banners/3.jpg';
+import Banenr_5 from './banners/5.jpg';
 
 /* CATEGORIES */
 import category_1 from './categories/2-1.jpg';
@@ -56,6 +58,8 @@ const Images = {
     Banenr_1,
     Banenr_2,
     Banenr_3,
+    Banenr_4,
+    Banenr_5,
   },
 
   categories: {

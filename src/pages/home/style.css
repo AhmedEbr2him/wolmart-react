@@ -222,7 +222,8 @@
       height: 5px;
       transition: var(--motion-duration-short-2);
       &.slick-active {
-        width: 25px;
+        width: 18px;
+        height: 8px;
         button {
           background-color: var(--main-text-color);
         }
@@ -612,6 +613,8 @@
 }
 /* CLOTHING AND APPAREL */
 .banner-products {
+  padding-block-end: 4rem;
+
   .section-banner {
     padding-block-start: 2rem;
 
@@ -630,6 +633,14 @@
         font-size: 1.4rem;
         font-weight: var(--weight-semi-bold);
         line-height: 2.4rem;
+      }
+      :where(h5, h3) {
+        &.white {
+          color: #ffffff;
+        }
+      }
+      h5 {
+        text-transform: capitalize;
       }
       h3 {
         font-size: 2.4rem;
@@ -664,14 +675,39 @@
           }
         }
       }
+
+      /* WHITE COLORS */
+      &.white {
+        :where(h5, hr, h3, span, ) {
+          color: #ffffff;
+        }
+        .btn {
+          border-color: #ffffff;
+
+          :where(span, svg) {
+            color: #ffffff !important;
+          }
+
+          &:hover {
+            background-color: #ffffff;
+            :where(span, svg) {
+              color: #232323 !important;
+            }
+          }
+        }
+      }
     }
   }
 
   .products-list-wrapper {
     padding-block-start: 2rem;
 
-    .popular-product {
-      margin-inline: 0.8rem;
+    .slick-track {
+      display: flex;
+      gap: 0.8rem;
+      > div {
+        flex: 1;
+      }
     }
   }
   .slick-slider .slick-dots {
