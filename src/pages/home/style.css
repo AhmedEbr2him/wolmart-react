@@ -382,6 +382,9 @@
     &:hover {
       border-color: var(--main-text-color);
     }
+    .product-price {
+      justify-content: flex-start;
+    }
   }
   .slick-slider {
     .custom-arrow {

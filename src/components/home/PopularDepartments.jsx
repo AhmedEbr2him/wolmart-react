@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import SectionTitle from '../common/SectionTitle';
 import Product from '../common/Product';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const PopularDepartments = ({ products }) => {
   const tabList = [
@@ -10,10 +10,18 @@ const PopularDepartments = ({ products }) => {
     { link: '#', id: 'tab-3', label: 'most popular' },
     { link: '#', id: 'tab-4', label: 'feature' },
   ];
-  const newArrivals = products.new_arrivals;
-  const sortBestSeller = products.best_seller?.slice().sort((a, b) => b.price.new - a.price.new);
-  const sortMostPopular = products.best_seller?.slice().sort((a, b) => b.rating - a.rating);
-  const sortFeatured = products.best_seller?.slice().sort((a, b) => b.id - a.id);
+  const [newArrivals, setNewArrivals] = useState([]);
+  const [bestSelling, setBestSelling] = useState([]);
+
+  useEffect(() => {
+    const newArrivalsFilter = products?.filter(product => product?.reviews?.length <= 2);
+    const bestSellingFilter = products?.filter(product => product?.rating >= 4.5);
+    setNewArrivals(newArrivalsFilter);
+    setBestSelling(bestSellingFilter);
+  }, [products]);
+
+  const sortMostPopular = products?.slice().sort((a, b) => b.rating - a.rating);
+  const sortFeatured = products?.slice().sort((a, b) => b.reviews?.length - a.reviews?.length);
   const [activeTab, setActiveTab] = useState('tab-1');
 
   // slice / concat / array from / [... for main array] => creates a shallow copy of the array before sorting to avoid unexpected behavior when  rendering different tabs based on sorted data.
@@ -26,7 +34,10 @@ const PopularDepartments = ({ products }) => {
           <div className='tab-nav'>
             <ul className='nav'>
               {tabList.map((item, index) => (
-                <li key={index} className={`nav-item ${activeTab === item.id ? 'active-tab' : ''}`}>
+                <li
+                  key={`${index}-${item.name}`}
+                  className={`nav-item ${activeTab === item.id ? 'active-tab' : ''}`}
+                >
                   <button
                     aria-label={item.label}
                     className='nav-link'
@@ -42,7 +53,7 @@ const PopularDepartments = ({ products }) => {
 
         {activeTab === 'tab-1' && <TabContent products={newArrivals} tabId='new_arrivals' />}
 
-        {activeTab === 'tab-2' && <TabContent products={sortBestSeller} tabId='best_seller' />}
+        {activeTab === 'tab-2' && <TabContent products={bestSelling} tabId='best_seller' />}
 
         {activeTab === 'tab-3' && <TabContent products={sortMostPopular} tabId='most_popular' />}
 
@@ -57,7 +68,7 @@ const TabContent = ({ products, tabId }) => {
       <div className='tab-pane'>
         <div className='products-wrapper'>
           {products?.map((product, index) => (
-            <Product key={product.id} index={index} data={product} />
+            <Product key={index} index={index} data={product} />
           ))}
         </div>
       </div>

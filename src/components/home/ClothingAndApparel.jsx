@@ -6,6 +6,7 @@ import Product from '../common/Product';
 import TitleLink from '../common/TitleLink';
 
 const ClothingAndApparel = ({ products }) => {
+  console.log(products);
   const settings = {
     className: 'center',
     slidesToShow: 2,
@@ -32,7 +33,7 @@ const ClothingAndApparel = ({ products }) => {
           <div className='products-list-wrapper'>
             <div className='products-list'>
               <Slider {...settings}>
-                {products?.new_arrivals_collection?.map((product, index) => (
+                {products?.slice(0, 8).map((product, index) => (
                   <Product key={index} data={product} />
                 ))}
               </Slider>

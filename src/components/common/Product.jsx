@@ -4,7 +4,7 @@ import Rating from './Rating';
 import ProductPrice from './ProductPrice';
 import { TbShoppingCartPlus, TbHeart, TbEye, TbGitCompare } from 'react-icons/tb';
 const Product = ({ data }) => {
-  const { id = '', name = '', price = [], images = [], rating = '', reviews = [] } = data;
+  const { name = '', price = [], images = [], rating = '', reviews = [] } = data;
 
   const actionList = [
     {

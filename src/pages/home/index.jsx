@@ -11,11 +11,14 @@ import {
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
+
 const Home = () => {
   const [dealProducts, setDealProducts] = useState([]);
   const [products, setProducts] = useState([]);
+  const [topProducts, setTopProducts] = useState([]);
+  const [popularProducts, setPopularProduct] = useState([]);
+  const [fashionProducts, setFashionProducts] = useState([]);
 
-  console.log(products);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -32,15 +35,24 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const topProducts 
+  useEffect(() => {
+    const topProductsFilter = products.filter(product => product.rating >= 4.5);
+    const popularProducts = products.filter(product => product.rating >= 4);
+    const fashionProducts = products.filter(product => product.category === 'fashion');
+
+    setTopProducts(topProductsFilter);
+    setPopularProduct(popularProducts);
+    setFashionProducts(fashionProducts);
+  }, [products]);
+
   return (
     <>
       <IntroSection />
       <FeaturesSection />
       <CategoryBanner />
-      {dealProducts && <Deals products={dealProducts} />}
+      {dealProducts && <Deals products={dealProducts} topProducts={topProducts} />}
       <CategorySection />
-      {products && <PopularDepartments products='' />}
+      {products && <PopularDepartments products={popularProducts} />}
 
       <div className='banner-wrapper'>
         <Banner
@@ -58,7 +70,7 @@ const Home = () => {
           underline='true'
         />
       </div>
-      {products && <ClothingAndApparel products={''} />}
+      {products && <ClothingAndApparel products={fashionProducts} />}
     </>
   );
 };

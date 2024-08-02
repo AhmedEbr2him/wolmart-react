@@ -11,7 +11,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-1.jpg",
+          "src_1": "./public/products/2-1.jpg",
+          "src_2": "./public/products/2-1.jpg",
           "width": 105,
           "height": 118
         }
@@ -65,14 +66,15 @@
       "name": "Professional Pixel Camera",
       "description": "A brief description of the product.",
       "price": {
-        "old": 95.99,
-        "new": 125.0
+        "old": 125.0,
+        "new": 95.99
       },
 
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-2.jpg",
+          "src_1": "./public/products/2-2.jpg",
+          "src_2": "./public/products/2-2.jpg",
           "width": 105,
           "height": 118
         }
@@ -134,7 +136,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-3.jpg",
+          "src_1": "./public/products/2-3.jpg",
+          "src_2": "./public/products/2-3.jpg",
           "width": 105,
           "height": 118
         }
@@ -197,7 +200,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-4.jpg",
+          "src_1": "./public/products/2-4.jpg",
+          "src_2": "./public/products/2-4.jpg",
           "width": 105,
           "height": 118
         }
@@ -259,7 +263,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-5.jpg",
+          "src_1": "./public/products/2-5.jpg",
+          "src_2": "./public/products/2-5.jpg",
           "width": 105,
           "height": 118
         }
@@ -320,7 +325,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-6.jpg",
+          "src_1": "./public/products/2-6.jpg",
+          "src_2": "./public/products/2-6.jpg",
           "width": 105,
           "height": 118
         }
@@ -381,7 +387,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-7.jpg",
+          "src_1": "./public/products/2-7.jpg",
+          "src_2": "./public/products/2-7.jpg",
           "width": 105,
           "height": 118
         }
@@ -442,7 +449,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-8.jpg",
+          "src_1": "./public/products/2-8.jpg",
+          "src_2": "./public/products/2-8.jpg",
           "width": 105,
           "height": 118
         }
@@ -503,7 +511,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-9.jpg",
+          "src_1": "./public/products/2-9.jpg",
+          "src_2": "./public/products/2-9.jpg",
           "width": 105,
           "height": 118
         }
@@ -564,7 +573,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-1.jpg",
+          "src_1": "./public/products/2-1.jpg",
+          "src_2": "./public/products/2-1.jpg",
           "width": 105,
           "height": 118
         }
@@ -618,14 +628,15 @@
       "name": "Professional Pixel Camera",
       "description": "A brief description of the product.",
       "price": {
-        "old": 95.99,
-        "new": 125.0
+        "old": 125.99,
+        "new": 100.0
       },
 
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-2.jpg",
+          "src_1": "./public/products/2-2.jpg",
+          "src_2": "./public/products/2-2.jpg",
           "width": 105,
           "height": 118
         }
@@ -687,7 +698,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-3.jpg",
+          "src_1": "./public/products/2-3.jpg",
+          "src_2": "./public/products/2-3.jpg",
           "width": 105,
           "height": 118
         }
@@ -750,7 +762,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-4.jpg",
+          "src_1": "./public/products/2-4.jpg",
+          "src_2": "./public/products/2-4.jpg",
           "width": 105,
           "height": 118
         }
@@ -812,7 +825,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-5.jpg",
+          "src_1": "./public/products/2-5.jpg",
+          "src_2": "./public/products/2-5.jpg",
           "width": 105,
           "height": 118
         }
@@ -873,7 +887,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-6.jpg",
+          "src_1": "./public/products/2-6.jpg",
+          "src_2": "./public/products/2-6.jpg",
           "width": 105,
           "height": 118
         }
@@ -934,7 +949,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-7.jpg",
+          "src_1": "./public/products/2-7.jpg",
+          "src_2": "./public/products/2-7.jpg",
           "width": 105,
           "height": 118
         }
@@ -995,7 +1011,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-8.jpg",
+          "src_1": "./public/products/2-8.jpg",
+          "src_2": "./public/products/2-8.jpg",
           "width": 105,
           "height": 118
         }
@@ -1056,7 +1073,8 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-9.jpg",
+          "src_1": "./public/products/2-9.jpg",
+          "src_2": "./public/products/2-9.jpg",
           "width": 105,
           "height": 118
         }
@@ -3295,22 +3313,26 @@
       "currency": "USD",
       "images": [
         {
-          "src": "./public/products/2-1-600x675.jpg",
+          "src_1": "./public/products/2-1-600x675.jpg",
+          "src_2": "./public/products/2-1-600x675.jpg",
           "width": 60,
           "height": 68
         },
         {
-          "src": "./public/products/2-2-600x675.jpg",
+          "src_1": "./public/products/2-2-600x675.jpg",
+          "src_2": "./public/products/2-2-600x675.jpg",
           "width": 60,
           "height": 68
         },
         {
-          "src": "./public/products/2-3-600x675.jpg",
+          "src_1": "./public/products/2-3-600x675.jpg",
+          "src_2": "./public/products/2-3-600x675.jpg",
           "width": 60,
           "height": 68
         },
         {
-          "src": "./public/products/2-4-600x675.jpg",
+          "src_1": "./public/products/2-4-600x675.jpg",
+          "src_2": "./public/products/2-4-600x675.jpg",
           "width": 60,
           "height": 68
         }

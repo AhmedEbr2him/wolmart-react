@@ -5,7 +5,7 @@ import BestSelling from './BestSelling';
 import CustomPrevArrow from '../common/CustomArrows/CustomPrevArrow';
 import CustomNextArrow from '../common/CustomArrows/CustomNextArrow';
 
-const Deals = ({ products }) => {
+const Deals = ({ products, topProducts }) => {
   const settings = {
     dots: false,
     draggable: true,
@@ -36,7 +36,7 @@ const Deals = ({ products }) => {
 
         <div className='product-wrapper'>
           <h4 className='head-title'>Top 20 Best Seller</h4>
-          <BestSelling data={products.best_selling} />
+          <BestSelling data={topProducts} />
         </div>
       </div>
     </section>

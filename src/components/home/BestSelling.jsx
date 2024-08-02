@@ -37,6 +37,12 @@ const BestSelling = ({ data }) => {
               ?.slice(3, 6)
               ?.map((product, index) => <BestSellingProduct product={product} key={index} />)}
         </div>
+        <div className='best-selling-list'>
+          {data &&
+            data
+              ?.slice(6, 9)
+              ?.map((product, index) => <BestSellingProduct product={product} key={index} />)}
+        </div>
       </Slider>
     </div>
   );
@@ -49,10 +55,10 @@ const BestSellingProduct = ({ product }) => {
     <div className='product'>
       <figure className='product-media'>
         {images.map((img, index) => {
-          const { src = '', width = '', height = '' } = img;
+          const { src_1 = '' } = img;
           return (
             <Link to='' key={index}>
-              <img src={src} alt={name} width={width} height={height} loading='lazy' />
+              <img src={src_1} alt={name} width={105} height={118} loading='lazy' />
             </Link>
           );
         })}
@@ -63,8 +69,9 @@ const BestSellingProduct = ({ product }) => {
         </h4>
         <Rating rating={rating} />
         <div className='product-price'>
-          {price.old > 0 && <ins className='new-price'>${price.old}</ins>}
-          {price.new > 0 && <del className='old-price'>${price.new}</del>}
+          {price.new > 0 && <ins className='old-price'>${price.new}</ins>}
+          {price.old && price.new > 0 && <span>&nbsp;-&nbsp;</span>}
+          {price.old > 0 && <del className='new-price'>${price.old}</del>}
         </div>
       </div>
     </div>
