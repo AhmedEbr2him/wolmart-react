@@ -10,6 +10,7 @@ import {
   ProductsListBanner,
   LinkBtn,
   Clients,
+  Blog,
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
@@ -142,6 +143,8 @@ const Home = () => {
       )}
 
       <Clients />
+
+      <Blog />
     </article>
   );
 };
