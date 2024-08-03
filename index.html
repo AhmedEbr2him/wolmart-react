@@ -26,6 +26,13 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <!-- To Inject Immediate Application of Theme -->
+    <script>
+      const theme =
+        sessionStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-scheme', theme);
+    </script>
   </head>
   <body>
     <div id="root"></div>

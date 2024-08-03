@@ -1,12 +1,8 @@
 import './style.css';
 import { Link, useLocation } from 'react-router-dom';
-import { BsShop } from 'react-icons/bs';
-import { LuUser } from 'react-icons/lu';
-import { BiShoppingBag } from 'react-icons/bi';
-import { FiSearch } from 'react-icons/fi';
 import { useIsScroll } from '../../../hooks/useIsScroll';
 import { routesConstatns } from '../../../constants/routesConstants';
-import { SlHome } from 'react-icons/sl';
+import { BiHome, BiStore, BiUser, BiShoppingBag, BiSearchAlt } from 'react-icons/bi';
 
 const StickyFooter = () => {
   const { isScroll } = useIsScroll();
@@ -16,17 +12,17 @@ const StickyFooter = () => {
     {
       label: 'Home',
       to: routesConstatns.HOME,
-      icon: <SlHome size={size} />,
+      icon: <BiHome size={size} />,
     },
     {
       label: 'Shop',
       to: routesConstatns.SHOP,
-      icon: <BsShop size={size} />,
+      icon: <BiStore size={size} />,
     },
     {
       label: 'Account',
       to: '#',
-      icon: <LuUser size={size} />,
+      icon: <BiUser size={size} />,
     },
     {
       label: 'Cart',
@@ -36,7 +32,7 @@ const StickyFooter = () => {
     {
       label: 'Search',
       to: '#',
-      icon: <FiSearch size={size} />,
+      icon: <BiSearchAlt size={size} />,
     },
   ];
   const location = useLocation();

@@ -90,7 +90,6 @@
   }
   .banner-subtitle {
     margin-right: 30px;
-    animation-delay: 0.5s;
 
     span {
       position: relative;
@@ -108,14 +107,9 @@
   }
   .banner-title {
     margin-right: 30px;
-    animation-delay: 1.25s;
   }
   p {
     margin-right: 30px;
-    animation-delay: 2s;
-  }
-  a {
-    animation-delay: 3s;
   }
 }
 
@@ -243,6 +237,7 @@
       transition: var(--motion-duration-short-2);
       border: 1px solid var(--border-color);
       border-radius: var(--circle-radius);
+      background-color: var(--alpha-10);
 
       &::before {
         display: none;
@@ -625,6 +620,8 @@
 
   .section-banner {
     padding-block-start: 2rem;
+    max-width: var(--mobile-container);
+    margin-inline: 1.5rem;
 
     .banner {
       min-height: 21rem;
@@ -726,10 +723,8 @@
     padding-block-start: 2rem;
 
     .slick-track {
-      display: flex;
-      gap: 0.8rem;
-      > div {
-        flex: 1;
+      > div.slick-slide:not(:last-child) {
+        padding-right: 0.8rem;
       }
     }
   }
@@ -857,12 +852,32 @@
 .blog-section {
   .post {
     padding-bottom: 1rem;
+
+    &:hover img {
+      scale: 1.1;
+    }
+
+    .post-title,
+    .post-date,
+    .post-author {
+      transition: var(--motion-duration-medium-1);
+
+      &:hover {
+        color: var(--main-text-color);
+        transition: var(--motion-duration-medium-1);
+      }
+    }
   }
-  .post-media a {
-    border-radius: var(--small-radius);
+  .post-media {
+    overflow: hidden;
+
+    a {
+      border-radius: var(--small-radius);
+    }
 
     img {
       border-radius: inherit;
+      transition: var(--motion-duration-medium-1);
     }
   }
   .post-details {
@@ -893,23 +908,30 @@
     }
   }
   .post-title {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
     margin-block-end: 1.7rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    line-clamp: 1;
-    -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    text-transform: none;
+    transition: color var(--motion-duration-medium-1);
+
+    a {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      line-clamp: 1;
+      -webkit-line-clamp: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-transform: none;
+      white-space: normal;
+    }
   }
 
   .slick-track {
-    display: flex;
-    gap: 1.4rem;
     padding-block-start: 2rem;
+
+    .slick-slide > div {
+      padding-inline: 1rem;
+    }
   }
   .slick-dots {
     bottom: -10px;

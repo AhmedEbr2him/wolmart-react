@@ -15,6 +15,7 @@ import {
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
+import { scrollToTop } from '../../utils/scrollToTop';
 
 const Home = () => {
   const [dealProducts, setDealProducts] = useState([]);
@@ -54,6 +55,9 @@ const Home = () => {
     setHomeProducts(homeProducts);
   }, [products]);
 
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <article className='home'>
       <IntroSection />

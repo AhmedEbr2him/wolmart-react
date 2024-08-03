@@ -20,17 +20,15 @@ const ProductsListBanner = ({ sectionTitle, to, banner, h5, h3, span, products, 
         <TitleLink title={sectionTitle} to={to} />
       </div>
       <div className='section-banner'>
-        <div className='container'>
-          <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={white} />
+        <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={white} />
 
-          <div className='products-list-wrapper'>
-            <div className='products-list'>
-              <Slider {...settings}>
-                {products?.slice(0, 8).map((product, index) => (
-                  <Product key={index} data={product} />
-                ))}
-              </Slider>
-            </div>
+        <div className='products-list-wrapper'>
+          <div className='products-list'>
+            <Slider {...settings}>
+              {products?.slice(0, 8).map((product, index) => (
+                <Product key={index} data={product} />
+              ))}
+            </Slider>
           </div>
         </div>
       </div>

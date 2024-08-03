@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 import { Logo, StickyWrapperContent } from '../../';
 import { useContext } from 'react';
 import { MainContext } from '../../../context/MainContext';
-import { useIsScroll } from '../../../hooks/useIsScroll';
 
 const Header = () => {
   const currencyList = ['USD', 'EUR', 'EGP'];
@@ -37,14 +36,13 @@ const Header = () => {
     'Clothing',
   ];
   const { openDrawer, openCart } = useContext(MainContext);
-  const { isScroll } = useIsScroll();
-  const { isDrawerActive } = useContext(MainContext);
+
   return (
-    <header className={`header ${isScroll ? 'scroll' : ''}`}>
+    <header className={`header`}>
       <div className='header-top'>
         <div className='container'>
           <div className='left-part'>
-            <marquee>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</marquee>
+            <p>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</p>
           </div>
 
           <div className='right-part'>

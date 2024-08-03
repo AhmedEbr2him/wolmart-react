@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 // import { Home } from './pages';
 import { Footer, Header, StickyFooter } from './components';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import React, { Suspense, lazy } from 'react';
 import Shop from './pages/shop';
@@ -16,8 +16,19 @@ const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
 const App = () => {
   const { isDrawerActive, isCartActive } = useContext(MainContext);
 
+  useEffect(() => {
+    const handleBody = () => {
+      if (isDrawerActive) {
+        document.getElementById('root').setAttribute('data-drawer_active', true);
+      } else {
+        document.getElementById('root').removeAttribute('data-drawer_active');
+      }
+    };
+    handleBody();
+  }, [isDrawerActive]);
+
   return (
-    <div className={'app'} data-drawer_active={isDrawerActive}>
+    <div className={'app'}>
       <Suspense fallback={null}>
         <LazyMobileDrawer />
         <LazyCartDrawer />

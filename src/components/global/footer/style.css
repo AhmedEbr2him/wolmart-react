@@ -12,6 +12,9 @@
     bottom: 0;
   }
 }
+[data-drawer_active='true'] .sticky-content-wrapper {
+  bottom: -100px;
+}
 .sticky-footer {
   display: flex;
   width: 100%;
@@ -61,6 +64,10 @@
       transform-origin: left;
       border-radius: var(--circle-radius);
     }
+
+    svg {
+      color: var(--default-text-color);
+    }
   }
 
   p {
@@ -71,9 +78,7 @@
     text-transform: uppercase;
   }
 }
-.footer {
-  padding-top: 7rem;
-}
+
 .footer-newsletter {
   background: var(--main-text-color);
   color: #ffffff;

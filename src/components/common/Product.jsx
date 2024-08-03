@@ -55,7 +55,7 @@ const Product = ({ data }) => {
           <button
             key={index}
             aria-label={item.label}
-            style={{ transitionDelay: `${100 * index}ms` }}
+            style={{ animationDelay: `${100 * index}ms` }}
           >
             {item.icon}
             <span className='tooltip'>{item.label}</span>
