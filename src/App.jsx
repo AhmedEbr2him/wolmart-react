@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 // import { Home } from './pages';
-import { Footer, Header, ScrollToTop, StickyFooter } from './components';
+import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import React, { Suspense, lazy } from 'react';

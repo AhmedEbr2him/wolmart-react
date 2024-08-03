@@ -7,6 +7,7 @@
   --main-text-color-hover: #3c78b4;
   --secondary-text-color: #f77c29;
   --scrim: #000000;
+  --header-height: 114px;
 
   /* light colors */
   --light-site-background: #ffffff;
@@ -200,11 +201,11 @@ html,
 
 .main {
   transition: var(--motion-duration-medium-1);
-
+  padding-block-start: var(--header-height);
+  padding-bottom: 80px;
   opacity: 1;
   margin-left: 0;
   margin-right: 0;
-  padding-bottom: 80px;
 }
 [data-drawer_active='true'] .main {
   margin-left: 296px;
@@ -938,5 +939,31 @@ ins {
   }
   a {
     margin-inline: auto;
+  }
+}
+/* BREADCRUMB */
+.breadcrumb-list {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-block: 1.4rem;
+
+  .breadcrumb {
+    line-height: 1.8rem;
+  }
+  span {
+    display: inline-block;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    margin-right: 0.4rem;
+    transition: color var(--motion-duration-short-2);
+
+    &:hover {
+      color: var(--main-text-color);
+    }
+  }
+  svg {
+    vertical-align: middle;
+    font-size: 1.2rem;
   }
 }

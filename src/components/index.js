@@ -23,6 +23,7 @@ export { default as Banner } from './common/Banner';
 export { default as LinkUnderline } from './common/LinkUnderline';
 export { default as TitleLink } from './common/TitleLink';
 export { default as ScrollToTop } from './common/ScrollToTop';
+export { default as BreadcrumbList } from './common/BreadcrumbList';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';
