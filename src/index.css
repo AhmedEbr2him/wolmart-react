@@ -299,7 +299,6 @@ html,
 }
 .link-btn {
   display: flex;
-  gap: 5px;
   background-color: transparent;
   border: 2px solid var(--primary-color);
   padding: 1rem 2rem;

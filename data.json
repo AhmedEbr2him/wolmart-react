@@ -3915,26 +3915,22 @@
       "currency": "USD",
       "images": [
         {
-          "src_1": "./public/products/2-1-600x675.jpg",
-          "src_2": "./public/products/2-1-600x675.jpg",
+          "src": "./public/products/2-1-600x675.jpg",
           "width": 60,
           "height": 68
         },
         {
-          "src_1": "./public/products/2-2-600x675.jpg",
-          "src_2": "./public/products/2-2-600x675.jpg",
+          "src": "./public/products/2-2-600x675.jpg",
           "width": 60,
           "height": 68
         },
         {
-          "src_1": "./public/products/2-3-600x675.jpg",
-          "src_2": "./public/products/2-3-600x675.jpg",
+          "src": "./public/products/2-3-600x675.jpg",
           "width": 60,
           "height": 68
         },
         {
-          "src_1": "./public/products/2-4-600x675.jpg",
-          "src_2": "./public/products/2-4-600x675.jpg",
+          "src": "./public/products/2-4-600x675.jpg",
           "width": 60,
           "height": 68
         }
@@ -3989,7 +3985,7 @@
       {
         "author": "John Doe",
         "date_added": "2024-08-03",
-        "title": "The Impact of Dark Mode on User Experience",
+        "title": "The impact of dark mode on user experience",
         "description": "Dark mode has become increasingly popular in recent years. This post explores the benefits and considerations of implementing dark mode in your applications.",
         "tags": ["dark mode", "user experience", "UI/UX", "design trends"],
         "comments": [
@@ -4034,7 +4030,7 @@
       {
         "author": "Alice Green",
         "date_added": "2024-08-03",
-        "title": "Exploring the Hidden Gems of Southeast Asia",
+        "title": "Exploring the hidden gems of southeast asia",
         "description": "Discover the lesser-known destinations in Southeast Asia that offer unique experiences away from the typical tourist paths.",
         "tags": ["travel", "Southeast Asia", "adventure", "off the beaten path"],
         "comments": [
@@ -4080,7 +4076,7 @@
       {
         "author": "Emily Taylor",
         "date_added": "2024-08-03",
-        "title": "Summer Fashion Trends: What to Wear This Season",
+        "title": "Summer fashion trends and What to wear this season",
         "description": "Stay ahead of the curve with the latest summer fashion trends. From bold colors to sustainable fabrics, discover what's hot this season.",
         "tags": ["fashion", "summer", "trends", "style"],
         "comments": [
@@ -4131,7 +4127,7 @@
       {
         "author": "Olivia Brooks",
         "date_added": "2024-08-03",
-        "title": "Transform Your Home with These DIY Decor Ideas",
+        "title": "Transform your home with these DIY decor ideas",
         "description": "Looking to refresh your living space? These easy DIY home decor ideas will help you add a personal touch and elevate your home's style.",
         "tags": ["home decor", "DIY", "interior design", "decorating tips"],
         "comments": [

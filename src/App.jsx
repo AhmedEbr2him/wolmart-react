@@ -21,7 +21,7 @@ const App = () => {
       <Suspense fallback={null}>
         <LazyMobileDrawer />
         <LazyCartDrawer />
-        {(isDrawerActive || isCartActive) && <LazyScrimOverlay />}
+        <LazyScrimOverlay />
       </Suspense>
 
       <StickyFooter />

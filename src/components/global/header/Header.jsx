@@ -46,6 +46,7 @@ const Header = () => {
           <div className='left-part'>
             <marquee>WELCOME TO WOLMART STORE MESSAGE OR REMOVE IT!</marquee>
           </div>
+
           <div className='right-part'>
             <div className='menu'>
               <div className='dropdown'>
