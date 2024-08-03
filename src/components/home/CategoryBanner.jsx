@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import Images from '../../assets/images/images';
 
 const CategoryBanner = () => {
   return (
-    <div className='banner-wrapper'>
+    <div className='banner-wrapper' data-lazy-trigger>
       <div className='fixed-banner-wrapper'>
         <div className='container'>
           <div className='fixed-banner first-banner'>

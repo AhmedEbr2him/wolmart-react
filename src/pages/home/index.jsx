@@ -1,21 +1,21 @@
 import './style.css';
-import {
-  IntroSection,
-  FeaturesSection,
-  CategoryBanner,
-  Deals,
-  CategorySection,
-  PopularDepartments,
-  Banner,
-  ProductsListBanner,
-  LinkBtn,
-  Clients,
-  Blog,
-  RecentViews,
-} from '../../components';
+import { Suspense, lazy, useRef } from 'react';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
 import { scrollToTop } from '../../utils/scrollToTop';
+
+const LazyIntroSection = lazy(() => import('../../components/home/IntroSection'));
+const LazyFeaturesSection = lazy(() => import('../../components/home/FeaturesSection'));
+const LazyCategoryBanner = lazy(() => import('../../components/home/CategoryBanner'));
+const LazyDeals = lazy(() => import('../../components/home/Deals'));
+const LazyCategorySection = lazy(() => import('../../components/home/CategorySection'));
+const LazyPopularDepartments = lazy(() => import('../../components/home/PopularDepartments'));
+const LazyBanner = lazy(() => import('../../components/common/Banner'));
+const LazyProductsListBanner = lazy(() => import('../../components/home/ProductsListBanner'));
+const LazyLinkBtn = lazy(() => import('../../components/common/LinkBtn'));
+const LazyClients = lazy(() => import('../../components/home/Clients'));
+const LazyBlog = lazy(() => import('../../components/home/Blog'));
+const LazyRecentViews = lazy(() => import('../../components/home/RecentViews'));
 
 const Home = () => {
   const [dealProducts, setDealProducts] = useState([]);
@@ -25,6 +25,18 @@ const Home = () => {
   const [fashionProducts, setFashionProducts] = useState([]);
   const [techProducts, setTechProducts] = useState([]);
   const [homeProducts, setHomeProducts] = useState([]);
+  const [isLoaded, setIsLoaded] = useState({
+    intro: false,
+    featrues: false,
+    categoryBanner: false,
+    deals: false,
+    categorySection: false,
+    popularDepartments: false,
+    productListBanner: false,
+    client: false,
+    blog: false,
+    recentViews: false,
+  });
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -55,36 +67,66 @@ const Home = () => {
     setHomeProducts(homeProducts);
   }, [products]);
 
+  /* CREATE LAZY LOAD RESOURCES */
   useEffect(() => {
-    scrollToTop();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          const { target } = entry;
+          const key = target.getAttribute('data-lazy-trigger');
+          if (key) {
+            setIsLoaded(prevState => ({ ...prevState, [key]: true }));
+            observer.unobserve(target);
+          }
+        }
+      },
+      { threshold: 0 }
+    );
+
+    const targets = document.querySelectorAll('[data-lazy-trigger]');
+    targets.forEach(target => {
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
+
   return (
     <article className='home'>
-      <IntroSection />
-      <FeaturesSection />
-      <CategoryBanner />
-      {dealProducts && <Deals products={dealProducts} topProducts={topProducts} />}
-      <CategorySection />
-      {products && <PopularDepartments products={popularProducts} />}
+      <Suspense>
+        <LazyIntroSection />
+      </Suspense>
 
-      <div className='banner-wrapper'>
-        <Banner
-          image={Images.banners.Banenr_1}
-          backgroundColor={'#3B4B48'}
-          h5={'Natural Process'}
-          h3={'Cosmetic Makeup Professional'}
-          underline='true'
-        />
-        <Banner
-          image={Images.banners.Banenr_2}
-          backgroundColor={'#E5E5E5'}
-          h5={'Trending Now'}
-          h3={"Women's Lifestyle Collection"}
-          underline='true'
-        />
-      </div>
-      {products && (
-        <ProductsListBanner
+      <Suspense Suspense>
+        <LazyCategoryBanner />
+      </Suspense>
+
+      <Suspense Suspense>
+        <LazyFeaturesSection />
+      </Suspense>
+
+      <Suspense>
+        <LazyCategoryBanner />
+      </Suspense>
+
+      <Suspense>
+        <LazyDeals products={dealProducts} topProducts={topProducts} />
+      </Suspense>
+
+      <Suspense>
+        <LazyCategorySection />
+      </Suspense>
+
+      <Suspense>
+        <LazyPopularDepartments products={popularProducts} />
+      </Suspense>
+
+      <Suspense>
+        <LazyProductsListBanner
           sectionTitle='Clothing & Apparel'
           banner={Images.banners.Banenr_3}
           to='#'
@@ -94,9 +136,10 @@ const Home = () => {
           products={fashionProducts}
           style={'white'}
         />
-      )}
-      {products && (
-        <ProductsListBanner
+      </Suspense>
+
+      <Suspense>
+        <LazyProductsListBanner
           sectionTitle='Consumer Electric'
           banner={Images.banners.Banenr_4}
           to='#'
@@ -106,7 +149,51 @@ const Home = () => {
           products={techProducts}
           white={'true'}
         />
-      )}
+      </Suspense>
+
+      <Suspense>
+        <LazyProductsListBanner
+          sectionTitle='Consumer Electric'
+          banner={Images.banners.Banenr_4}
+          to='#'
+          h5='new collection'
+          h3='top Camera'
+          span='mirrorless'
+          products={techProducts}
+          white={'true'}
+        />
+      </Suspense>
+
+      <Suspense>
+        <LazyClients />
+      </Suspense>
+
+      <Suspense>
+        <LazyBlog />
+      </Suspense>
+
+      <Suspense>
+        <LazyRecentViews products={homeProducts} />
+      </Suspense>
+
+      <div className='banner-wrapper'>
+        <Suspense>
+          <LazyBanner
+            image={Images.banners.Banenr_1}
+            backgroundColor={'#3B4B48'}
+            h5={'Natural Process'}
+            h3={'Cosmetic Makeup Professional'}
+            underline='true'
+          />
+          <LazyBanner
+            image={Images.banners.Banenr_2}
+            backgroundColor={'#E5E5E5'}
+            h5={'Trending Now'}
+            h3={"Women's Lifestyle Collection"}
+            underline='true'
+          />
+        </Suspense>
+      </div>
 
       <div className='banner-fashion-wrapper'>
         <div className='container'>
@@ -130,28 +217,10 @@ const Home = () => {
                 to get best offer.
               </p>
             </div>
-            <LinkBtn className='btn btn-outline' label='shop now' classType='btn-outline' />
+            <LazyLinkBtn className='btn btn-outline' label='shop now' classType='btn-outline' />
           </div>
         </div>
       </div>
-
-      {products && (
-        <ProductsListBanner
-          sectionTitle='Home Garden & Kitchen'
-          banner={Images.banners.Banenr_5}
-          to='#'
-          h5='Deals And Promotions '
-          h3='Trending'
-          span='House Utensil'
-          products={homeProducts}
-        />
-      )}
-
-      <Clients />
-
-      <Blog />
-
-      {products && <RecentViews products={homeProducts} />}
     </article>
   );
 };

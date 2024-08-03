@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { TbTruckDelivery } from 'react-icons/tb';
 import { RiSecurePaymentLine } from 'react-icons/ri';
 import { TbCreditCardRefund } from 'react-icons/tb';
@@ -5,7 +6,7 @@ import { TfiHeadphoneAlt } from 'react-icons/tfi';
 
 const FeaturesSection = () => {
   return (
-    <section className='section features'>
+    <section className='section features' data-lazy-trigger>
       <div className='container'>
         <div className='feature-box'>
           <div className='icon'>

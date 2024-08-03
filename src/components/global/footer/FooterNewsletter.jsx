@@ -16,7 +16,7 @@ const FooterNewsletter = () => {
             </div>
           </div>
           <div className='form-box'>
-            <form action='#' className='input-wrapper'>
+            <form className='input-wrapper'>
               <input
                 type='text'
                 className='form-control'

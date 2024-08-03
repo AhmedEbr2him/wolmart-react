@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Images from '../../assets/images/images';
@@ -21,7 +22,7 @@ const IntroSection = () => {
     },
   };
   return (
-    <section className='section intro-section'>
+    <section className='section intro-section' data-lazy-trigger>
       <Slider {...settings}>
         <FirstSlide />
         <SecondSlide />

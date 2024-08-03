@@ -17,7 +17,7 @@ const Deals = ({ products, topProducts }) => {
   };
 
   return (
-    <section className='section deals-wrapper'>
+    <section className='section deals-wrapper' data-lazy-trigger>
       <div className='container'>
         <div className='product-wrapper'>
           <h4 className='head-title'>Deals Hot of The Day</h4>

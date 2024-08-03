@@ -29,7 +29,7 @@ const Blog = () => {
     dots: true,
   };
   return (
-    <section className='section blog-section'>
+    <section className='section blog-section' data-lazy-trigger>
       <div className='blog-section-wrapper'>
         <div className='container'>
           <TitleLink title='from out blog' to='#' />

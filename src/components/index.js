@@ -22,6 +22,7 @@ export { default as ProductPrice } from './common/ProductPrice';
 export { default as Banner } from './common/Banner';
 export { default as LinkUnderline } from './common/LinkUnderline';
 export { default as TitleLink } from './common/TitleLink';
+export { default as ScrollToTop } from './common/ScrollToTop';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';

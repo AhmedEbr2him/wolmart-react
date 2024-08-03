@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import Images from '../../assets/images/images';
 import Slider from 'react-slick';
@@ -40,7 +41,7 @@ const CategorySection = () => {
   };
 
   return (
-    <section className='section category-section'>
+    <section className='section category-section' data-lazy-trigger>
       <div className='container'>
         <SectionTitle title='Top Categories Of The Month' />
         <div className='category-list'>

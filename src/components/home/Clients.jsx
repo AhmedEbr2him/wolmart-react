@@ -11,7 +11,7 @@ const Clients = () => {
     slidesPerRow: 2,
   };
   return (
-    <section className='section client-section-wrapper'>
+    <section className='section client-section-wrapper' data-lazy-trigger>
       <div className='container'>
         <SectionTitle title='our clients' />
         <div className='client-section-content'>

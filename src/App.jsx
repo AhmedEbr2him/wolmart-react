@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 // import { Home } from './pages';
-import { Footer, Header, StickyFooter } from './components';
+import { Footer, Header, ScrollToTop, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import React, { Suspense, lazy } from 'react';
@@ -14,7 +14,7 @@ const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDra
 const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
 
 const App = () => {
-  const { isDrawerActive, isCartActive } = useContext(MainContext);
+  const { isDrawerActive } = useContext(MainContext);
 
   useEffect(() => {
     const handleBody = () => {

@@ -15,7 +15,7 @@ const ProductsListBanner = ({ sectionTitle, to, banner, h5, h3, span, products, 
     dots: true,
   };
   return (
-    <section className='section banner-products'>
+    <section className='section banner-products' data-lazy-trigger>
       <div className='container'>
         <TitleLink title={sectionTitle} to={to} />
       </div>

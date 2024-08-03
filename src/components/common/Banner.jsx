@@ -3,7 +3,7 @@ import LinkBtn from './LinkBtn';
 import LinkUnderline from './LinkUnderline';
 const Banner = ({ image, backgroundColor, h5, span, h3, underline, outline }) => {
   return (
-    <div className='fixed-banner-wrapper'>
+    <div className='fixed-banner-wrapper' data-lazy-trigger>
       <div className='container'>
         <div className='banner fixed-banner' style={{ backgroundImage: `url(${image})` }}>
           <figure>

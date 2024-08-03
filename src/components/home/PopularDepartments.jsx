@@ -27,7 +27,7 @@ const PopularDepartments = ({ products }) => {
   // slice / concat / array from / [... for main array] => creates a shallow copy of the array before sorting to avoid unexpected behavior when  rendering different tabs based on sorted data.
   // should create a shallow copy of the array before sorting. This way, each sort operation works on a separate array instance
   return (
-    <section className='section popular-departments'>
+    <section className='section popular-departments' data-lazy-trigger>
       <div className='container'>
         <div className='section-header'>
           <SectionTitle title='Popular Departments' />

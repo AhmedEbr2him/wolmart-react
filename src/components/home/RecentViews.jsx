@@ -11,7 +11,7 @@ const RecentViews = ({ products }) => {
     dots: true,
   };
   return (
-    <section className='section recent-views-section'>
+    <section className='section recent-views-section' data-lazy-trigger>
       <div className='section-wrapper'>
         <SectionTitle title='your recent views' />
 
