@@ -33,3 +33,4 @@ export { default as PopularDepartments } from './home/PopularDepartments';
 export { default as ProductsListBanner } from './home/ProductsListBanner.jsx';
 export { default as Clients } from './home/Clients';
 export { default as Blog } from './home/Blog';
+export { default as RecentViews } from './home/RecentViews';

@@ -11,6 +11,7 @@ import {
   LinkBtn,
   Clients,
   Blog,
+  RecentViews,
 } from '../../components';
 import { useEffect, useState } from 'react';
 import Images from '../../assets/images/images';
@@ -22,7 +23,7 @@ const Home = () => {
   const [popularProducts, setPopularProduct] = useState([]);
   const [fashionProducts, setFashionProducts] = useState([]);
   const [techProducts, setTechProducts] = useState([]);
-  const [homeProduct, setHomeProducts] = useState([]);
+  const [homeProducts, setHomeProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -138,13 +139,15 @@ const Home = () => {
           h5='Deals And Promotions '
           h3='Trending'
           span='House Utensil'
-          products={homeProduct}
+          products={homeProducts}
         />
       )}
 
       <Clients />
 
       <Blog />
+
+      {products && <RecentViews products={homeProducts} />}
     </article>
   );
 };
