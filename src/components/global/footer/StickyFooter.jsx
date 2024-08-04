@@ -6,7 +6,7 @@ import { BiHome, BiStore, BiUser, BiShoppingBag, BiSearchAlt } from 'react-icons
 
 const StickyFooter = () => {
   const { isScroll } = useIsScroll();
-  const size = 24;
+  const size = 26;
 
   const stickList = [
     {

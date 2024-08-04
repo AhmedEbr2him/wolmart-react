@@ -276,4 +276,71 @@ const selectedList = {
     { value: 32, label: 'show 32' },
   ],
 };
-export { categories, selectedList };
+
+const filterItems = {
+  allCategories: [
+    { label: 'Accessories', to: '#' },
+    { label: 'Babies', to: '#' },
+    { label: 'Beauty', to: '#' },
+    { label: 'Decoration', to: '#' },
+    { label: 'Electronics', to: '#' },
+    { label: 'Fashion', to: '#' },
+    { label: 'Food', to: '#' },
+    { label: 'Furniture', to: '#' },
+    { label: 'Kitchen', to: '#' },
+    { label: 'Medical', to: '#' },
+    { label: 'Sports', to: '#' },
+    { label: 'Watches', to: '#' },
+  ],
+
+  priceRanges: [
+    { label: '$0.00 - $100.00', value: '100', to: '' },
+    { label: '$100.00 - $200.00', value: '200', to: '' },
+    { label: '$200.00 - $300.00', value: '300', to: '' },
+    { label: '$300.00 - $500.00', value: '500', to: '' },
+    { label: '$500.00+', value: '500+', to: '' },
+  ],
+  sizeRange: [
+    {
+      label: 'Extra Large',
+      value: 'xl',
+      to: '#',
+    },
+    {
+      label: 'Large',
+      value: 'l',
+      to: '#',
+    },
+    {
+      label: 'Medium',
+      value: 'm',
+      to: '#',
+    },
+
+    {
+      label: 'Small',
+      value: 's',
+      to: '#',
+    },
+  ],
+  brands: [
+    { label: 'Elegant Auto Group', value: 'Elegant Auto Group', to: '#' },
+    { label: 'Green Grass', value: 'Green Grass', to: '#' },
+    { label: 'Node Js', value: 'Node Js', to: '#' },
+    { label: 'NS8', value: 'NS8', to: '#' },
+    { label: 'Red', value: 'Red', to: '#' },
+    { label: 'Skysuite Tech', value: 'Skysuite Tech', to: '#' },
+    { label: 'Sterling', value: 'Sterling', to: '#' },
+  ],
+  colorOptions: [
+    { label: 'Black', value: 'black', to: '#' },
+    { label: 'Blue', value: 'blue', to: '#' },
+    { label: 'Brown', value: 'brown', to: '#' },
+    { label: 'Green', value: 'green', to: '#' },
+    { label: 'Grey', value: 'grey', to: '#' },
+    { label: 'Orange', value: 'orange', to: '#' },
+    { label: 'Yellow', value: 'yellow', to: '#' },
+  ],
+};
+
+export { categories, selectedList, filterItems };

@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import { lazy, Suspense, useContext, useEffect, useRef, useState } from 'react';
 import ShopSidebar from './ShopSidebar';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs';
 import { FaThList } from 'react-icons/fa';
@@ -10,6 +10,7 @@ import { FaArrowRight } from 'react-icons/fa6';
 import SkeletonCard from '../common/SkeletonCard';
 const LazyProduct = lazy(() => import('../common/Product'));
 import { selectedList } from '../../constants/mockData';
+import { MainContext } from '../../context/MainContext';
 
 const ShopContent = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -112,10 +113,12 @@ const ShopContent = () => {
 };
 /* NAVIGATION */
 const Navigation = () => {
+  const { openFilter } = useContext(MainContext);
+
   return (
     <nav className='toolbox'>
       <div className='toolbox-left'>
-        <button aria-label='filter button' className='btn filter-btn'>
+        <button aria-label='filter button' className='btn filter-btn' onClick={openFilter}>
           <IoList />
           <span>filter</span>
         </button>

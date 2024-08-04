@@ -3,7 +3,6 @@ import Images from '../../assets/images/images';
 import BreadcrumbList from '../../components/common/BreadcrumbList';
 import LinkBtn from '../../components/common/LinkBtn';
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
 import { Categories, ShopContent } from '../../components';
 
 const Shop = () => {

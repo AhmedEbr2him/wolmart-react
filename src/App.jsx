@@ -14,7 +14,7 @@ const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDra
 const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
 
 const App = () => {
-  const { isDrawerActive } = useContext(MainContext);
+  const { isDrawerActive, isFilterActive } = useContext(MainContext);
 
   useEffect(() => {
     const handleBody = () => {
@@ -25,13 +25,14 @@ const App = () => {
       }
     };
     handleBody();
-  }, [isDrawerActive]);
+  }, [isDrawerActive, isFilterActive]);
 
   return (
     <div className={'app'}>
       <Suspense fallback={null}>
         <LazyMobileDrawer />
         <LazyCartDrawer />
+        {/* SCRIM */}
         <LazyScrimOverlay />
       </Suspense>
 
