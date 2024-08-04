@@ -36,3 +36,6 @@ export { default as ProductsListBanner } from './home/ProductsListBanner.jsx';
 export { default as Clients } from './home/Clients';
 export { default as Blog } from './home/Blog';
 export { default as RecentViews } from './home/RecentViews';
+
+/* SHOP */
+export { default as Categories } from './shop/Categories';

@@ -24,6 +24,7 @@ import Banenr_3 from './banners/2.jpg';
 import Banenr_4 from './banners/3.jpg';
 import Banenr_5 from './banners/5.jpg';
 import Banner_fashion from './banners/4.jpg';
+import Banner_shop_1 from './banners/banner1.jpg';
 
 /* CATEGORIES */
 import category_1 from './categories/2-1.jpg';
@@ -32,7 +33,14 @@ import category_3 from './categories/2-3.jpg';
 import category_4 from './categories/2-4.jpg';
 import category_5 from './categories/2-5.jpg';
 import category_6 from './categories/2-6.jpg';
-
+import shop_category_1 from './shopCategories/category-4.jpg';
+import shop_category_2 from './shopCategories/category-5.jpg';
+import shop_category_3 from './shopCategories/category-6.jpg';
+import shop_category_4 from './shopCategories/category-7.jpg';
+import shop_category_5 from './shopCategories/category-8.jpg';
+import shop_category_6 from './shopCategories/category-9.jpg';
+import shop_category_7 from './shopCategories/category-20.jpg';
+import shop_category_8 from './shopCategories/category-21.jpg';
 /* CLIENTS */
 import client_1 from './clients/1.png';
 import client_2 from './clients/2.png';
@@ -46,6 +54,15 @@ import client_9 from './clients/9.png';
 import client_10 from './clients/10.png';
 import client_11 from './clients/11.png';
 import client_12 from './clients/12.png';
+
+/* BRANDS */
+import brand_1 from './brands/1.png';
+import brand_2 from './brands/2.png';
+import brand_3 from './brands/3.png';
+import brand_4 from './brands/4.png';
+import brand_5 from './brands/5.png';
+import brand_6 from './brands/6.png';
+import brand_7 from './brands/7.png';
 
 const Images = {
   flags: { en, fr },
@@ -76,6 +93,7 @@ const Images = {
     Banenr_4,
     Banenr_5,
     Banner_fashion,
+    Banner_shop_1,
   },
 
   categories: {
@@ -85,6 +103,14 @@ const Images = {
     category_4,
     category_5,
     category_6,
+    shop_category_1,
+    shop_category_2,
+    shop_category_3,
+    shop_category_4,
+    shop_category_5,
+    shop_category_6,
+    shop_category_7,
+    shop_category_8,
   },
 
   clients: [
@@ -101,6 +127,7 @@ const Images = {
     client_11,
     client_12,
   ],
+  brands: [brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7],
 };
 
 export default Images;

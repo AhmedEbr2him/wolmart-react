@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { IoChevronForward } from 'react-icons/io5';
 const BreadcrumbList = () => {
   return (
@@ -18,10 +18,10 @@ const BreadCrumb = () => {
     const isLast = segments.length - 1 === index;
 
     return (
-      <Link key={index} to={`/${url}`} className='breadcrumb'>
+      <NavLink key={index} to={`/${url}`} className='breadcrumb'>
         <span>{segment === '' ? 'Home' : segment}</span>
         {!isLast && <IoChevronForward />}
-      </Link>
+      </NavLink>
     );
   });
 

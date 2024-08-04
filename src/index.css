@@ -950,6 +950,12 @@ ins {
 
   .breadcrumb {
     line-height: 1.8rem;
+
+    &.active {
+      span {
+        color: var(--main-text-color);
+      }
+    }
   }
   span {
     display: inline-block;
