@@ -7,13 +7,14 @@ import { MainContext } from '../../context/MainContext';
 
 const ShopSidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState({
-    allCategories: false,
-    price: false,
-    size: false,
-    brand: false,
-    color: false,
+    allCategories: true,
+    price: true,
+    size: true,
+    brand: true,
+    color: true,
   });
   const { closeFilter, isFilterOpen } = useContext(MainContext);
+
   const toggleCollapsed = key => {
     setIsCollapsed(prevState => ({
       ...prevState,

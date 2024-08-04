@@ -4,7 +4,7 @@ import { routesConstatns } from './constants/routesConstants';
 import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
-import React, { Suspense, lazy } from 'react';
+import { Suspense, lazy } from 'react';
 import Shop from './pages/shop';
 import { Cart } from './pages';
 

@@ -11,6 +11,7 @@ import SkeletonCard from '../common/SkeletonCard';
 const LazyProduct = lazy(() => import('../common/Product'));
 import { selectedList } from '../../constants/mockData';
 import { MainContext } from '../../context/MainContext';
+import { useIsScroll } from '../../hooks/useIsScroll';
 
 const ShopContent = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -22,6 +23,7 @@ const ShopContent = () => {
   const totalProductsPages = Math.ceil(allProducts.length / productsPerPage);
   const [isLoading, setIsLoading] = useState(true);
   const sectionRef = useRef(null);
+  const { isScroll } = useIsScroll();
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
@@ -71,7 +73,7 @@ const ShopContent = () => {
     <section className='section shop-content' ref={sectionRef}>
       <ShopSidebar />
       <div className='main-content'>
-        <div className='filter-content-wrapper'>
+        <div className={`filter-content-wrapper ${isScroll ? '' : 'fixed'}`}>
           <Navigation />
         </div>
 
@@ -191,23 +193,64 @@ const ProductsList = ({ isLoading, currentProducts }) => {
 
 /* PAGINATION */
 const Pagination = ({ totalProductsPages, currentPage, handlePageNumber }) => {
-  return (
-    <ul className='pagination'>
-      {Array.from({ length: totalProductsPages }, (_, index) => {
-        const temPageNum = index + 1;
+  const pagination = [];
+  const maxPagesToShow = 3;
 
-        return (
-          <li
-            key={index}
-            className={`pagination-item ${currentPage === temPageNum ? 'active' : ''}`}
-            onClick={() => handlePageNumber(temPageNum)}
-          >
-            <button aria-label='Pagination'>{temPageNum}</button>
-          </li>
-        );
-      })}
-    </ul>
+  // Add the first page
+  pagination.push(
+    <li
+      key={1}
+      className={`pagination-item ${currentPage === 1 ? 'active' : ''}`}
+      onClick={() => handlePageNumber(1)}
+    >
+      <button aria-label='Pagination'>1</button>
+    </li>
   );
+
+  // Determine the range of pages to show in the middle
+  let startPage = Math.max(currentPage - 1, 2);
+  let endPage = Math.min(currentPage + 1, totalProductsPages - 1);
+
+  // Adjust if the start or end page is too close to the boundaries
+  if (currentPage === 1) {
+    endPage = Math.min(maxPagesToShow, totalProductsPages - 1);
+  } else if (currentPage === totalProductsPages) {
+    startPage = Math.max(totalProductsPages - 2, 2);
+  }
+
+  // Add the middle pages
+  if (startPage > 2) {
+    pagination.push(<li key='start-ellipsis'>...</li>);
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    pagination.push(
+      <li
+        key={i}
+        className={`pagination-item ${currentPage === i ? 'active' : ''}`}
+        onClick={() => handlePageNumber(i)}
+      >
+        <button aria-label='Pagination'>{i}</button>
+      </li>
+    );
+  }
+  if (endPage < totalProductsPages - 1) {
+    pagination.push(<li key='end-ellipsis'>...</li>);
+  }
+
+  // Add the last page
+  if (totalProductsPages > 1) {
+    pagination.push(
+      <li
+        key={totalProductsPages}
+        className={`pagination-item ${currentPage === totalProductsPages ? 'active' : ''}`}
+        onClick={() => handlePageNumber(totalProductsPages)}
+      >
+        <button aria-label='Pagination'>{totalProductsPages}</button>
+      </li>
+    );
+  }
+  return <ul className='pagination'>{pagination}</ul>;
 };
 
 export default ShopContent;

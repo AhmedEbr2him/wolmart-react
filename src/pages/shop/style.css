@@ -77,6 +77,9 @@
 .slick-slider .slick-dots {
   bottom: -2.5rem !important;
 }
+.section {
+  position: relative;
+}
 .shop-content {
   position: relative;
 
@@ -121,6 +124,7 @@
     width: 100%;
     appearance: none;
     -webkit-appearance: none;
+    background-color: var(--site-background);
 
     &::after {
       content: '';
