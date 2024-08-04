@@ -973,3 +973,44 @@ ins {
     font-size: 1.2rem;
   }
 }
+/* SKELETON */
+.skeleton {
+  background-color: var(--section-background);
+  animation: skeleton-loading 500ms linear infinite alternate;
+
+  &.card-banner {
+    aspect-ratio: 1/1;
+    width: 100%;
+    border-radius: var(--medium-radius);
+  }
+
+  &.card-subtitle {
+    margin-block: 8px;
+    height: 16px;
+    width: 50%;
+  }
+  &.card-title {
+    margin-block: 8px;
+    height: 18px;
+    width: 80%;
+  }
+  &.card-rating {
+    margin-block: 8px;
+    height: 16px;
+    width: 100%;
+  }
+  &.card-price {
+    margin-block: 8px;
+    height: 16px;
+    width: 50%;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

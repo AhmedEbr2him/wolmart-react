@@ -47,7 +47,7 @@ const Categories = () => {
   };
 
   return (
-    <section className='category-ellipsis'>
+    <section className='shop-default-category'>
       <Slider {...settings}>
         {categoryList.map((category, index) => (
           <div key={index} className='category'>

@@ -259,4 +259,21 @@ const categories = [
     ],
   },
 ];
-export { categories };
+
+const selectedList = {
+  orederByList: [
+    { value: 'default', label: 'default sorting' },
+    { value: 'popularity', label: 'Sort by popularity' },
+    { value: 'rating', label: 'Sort by average rating' },
+    { value: 'latest', label: 'Sort by latest' },
+    { value: 'price-low', label: 'Sort by pric: low to high' },
+    { value: 'price-high', label: 'Sort by price: high to low' },
+  ],
+  countList: [
+    { value: 9, label: 'show 9' },
+    { value: 12, label: 'show 12' },
+    { value: 24, label: 'show 24' },
+    { value: 32, label: 'show 32' },
+  ],
+};
+export { categories, selectedList };
