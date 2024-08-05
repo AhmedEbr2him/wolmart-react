@@ -25,6 +25,7 @@ export { default as TitleLink } from './common/TitleLink';
 export { default as ScrollToTop } from './common/ScrollToTop';
 export { default as BreadcrumbList } from './common/BreadcrumbList';
 export { default as SkeletonCard } from './common/SkeletonCard';
+export { default as PageHeader } from './common/PageHeader';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';
@@ -41,3 +42,7 @@ export { default as RecentViews } from './home/RecentViews';
 /* SHOP */
 export { default as Categories } from './shop/Categories';
 export { default as ShopContent } from './shop/ShopContent';
+
+/* ABOUT */
+export { default as CounterSection } from './about/CounterSection';
+export { default as AccordionSection } from './about/AccordionSection';

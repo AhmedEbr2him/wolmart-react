@@ -1,14 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
-// import { Home } from './pages';
 import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import { Suspense, lazy } from 'react';
 import Shop from './pages/shop';
 import { Cart } from './pages';
-
+/* PAGES */
 const LazyHome = lazy(() => import('./pages/home/index'));
+const LazyAbout = lazy(() => import('./pages/about/index'));
+
+/* COMPOENNTS */
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
 const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDrawer'));
 const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
@@ -48,6 +50,14 @@ const App = () => {
                 <LazyHome />
               </Suspense>
             }
+          />
+          <Route
+            element={
+              <Suspense fallback={<div>...Loading</div>}>
+                <LazyAbout />
+              </Suspense>
+            }
+            path={routesConstatns.ABOUT_US}
           />
           <Route path={routesConstatns.SHOP} element={<Shop />} />
           <Route path={routesConstatns.CART} element={<Cart />} />

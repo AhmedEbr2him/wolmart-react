@@ -1,8 +1,9 @@
+import { routesConstatns } from './routesConstants';
 export const linksList = [
   {
     label: 'Company',
     list: [
-      { to: '#', label: 'about us' },
+      { to: routesConstatns.ABOUT_US, label: 'about us' },
       { to: '#', label: 'team member' },
       { to: '#', label: 'career' },
       { to: '#', label: 'contect us' },

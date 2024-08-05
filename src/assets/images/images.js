@@ -64,6 +64,21 @@ import brand_5 from './brands/5.png';
 import brand_6 from './brands/6.png';
 import brand_7 from './brands/7.png';
 
+/* ABOUT US  */
+import about_banner_1 from './aboutus/1.jpg';
+import about_banner_2 from './aboutus/2.jpg';
+import about_banner_3 from './aboutus/3.jpg';
+
+import award_1 from './aboutus/awards/1.png';
+import award_2 from './aboutus/awards/2.png';
+import award_3 from './aboutus/awards/3.png';
+import award_4 from './aboutus/awards/4.png';
+
+import member_1 from './aboutus/members/4.jpg';
+import member_2 from './aboutus/members/5.jpg';
+import member_3 from './aboutus/members/6.jpg';
+import member_4 from './aboutus/members/7.jpg';
+
 const Images = {
   flags: { en, fr },
   logo: { lightLogo, darkLogo },
@@ -128,6 +143,11 @@ const Images = {
     client_12,
   ],
   brands: [brand_1, brand_2, brand_3, brand_4, brand_5, brand_6, brand_7],
-};
 
+  about: {
+    banner: { about_banner_1, about_banner_2, about_banner_3 },
+    awards: { award_1, award_2, award_3, award_4 },
+    members: { member_1, member_2, member_3, member_4 },
+  },
+};
 export default Images;
