@@ -3,20 +3,7 @@
     padding-inline: 16px;
   }
 }
-.page-header {
-  text-align: center;
-  height: 18rem;
-  display: grid;
-  place-content: center;
-  background-color: var(--section-background);
-  margin-block-end: 4rem;
 
-  h1 {
-    text-transform: capitalize;
-    font-size: 3rem;
-    font-weight: var(--weight-bold);
-  }
-}
 .page-content {
   padding-block-start: 5rem;
   .section-wrapper {
@@ -24,15 +11,6 @@
     padding-block-end: 5rem;
   }
 
-  .introduce-section {
-    .title {
-      text-align: center;
-      max-width: 40rem;
-    }
-    p {
-      line-height: 2.4rem;
-    }
-  }
   .customer-service-section .title {
     text-align: left;
     font-size: 2.5rem;

@@ -3,5 +3,6 @@ export const routesConstatns = {
   SHOP: '/shop',
   CART: '/cart',
   ABOUT_US: '/about-us',
+  CONTACT_US: '/contact-us',
   ERROR: '*',
 };

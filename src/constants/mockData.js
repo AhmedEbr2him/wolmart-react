@@ -6,7 +6,7 @@ export const linksList = [
       { to: routesConstatns.ABOUT_US, label: 'about us' },
       { to: '#', label: 'team member' },
       { to: '#', label: 'career' },
-      { to: '#', label: 'contect us' },
+      { to: routesConstatns.CONTACT_US, label: 'contect us' },
       { to: '#', label: 'affilate' },
       { to: '#', label: 'order hisory' },
     ],

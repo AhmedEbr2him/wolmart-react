@@ -26,6 +26,7 @@ export { default as ScrollToTop } from './common/ScrollToTop';
 export { default as BreadcrumbList } from './common/BreadcrumbList';
 export { default as SkeletonCard } from './common/SkeletonCard';
 export { default as PageHeader } from './common/PageHeader';
+export { default as Introduce } from './common/Introduce';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';

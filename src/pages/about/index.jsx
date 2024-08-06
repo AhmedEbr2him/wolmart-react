@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 import './style.css';
 import Images from '../../assets/images/images';
-import { AccordionSection, BreadcrumbList, CounterSection, PageHeader } from '../../components';
+import {
+  AccordionSection,
+  BreadcrumbList,
+  CounterSection,
+  Introduce,
+  PageHeader,
+} from '../../components';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import { FaFacebookF } from 'react-icons/fa';
@@ -54,14 +60,14 @@ const AboutUs = () => {
           <div className='container'>
             <section className='section introduce-section'>
               <div className='section-wrapper'>
-                <h2 className='title'>
-                  We&apos;re Devoted Marketing <br />
-                  Consultants Helping Your Business Grow
-                </h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  labore et dolore magna aliqua. Venenatis tellu metus
-                </p>
+                <Introduce
+                  title="We're Devoted Marketing 
+                  Consultants Helping Your Business Grow"
+                  paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  labore et dolore magna aliqua. Venenatis tellu metus'
+                />
+
+                <p></p>
                 <figure>
                   <img
                     src={Images.about.banner.about_banner_1}
@@ -142,7 +148,7 @@ const AboutUs = () => {
                   maecenas ultricies mi eget mauris. Volutpat ac
                 </p>
 
-                <Slider>
+                <Slider {...settings}>
                   {members.map((member, index) => (
                     <div key={index} className='member'>
                       <figure>

@@ -23,6 +23,7 @@ const FooterNewsletter = () => {
                 name='email'
                 id='email'
                 placeholder='Your Email Adress'
+                autoComplete='off'
               />
               <button className='btn btn-dark' aria-label='subscripe button'>
                 <span>Subscripe</span>
