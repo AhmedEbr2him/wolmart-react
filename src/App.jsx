@@ -10,6 +10,7 @@ import { Cart } from './pages';
 const LazyHome = lazy(() => import('./pages/home/index'));
 const LazyAbout = lazy(() => import('./pages/about/index'));
 const LazyContact = lazy(() => import('./pages/contact/index'));
+const LazyWishlist = lazy(() => import('./pages/wishlist/index'));
 
 /* COMPOENNTS */
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
@@ -67,6 +68,14 @@ const App = () => {
               </Suspense>
             }
             path={routesConstatns.CONTACT_US}
+          />
+          <Route
+            element={
+              <Suspense fallback={<div>...Loading</div>}>
+                <LazyWishlist />
+              </Suspense>
+            }
+            path={routesConstatns.WISHLIST}
           />
           <Route path={routesConstatns.SHOP} element={<Shop />} />
           <Route path={routesConstatns.CART} element={<Cart />} />

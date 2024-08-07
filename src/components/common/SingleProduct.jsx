@@ -14,6 +14,7 @@ import Rating from './Rating';
 import calculateDiscount from '../../utils/calculateDiscount';
 import { useCheckboxState } from '../../hooks/useCheckboxState';
 import InputPriceGroup from './InputPriceGroup';
+import SocialList from './SocialList';
 
 const SingleProduct = ({ data }) => {
   const {
@@ -124,45 +125,14 @@ const SingleProduct = ({ data }) => {
               </button>
             </div>
           </div>
-          <SocialList />
+          {/* SOCIAL LIST */}
+          <SocialList product={true} />
         </div>
       </div>
     </div>
   );
 };
 export default SingleProduct;
-
-const SocialList = () => {
-  const socialLinks = [
-    { label: 'facebook', link: '#', icon: <FaFacebookF /> },
-    { label: 'X', link: '#', icon: <BsTwitterX /> },
-    { label: 'Pinterest', link: '#', icon: <FaPinterestP /> },
-    { label: "What's app", link: '#', icon: <FaWhatsapp /> },
-    { label: 'Inestagram', link: '#', icon: <SlSocialInstagram /> },
-  ];
-
-  return (
-    <div className='social-links-wrapper'>
-      <div className='social-links'>
-        {socialLinks.map((link, index) => (
-          <Link key={index} to={link.link} className='btn'>
-            {link.icon}
-          </Link>
-        ))}
-      </div>
-      <div className='product-links-wrapper'>
-        <button aria-label='favorite' className='favorite-btn'>
-          <IoMdHeartEmpty />
-          <span className='tooltip'>Add to Favorite</span>
-        </button>
-        <button aria-label='compare' className='compare-btn'>
-          <LiaBalanceScaleSolid />
-          <span className='tooltip'>Add to Comparison</span>
-        </button>
-      </div>
-    </div>
-  );
-};
 
 const Discount = ({ oldPrice, newPrice, calculateDiscount }) => {
   const discountAmount = calculateDiscount(oldPrice, newPrice);

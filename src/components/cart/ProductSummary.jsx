@@ -104,11 +104,11 @@ const ProductSummary = () => {
           <span>$100.00</span>
         </div>
         <div className='cart-action'>
-          <button className='btn btn-outline cart-clear'>clear cart</button>
           <button className='btn btn-dark checkout'>
-            proceed to checkout
+            checkout
             <FiArrowRight />
           </button>
+          <button className='btn btn-outline cart-clear'>clear cart</button>
         </div>
       </div>
     </div>
