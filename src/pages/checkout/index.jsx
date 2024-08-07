@@ -1,11 +1,13 @@
 import './style.css';
 import { Link } from 'react-router-dom';
 import { BreadcrumbList, CountrySelect, PageHeader, ToolSelectBox } from '../../components';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { MainContext } from '../../context/MainContext';
+import Images from '../../assets/images/images';
 
 const Checkout = () => {
   const { state } = useContext(MainContext);
+
   return (
     <article className='checkout'>
       <div className='checkout-wrapper'>
@@ -142,14 +144,19 @@ const Checkout = () => {
                     placeholder='Enter your email address'
                   />
                 </div>
+                <div className='save-information'>
+                  <input type='checkbox' name='save' id='save_form' />
+                  <label htmlFor='save_form'>Save this information for next time.</label>
+                </div>
               </div>
-              <div className='save-information'>
-                <input type='checkbox' name='save' id='save_form' />
-                <label htmlFor='save_form'>Save this information for next time.</label>
+
+              <div className='shipping-payment'>
+                <h4 className='field-title shipping-title'>Payment method</h4>
+                <CreditPayment />
               </div>
 
               <Link to='' className='btn btn-dark next-btn'>
-                Next
+                Place order
               </Link>
             </form>
           </section>
@@ -159,3 +166,92 @@ const Checkout = () => {
   );
 };
 export default Checkout;
+
+const CreditPayment = () => {
+  const [isSelected, setIsSelected] = useState(null);
+  console.log(isSelected);
+
+  const hanldeIsSelected = e => {
+    const checkedValue = e.target.id;
+
+    setIsSelected(checkedValue);
+  };
+
+  return (
+    <div className='payment-wrapper'>
+      <div className='payment-type creditcard'>
+        <div className='card-value'>
+          <input
+            type='radio'
+            name='credit card'
+            id='credit'
+            onChange={hanldeIsSelected}
+            checked={isSelected === 'credit'}
+          />
+          <label htmlFor='credit'>
+            credit card
+            <figure>
+              <img src={Images.payment.payment} alt='Payment' />
+            </figure>
+          </label>
+        </div>
+
+        <div className='card-content'>
+          <div className='form-group'>
+            <label htmlFor='card_number'>Card number</label>
+            <input
+              type='number'
+              placeholder='.... .... ....'
+              name='card_number'
+              id='card_number'
+              className='form-control'
+            />
+          </div>
+          <div className='form-group'>
+            <label htmlFor='expired_date'>Expiration (MM/YY)</label>
+            <input
+              type='number'
+              name='expired date'
+              placeholder='MM/YY'
+              id='expired_date'
+              className='form-control'
+            />
+          </div>
+
+          <div className='form-group'>
+            <label htmlFor='security_code'>Card security code</label>
+            <input
+              type='number'
+              name='security code'
+              placeholder='CSC'
+              id='security_code'
+              className='form-control'
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className='payment-type paypal'>
+        <div className='card-value'>
+          <input
+            type='radio'
+            name='paypal'
+            id='paypal'
+            checked={isSelected === 'paypal'}
+            onChange={hanldeIsSelected}
+          />
+          <label htmlFor='paypal'>
+            paypal
+            <figure>
+              <img src={Images.payment.paypal} alt='Payment' width='110' height='110' />
+            </figure>
+          </label>
+        </div>
+
+        <div className='card-content'>
+          <Link to='#'></Link>
+        </div>
+      </div>
+    </div>
+  );
+};

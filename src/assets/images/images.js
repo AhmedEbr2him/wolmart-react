@@ -5,6 +5,8 @@ import darkLogo from './dark-logo.png';
 import cartProductOne from './products/cart-products/product-1.jpg';
 import cartProductTwo from './products/cart-products/product-2.jpg';
 import payment from './payment.png';
+import paypal from './free-paypal-54-675727.png';
+
 /* INTRO SECTION */
 import banner_1 from './slides/slide-1.jpg';
 import banner_2 from './slides/slide-2.jpg';
@@ -82,7 +84,7 @@ import member_4 from './aboutus/members/7.jpg';
 const Images = {
   flags: { en, fr },
   logo: { lightLogo, darkLogo },
-  payment: { payment },
+  payment: { payment, paypal },
   products: {
     cartProducts: { cartProductOne, cartProductTwo },
   },

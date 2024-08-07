@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, createBrowserRouter } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
