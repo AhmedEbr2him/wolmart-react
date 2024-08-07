@@ -1,12 +1,11 @@
 .contact-us {
-  .title,
-  p {
-    text-align: left;
-    color: var(--title-color);
-  }
-
   .contact-section :where(.accordion-wrapper, .inputs-wrapper) {
     margin-block-end: 4rem;
+
+    .title {
+      text-align: left;
+      color: var(--title-color);
+    }
   }
   .horizontal-divider {
     margin: 1.5rem 0 5rem 0;

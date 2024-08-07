@@ -3,7 +3,6 @@ import { lazy, Suspense, useContext, useEffect, useRef, useState } from 'react';
 import ShopSidebar from './ShopSidebar';
 import { BsFillGrid3X3GapFill } from 'react-icons/bs';
 import { FaThList } from 'react-icons/fa';
-import { IoIosArrowDown } from 'react-icons/io';
 import { IoList } from 'react-icons/io5';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
@@ -12,6 +11,7 @@ const LazyProduct = lazy(() => import('../common/Product'));
 import { selectedList } from '../../constants/mockData';
 import { MainContext } from '../../context/MainContext';
 import { useIsScroll } from '../../hooks/useIsScroll';
+import ToolSelectBox from '../common/ToolSelectBox';
 
 const ShopContent = () => {
   const [allProducts, setAllProducts] = useState([]);
@@ -126,35 +126,23 @@ const Navigation = () => {
         </button>
 
         <div className='toolbox-list'>
-          <div className='toolbox-item'>
-            <label htmlFor='sort'>sort by:</label>
-            <select name='orderby' id='sort' className='form-control orderby-list'>
-              {selectedList.orederByList.map((item, index) => (
-                <option key={index} defaultValue={item.value}>
-                  {item.label}
-                </option>
-              ))}
-            </select>
-            <span>
-              <IoIosArrowDown />
-            </span>
-          </div>
+          <ToolSelectBox
+            selectedList={selectedList.orederByList}
+            label={'sort by'}
+            selectId={'sort'}
+            selectName={'orderby'}
+            className='orderby-list'
+          />
         </div>
       </div>
 
       <div className='toolbox-right'>
-        <div className='toolbox-item'>
-          <select name='count' className='form-control count-list'>
-            {selectedList.countList.map((item, index) => (
-              <option key={index} defaultValue={item.value}>
-                {item.label}
-              </option>
-            ))}
-          </select>
-          <span>
-            <IoIosArrowDown />
-          </span>
-        </div>
+        <ToolSelectBox
+          selectedList={selectedList.countList}
+          selectName={'count'}
+          className='count-list'
+        />
+
         <div className='toolbox-item btn-group'>
           <button className='icon-mod-grid btn-layout'>
             <BsFillGrid3X3GapFill />

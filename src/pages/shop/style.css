@@ -93,58 +93,7 @@
     align-items: center;
     gap: 1rem;
   }
-  .toolbox-item {
-    height: 100%;
-    position: relative;
-    z-index: 2;
 
-    > span {
-      position: absolute;
-      height: 100%;
-      right: 1.5rem;
-      font-size: 1.2rem;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0;
-      display: grid;
-      place-content: center;
-      z-index: 1;
-    }
-  }
-  select {
-    padding: 1.2rem 1rem;
-    border-radius: var(--small-radius);
-    border: 1px solid var(--border-color);
-    color: var(--default-text-color);
-    text-transform: capitalize;
-    cursor: pointer;
-    font-size: 1.2rem;
-    min-height: auto;
-    height: 100%;
-    width: 100%;
-    appearance: none;
-    -webkit-appearance: none;
-    background-color: var(--site-background);
-
-    &::after {
-      content: '';
-      position: absolute;
-    }
-    option {
-      background-color: var(--site-background);
-    }
-
-    &.orderby-list {
-      max-width: 13.6rem;
-    }
-    &.count-list {
-      width: 9.4rem;
-    }
-
-    &:focus-visible {
-      outline: none;
-    }
-  }
   .btn-group {
     display: none;
   }

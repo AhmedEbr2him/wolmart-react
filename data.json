@@ -4176,5 +4176,107 @@
         ]
       }
     ]
-  }
+  },
+
+  "country": [
+    {
+      "label": "United States",
+      "value": "usa",
+      "states": [
+        { "label": "Alabama", "value": "al" },
+        { "label": "Alaska", "value": "ak" },
+        { "label": "Arizona", "value": "az" },
+        { "label": "Arkansas", "value": "ar" },
+        { "label": "California", "value": "ca" },
+        { "label": "Colorado", "value": "co" },
+        { "label": "Connecticut", "value": "ct" },
+        { "label": "Delaware", "value": "de" },
+        { "label": "Florida", "value": "fl" },
+        { "label": "Georgia", "value": "ga" },
+        { "label": "Hawaii", "value": "hi" },
+        { "label": "Idaho", "value": "id" },
+        { "label": "Illinois", "value": "il" },
+        { "label": "Indiana", "value": "in" },
+        { "label": "Iowa", "value": "ia" },
+        { "label": "Kansas", "value": "ks" },
+        { "label": "Kentucky", "value": "ky" },
+        { "label": "Louisiana", "value": "la" },
+        { "label": "Maine", "value": "me" },
+        { "label": "Maryland", "value": "md" },
+        { "label": "Massachusetts", "value": "ma" },
+        { "label": "Michigan", "value": "mi" },
+        { "label": "Minnesota", "value": "mn" },
+        { "label": "Mississippi", "value": "ms" },
+        { "label": "Missouri", "value": "mo" },
+        { "label": "Montana", "value": "mt" },
+        { "label": "Nebraska", "value": "ne" },
+        { "label": "Nevada", "value": "nv" },
+        { "label": "New Hampshire", "value": "nh" },
+        { "label": "New Jersey", "value": "nj" },
+        { "label": "New Mexico", "value": "nm" },
+        { "label": "New York", "value": "ny" },
+        { "label": "North Carolina", "value": "nc" },
+        { "label": "North Dakota", "value": "nd" },
+        { "label": "Ohio", "value": "oh" },
+        { "label": "Oklahoma", "value": "ok" },
+        { "label": "Oregon", "value": "or" },
+        { "label": "Pennsylvania", "value": "pa" },
+        { "label": "Rhode Island", "value": "ri" },
+        { "label": "South Carolina", "value": "sc" },
+        { "label": "South Dakota", "value": "sd" },
+        { "label": "Tennessee", "value": "tn" },
+        { "label": "Texas", "value": "tx" },
+        { "label": "Utah", "value": "ut" },
+        { "label": "Vermont", "value": "vt" },
+        { "label": "Virginia", "value": "va" },
+        { "label": "Washington", "value": "wa" },
+        { "label": "West Virginia", "value": "wv" },
+        { "label": "Wisconsin", "value": "wi" },
+        { "label": "Wyoming", "value": "wy" }
+      ]
+    },
+    {
+      "label": "United Kingdom",
+      "value": "uk",
+      "states": [
+        { "label": "England", "value": "eng" },
+        { "label": "Scotland", "value": "sco" },
+        { "label": "Wales", "value": "wal" },
+        { "label": "Northern Ireland", "value": "ni" }
+      ]
+    },
+    {
+      "label": "France",
+      "value": "fr",
+      "states": [
+        { "label": "Île-de-France", "value": "idf" },
+        { "label": "Auvergne-Rhône-Alpes", "value": "ara" },
+        { "label": "Bourgogne-Franche-Comté", "value": "bfc" },
+        { "label": "Brittany", "value": "bre" },
+        { "label": "Centre-Val de Loire", "value": "cvl" },
+        { "label": "Corsica", "value": "cor" },
+        { "label": "Grand Est", "value": "ges" },
+        { "label": "Hauts-de-France", "value": "hdf" },
+        { "label": "Normandy", "value": "nor" },
+        { "label": "Nouvelle-Aquitaine", "value": "na" },
+        { "label": "Occitanie", "value": "occ" },
+        { "label": "Pays de la Loire", "value": "pdl" },
+        { "label": "Provence-Alpes-Côte d'Azur", "value": "paca" }
+      ]
+    },
+    {
+      "label": "Australia",
+      "value": "au",
+      "states": [
+        { "label": "New South Wales", "value": "nsw" },
+        { "label": "Victoria", "value": "vic" },
+        { "label": "Queensland", "value": "qld" },
+        { "label": "South Australia", "value": "sa" },
+        { "label": "Western Australia", "value": "wa" },
+        { "label": "Tasmania", "value": "tas" },
+        { "label": "Australian Capital Territory", "value": "act" },
+        { "label": "Northern Territory", "value": "nt" }
+      ]
+    }
+  ]
 }

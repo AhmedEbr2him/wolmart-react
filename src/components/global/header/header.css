@@ -6,7 +6,7 @@
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,6 +14,12 @@
   transition: var(--motion-duration-medium-1);
   min-height: var(--header-height);
   border-bottom: 1px solid var(--border-color);
+  transform: translateY(0);
+
+  &.scroll {
+    position: absolute;
+    transform: translateY(-100%);
+  }
 }
 
 .header-top {

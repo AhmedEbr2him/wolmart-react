@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
-import { FiPlus } from 'react-icons/fi';
-import { FiMinus } from 'react-icons/fi';
 import { AiOutlineShopping } from 'react-icons/ai';
 import { IoMdHeartEmpty } from 'react-icons/io';
 import { LiaBalanceScaleSolid } from 'react-icons/lia';
@@ -14,8 +12,8 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { SlSocialInstagram } from 'react-icons/sl';
 import Rating from './Rating';
 import calculateDiscount from '../../utils/calculateDiscount';
-import { useProductQty } from '../../hooks/useProductQty';
 import { useCheckboxState } from '../../hooks/useCheckboxState';
+import InputPriceGroup from './InputPriceGroup';
 
 const SingleProduct = ({ data }) => {
   const {
@@ -32,7 +30,6 @@ const SingleProduct = ({ data }) => {
   } = data;
 
   const [mainImage, setMainImage] = useState(images[0]?.src);
-  const { handleDecreaseQty, handleIncreaseQty, handleOnChangeQty, productQty } = useProductQty();
   const { handleOption, checkedState, size, checkboxIndex, setIsCheckedState } = useCheckboxState({
     sizes,
   });
@@ -115,20 +112,8 @@ const SingleProduct = ({ data }) => {
           <hr className='horizontal-divider' />
           <div className='product-form'>
             <div className='product-qty-form'>
-              <div className='input-group'>
-                <input
-                  type='number'
-                  name='qantity'
-                  value={productQty}
-                  onChange={handleOnChangeQty}
-                />
-                <button className='qty-plus' aria-label='plus' onClick={handleIncreaseQty}>
-                  <FiPlus />
-                </button>
-                <button className='qty-minus' aria-label='minus' onClick={handleDecreaseQty}>
-                  <FiMinus />
-                </button>
-              </div>
+              <InputPriceGroup />
+
               <button
                 aria-label='submit button'
                 disabled={!checkedState[checkboxIndex]}
