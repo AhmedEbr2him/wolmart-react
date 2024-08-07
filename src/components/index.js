@@ -29,6 +29,7 @@ export { default as PageHeader } from './common/PageHeader';
 export { default as Introduce } from './common/Introduce';
 export { default as InputPriceGroup } from './common/InputPriceGroup';
 export { default as ToolSelectBox } from './common/ToolSelectBox';
+export { default as CountrySelect } from './common/CountrySelect';
 
 /* HOME */
 export { default as IntroSection } from './home/IntroSection';

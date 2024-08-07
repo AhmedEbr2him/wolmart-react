@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { BsTrash } from 'react-icons/bs';
 import { FiMinus, FiPlus } from 'react-icons/fi';
 import { useProductQty } from '../../hooks/useProductQty';
@@ -9,7 +10,7 @@ import img from '../../assets/images/products/cart-products/product-1.jpg';
 const Table = ({ data, wishlist }) => {
   const { handleDecreaseQty, handleIncreaseQty, handleOnChangeQty, productQty } = useProductQty();
   const tableHead = [
-    { label: 'Product', class: 'product-table-img' },
+    { label: 'Product', class: 'product-table-img', input: true },
     { label: 'Name', class: 'product-table-name' },
     { label: 'Price', class: 'product-table-price' },
     { label: 'Quantity', class: 'product-table-quantity' },

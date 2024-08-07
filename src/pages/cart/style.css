@@ -97,27 +97,6 @@
       }
     }
 
-    .select-box {
-      margin-block-end: 1.5rem;
-
-      &:not(:last-child) {
-        position: relative;
-
-        span {
-          position: absolute;
-          top: 50%;
-          right: 1rem;
-          transform: translateY(-50%);
-          font-size: 1.2rem;
-          display: grid;
-          place-content: center;
-        }
-      }
-      select {
-        font-size: 1.4rem;
-      }
-    }
-
     .btn {
       width: 100%;
     }

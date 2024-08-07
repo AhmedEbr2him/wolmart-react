@@ -1,46 +1,11 @@
-import { useEffect, useState } from 'react';
-import { IoIosArrowDown } from 'react-icons/io';
+import { useContext } from 'react';
 import ToolSelectBox from '../common/ToolSelectBox';
 import { FiArrowRight } from 'react-icons/fi';
+import { MainContext } from '../../context/MainContext';
+import CountrySelect from '../common/CountrySelect';
 
 const ProductSummary = () => {
-  const [countries, setCountries] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState('usa');
-  const [state, setStates] = useState([]);
-
-  const getCountries = async () => {
-    try {
-      const response = await fetch('/data.json');
-      if (response.ok) {
-        const data = await response.json();
-        setCountries(data.country);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const handleSelectCountry = e => {
-    const selectedValue = e.target.value;
-    setSelectedCountry(selectedValue);
-    const country = countries.find(country => country.value === selectedValue);
-
-    if (country) {
-      setStates(country.states);
-    } else {
-      setStates([]);
-    }
-  };
-
-  useEffect(() => {
-    getCountries();
-  }, []);
-
-  /* SET DEFAULT COUNTRY WHEN APP START */
-  useEffect(() => {
-    const defaultCountry = countries.find(country => country.value === selectedCountry);
-    defaultCountry && setStates(defaultCountry.states);
-  }, [selectedCountry, countries]);
+  const { selectedCountry, state } = useContext(MainContext);
 
   return (
     <div className='products-summary'>
@@ -76,23 +41,7 @@ const ProductSummary = () => {
 
         <form>
           <div className='form-group'>
-            <div className='select-box'>
-              <select
-                name='country'
-                id='country'
-                value={selectedCountry}
-                onChange={handleSelectCountry}
-              >
-                {countries.map((country, index) => (
-                  <option key={index} value={country.value}>
-                    {country.label}
-                  </option>
-                ))}
-              </select>
-              <span>
-                <IoIosArrowDown />
-              </span>
-            </div>
+            <CountrySelect />
             <div className='select-box state'>
               <ToolSelectBox selectedList={state} selectName='state' selectId='state' />
             </div>
