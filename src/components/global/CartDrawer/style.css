@@ -45,13 +45,16 @@
   padding-block-end: 2rem;
   border-top: 1px solid var(--border-color);
 
-  .product-cart {
-    padding: 2rem 0 0;
+  .drawer-product-cart {
+    padding: 2rem 0;
     display: flex;
     align-items: flex-start;
     gap: 15px;
     position: relative;
 
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+    }
     .product-name {
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -71,12 +74,12 @@
       display: flex;
       align-items: center;
 
-      .product-price {
+      .drawer-product-price {
         font-weight: var(--weight-semi-bold);
         color: var(--main-text-color);
         font-size: 1.6rem;
       }
-      .product-quantity {
+      .drawer-product-quantity {
         margin-right: 1.4rem;
         color: var(--default-color);
         position: relative;

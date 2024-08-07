@@ -21,15 +21,15 @@ const CartDrawer = () => {
         </div>
         <div className='products-wrapper'>
           <div className='products-container'>
-            <div className='product product-cart'>
-              <div className='product-detail'>
+            <div className='product drawer-product-cart'>
+              <div className='drawer-product-price'>
                 <Link to='#' className='product-name'>
                   Beige knitted elas tic runner shoes tic runner shoes
                 </Link>
 
                 <div className='price-box'>
-                  <span className='product-quantity'>1</span>
-                  <span className='product-price'>$10.00</span>
+                  <span className='drawer-product-quantity'>1</span>
+                  <span className='drawer-product-price'>$10.00</span>
                 </div>
               </div>
               <figure className='product-media'>

@@ -5,5 +5,6 @@ export const routesConstatns = {
   ABOUT_US: '/about-us',
   CONTACT_US: '/contact-us',
   WISHLIST: '/wishlist',
+  CHECKOUT: '/checkout',
   ERROR: '*',
 };

@@ -204,50 +204,6 @@
   }
 }
 
-.slick-slider {
-  .slick-dots {
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    li {
-      width: 4px;
-      height: 4px;
-      margin: 0;
-
-      &.slick-active {
-        width: 10px;
-        margin-right: 0.4rem;
-
-        button {
-          width: 20px;
-          background-color: var(--main-text-color);
-          border-color: var(--main-text-color);
-        }
-      }
-    }
-    button {
-      width: 8px;
-      height: 8px;
-      padding: 0;
-      transition: var(--motion-duration-short-2);
-      border: 1px solid var(--border-color);
-      border-radius: var(--circle-radius);
-      background-color: var(--alpha-10);
-
-      &::before {
-        display: none;
-      }
-    }
-  }
-  .slick-arrow {
-    display: none !important;
-  }
-}
 @keyframes fade-in {
   100% {
     opacity: 1;

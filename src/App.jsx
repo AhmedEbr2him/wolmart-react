@@ -4,14 +4,40 @@ import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import { Suspense, lazy } from 'react';
-import Shop from './pages/shop';
-import { Cart } from './pages';
-/* PAGES */
-const LazyHome = lazy(() => import('./pages/home/index'));
-const LazyAbout = lazy(() => import('./pages/about/index'));
-const LazyContact = lazy(() => import('./pages/contact/index'));
-const LazyWishlist = lazy(() => import('./pages/wishlist/index'));
 
+/* PAGES */
+const lazyImport = path => lazy(() => import(`./pages/${path}/index`));
+
+const routeConfig = [
+  {
+    path: routesConstatns.HOME,
+    component: lazyImport('home'),
+  },
+  {
+    path: routesConstatns.SHOP,
+    component: lazyImport('shop'),
+  },
+  {
+    path: routesConstatns.CART,
+    component: lazyImport('cart'),
+  },
+  {
+    path: routesConstatns.ABOUT_US,
+    component: lazyImport('about'),
+  },
+  {
+    path: routesConstatns.CONTACT_US,
+    component: lazyImport('contact'),
+  },
+  {
+    path: routesConstatns.WISHLIST,
+    component: lazyImport('wishlist'),
+  },
+  {
+    path: routesConstatns.CHECKOUT,
+    component: lazyImport('checkout'),
+  },
+];
 /* COMPOENNTS */
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
 const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDrawer'));
@@ -32,6 +58,7 @@ const App = () => {
   }, [isDrawerActive, isFilterActive]);
 
   return (
+    /* MAIN COMPONENTS */
     <div className={'app'}>
       <Suspense fallback={null}>
         <LazyMobileDrawer />
@@ -43,42 +70,20 @@ const App = () => {
       <StickyFooter />
       <Header />
 
+      {/* MAIN PAGES */}
       <main className='main'>
         <Routes>
-          <Route
-            path={routesConstatns.HOME}
-            element={
-              <Suspense fallback={<div>...Loading</div>}>
-                <LazyHome />
-              </Suspense>
-            }
-          />
-          <Route
-            element={
-              <Suspense fallback={<div>...Loading</div>}>
-                <LazyAbout />
-              </Suspense>
-            }
-            path={routesConstatns.ABOUT_US}
-          />
-          <Route
-            element={
-              <Suspense fallback={<div>...Loading</div>}>
-                <LazyContact />
-              </Suspense>
-            }
-            path={routesConstatns.CONTACT_US}
-          />
-          <Route
-            element={
-              <Suspense fallback={<div>...Loading</div>}>
-                <LazyWishlist />
-              </Suspense>
-            }
-            path={routesConstatns.WISHLIST}
-          />
-          <Route path={routesConstatns.SHOP} element={<Shop />} />
-          <Route path={routesConstatns.CART} element={<Cart />} />
+          {routeConfig.map(({ path, component: Component }) => (
+            <Route
+              key={path}
+              path={path}
+              element={
+                <Suspense fallback={<div>...Loading</div>}>
+                  <Component />
+                </Suspense>
+              }
+            />
+          ))}
         </Routes>
       </main>
       <Footer />
