@@ -323,16 +323,16 @@ input[type='radio'] {
     width: 100%;
     color: var(--text-color);
   }
-  .form-control {
-    height: 4.7rem;
-    border: 1px solid var(--border-color);
-    padding: 1rem 2rem;
-    border-radius: var(--small-radius);
-    font-size: 1.4rem;
+}
+.form-control {
+  height: 4.7rem;
+  border: 1px solid var(--border-color);
+  padding: 1rem 2rem;
+  border-radius: var(--small-radius);
+  font-size: 1.4rem;
 
-    &::placeholder {
-      font-size: 1.3rem;
-    }
+  &::placeholder {
+    font-size: 1.3rem;
   }
 }
 [data-scheme='light'] .link-btn {
