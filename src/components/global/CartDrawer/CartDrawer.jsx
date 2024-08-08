@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Images from '../../../assets/images/images';
 import { useContext } from 'react';
 import { MainContext } from '../../../context/MainContext';
+import { routesConstatns } from '../../../constants/routesConstants';
 
 const CartDrawer = () => {
   const { isCartActive, closeCart } = useContext(MainContext);
@@ -56,10 +57,10 @@ const CartDrawer = () => {
             <span className='price'>$10.00</span>
           </div>
           <div className='cart-action'>
-            <Link to='#' className='btn btn-outline' onClick={closeCart}>
+            <Link to={routesConstatns.CART} className='btn btn-outline' onClick={closeCart}>
               view cart
             </Link>
-            <Link to='#' className='btn btn-primary' onClick={closeCart}>
+            <Link to={routesConstatns.CHECKOUT} className='btn btn-primary' onClick={closeCart}>
               checkout
             </Link>
           </div>
