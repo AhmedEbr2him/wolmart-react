@@ -3,17 +3,61 @@ import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import ProductPrice from './ProductPrice';
 import { TbShoppingCartPlus, TbHeart, TbEye, TbGitCompare } from 'react-icons/tb';
+import { useEffect, useState } from 'react';
 const Product = ({ data }) => {
-  const { name = '', price = [], images = [], rating = '', reviews = [] } = data;
+  const { id = '', name = '', price = [], images = [], rating = '', reviews = [] } = data;
+
+  const [storedProduct, setStoredProduct] = useState(() => {
+    const savedProducts = localStorage.getItem('savedProducts');
+    return savedProducts
+      ? JSON.parse(savedProducts)
+      : {
+          products: {
+            favorite: {},
+            cart: {},
+          },
+        };
+  });
+
+  const addToFavorite = (product, id) => {
+    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
+    const favoriteProduct = savedFavorite.products.favorite;
+
+    if (favoriteProduct[id]) {
+      delete favoriteProduct[id];
+    } else {
+      favoriteProduct[id] = product;
+    }
+
+    setStoredProduct(savedFavorite);
+  };
+  const addToCart = (product, id) => {
+    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
+    const favoriteProduct = savedFavorite.products.cart;
+
+    if (favoriteProduct[id]) {
+      delete favoriteProduct[id];
+    } else {
+      favoriteProduct[id] = product;
+    }
+
+    setStoredProduct(savedFavorite);
+  };
+  /* RENDER STORED PRODUCT */
+  useEffect(() => {
+    localStorage.setItem('savedProducts', JSON.stringify(storedProduct));
+  }, [storedProduct]);
 
   const actionList = [
     {
       label: 'add to cart',
       icon: <TbShoppingCartPlus />,
+      onClick: addToCart,
     },
     {
       label: 'add to favorite',
       icon: <TbHeart />,
+      onClick: addToFavorite,
     },
     {
       label: 'quick view',
@@ -56,6 +100,7 @@ const Product = ({ data }) => {
             key={index}
             aria-label={item.label}
             style={{ animationDelay: `${100 * index}ms` }}
+            onClick={() => item.onClick && item.onClick(data, id)}
           >
             {item.icon}
             <span className='tooltip'>{item.label}</span>
