@@ -1,15 +1,20 @@
 import './style.css';
 import { Link } from 'react-router-dom';
 import { BreadcrumbList, CountrySelect, PageHeader, ToolSelectBox } from '../../components';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MainContext } from '../../context/MainContext';
 import Images from '../../assets/images/images';
 import { LiaPaypal } from 'react-icons/lia';
 import { FiArrowLeft } from 'react-icons/fi';
+import { routesConstatns } from '../../constants/routesConstants';
+import { scrollToTop } from '../../utils/scrollToTop';
 
 const Checkout = () => {
   const { state } = useContext(MainContext);
-
+  /* SCROLL TO TOP */
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <article className='checkout'>
       <div className='checkout-wrapper'>
@@ -23,24 +28,26 @@ const Checkout = () => {
             <div className='head'>
               <h4 className='field-title'>Contact information</h4>
               <p>
-                Already have account? <Link to=''>Login</Link>
+                Already have account? <Link to={routesConstatns.AUTHENTICATION}>Login</Link>
               </p>
             </div>
 
             {/* FORM */}
             <form className='form'>
               <div className='email-offer-field'>
-                <input
-                  type='email'
-                  name='email'
-                  placeholder='Email'
-                  autoComplete='off'
-                  className='form-control'
-                />
-                <label htmlFor='email_offers' className='email_offer'>
-                  <input type='checkbox' name='offers' id='email_offers' />
-                  Email me with new and offers
-                </label>
+                <div className='form-group'>
+                  <input
+                    type='email'
+                    name='email'
+                    placeholder='Email'
+                    autoComplete='off'
+                    className='form-control'
+                  />
+                  <label htmlFor='email_offers' className='email_offer'>
+                    <input type='checkbox' name='offers' id='email_offers' />
+                    Email me with new and offers
+                  </label>
+                </div>
               </div>
 
               <h4 className='field-title shipping-title'>Shipping address</h4>
@@ -160,7 +167,7 @@ const Checkout = () => {
               <Link to='' className='btn btn-dark order-btn'>
                 Place order
               </Link>
-              <Link to='' className='btn btn-dark back-btn'>
+              <Link to={routesConstatns.CART} className='btn btn-dark back-btn'>
                 <span>
                   <FiArrowLeft />
                 </span>

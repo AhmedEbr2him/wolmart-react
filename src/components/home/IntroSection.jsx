@@ -5,6 +5,7 @@ import Images from '../../assets/images/images';
 import LinkBtn from '../common/LinkBtn';
 import { useState } from 'react';
 import Slider from 'react-slick';
+import { routesConstatns } from '../../constants/routesConstants';
 
 const IntroSection = () => {
   const [activeIndex, setActiveIndexs] = useState(0);
@@ -56,7 +57,7 @@ const FirstSlide = () => {
             sale up to <span>30% off</span>
           </p>
 
-          <LinkBtn label='shop now' classType='link-btn' animate='true' />
+          <LinkBtn label='shop now' classType='link-btn' animate='true' to={routesConstatns.SHOP} />
         </div>
       </div>
     </div>
@@ -84,7 +85,7 @@ const SecondSlide = () => {
           <h3 className='banner-title'>hats & packback</h3>
           <p>Only untill the end of this week.</p>
 
-          <LinkBtn label='shop now' classType='link-btn' />
+          <LinkBtn label='shop now' classType='link-btn' to={routesConstatns.SHOP} />
         </div>
       </div>
     </div>
@@ -112,7 +113,7 @@ const ThirdSlide = () => {
             <span>roller&nbsp;</span>
             &nbsp;-skate
           </h3>
-          <LinkBtn label='shop now' classType='link-btn' />
+          <LinkBtn label='shop now' classType='link-btn' to={routesConstatns.SHOP} />
         </div>
       </div>
     </div>

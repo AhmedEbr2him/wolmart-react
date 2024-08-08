@@ -7,8 +7,13 @@ import { MdOutlineMail, MdOutlineLocationOn } from 'react-icons/md';
 import { LiaFaxSolid } from 'react-icons/lia';
 import { IoIosArrowDown } from 'react-icons/io';
 import Slider from 'react-slick';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { scrollToTop } from '../../utils/scrollToTop';
 const Contact = () => {
+  /* SCROLL TO TOP */
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <article className='contact-us'>
       <div className='container'>

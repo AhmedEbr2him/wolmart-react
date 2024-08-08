@@ -23,16 +23,16 @@
   border-top: 1px solid var(--border-color);
   border-top-left-radius: var(--large-radius);
   border-top-right-radius: var(--large-radius);
+  position: relative;
 
   & > * {
     flex: 1;
   }
 
   .sticky-link {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    display: block;
+    text-align: center;
+    margin: auto;
     position: relative;
 
     & :where(svg, p) {
@@ -55,9 +55,9 @@
       height: 3px;
       opacity: 0;
       background: var(--main-text-color);
-      top: -1px;
+      top: -12px;
       left: 5px;
-      right: -5px;
+      right: auto;
       transition: var(--motion-duration-medium-2) var(--motion-easing-standard);
       transition-property: transform, opacity;
       transform: scaleX(0);

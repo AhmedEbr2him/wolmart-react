@@ -1192,30 +1192,13 @@ th:hover {
 }
 
 .cart .cart-action {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1.4rem;
-  padding-block: 2rem;
-  margin-block-end: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 1rem;
+  gap: 1rem;
 
   button {
     border-color: var(--border-color);
-  }
-  button:first-child {
-    grid-column: 1 / 4;
-    svg {
-      margin-inline-start: 0.5rem;
-    }
-  }
-  button:nth-child(2) {
-    grid-column: 4 /7;
-    &:hover {
-      background-color: var(--button-hover-background);
-      border-color: var(--border-color);
-    }
-  }
-  button:last-child {
-    grid-column: 1/-1;
   }
 
   svg {

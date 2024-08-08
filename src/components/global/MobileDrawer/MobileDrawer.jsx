@@ -10,9 +10,17 @@ import ListItem from '../../ListItem.jsx';
 import PropTypes from 'prop-types';
 import { Theme } from '../../';
 import { useStopDocScroll } from '../../../hooks/useStopDocScroll.js';
+import { routesConstatns } from '../../../constants/routesConstants.js';
 
 const MobileDrawer = () => {
-  const mainMenuList = ['Home', 'Blog', 'About us', 'Contact', 'FAQ', 'Pages'];
+  const mainMenuList = [
+    { label: 'Home', path: routesConstatns.HOME },
+    { label: 'Blog', path: routesConstatns.HOME },
+    { label: 'About us', path: routesConstatns.ABOUT_US },
+    { label: 'Contact', path: routesConstatns.CONTACT_US },
+    { label: 'FAQ', path: routesConstatns.HOME },
+    { label: 'Pages', path: routesConstatns.HOME },
+  ];
   const [activeTab, setActiveTab] = useState('main-menu');
   const { isDrawerActive, closeDrawer } = useContext(MainContext);
   const { startScroll, stopScroll } = useStopDocScroll();
@@ -69,10 +77,10 @@ const MobileDrawer = () => {
         <div className='tab-content'>
           <div className='tab-panel' id='main-menu' hidden={activeTab !== 'main-menu'}>
             <ul className='mobile-menu'>
-              {mainMenuList.map((item, index) => (
-                <li key={index} className='list-item'>
-                  <Link to={'#'} role='link-item'>
-                    {item}
+              {mainMenuList.map(({ path, label }, index) => (
+                <li key={index} className='list-item' onClick={closeDrawer}>
+                  <Link to={path} role='link-item'>
+                    {label}
                   </Link>
                 </li>
               ))}

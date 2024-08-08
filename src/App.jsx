@@ -1,4 +1,4 @@
-import { Routes, Route, createBrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
@@ -7,7 +7,6 @@ import { Suspense, lazy } from 'react';
 
 /* PAGES */
 const lazyImport = path => lazy(() => import(`./pages/${path}/index`));
-const routers = createBrowserRouter([{}]);
 
 const routeConfig = [
   {
@@ -40,7 +39,7 @@ const routeConfig = [
   },
   {
     path: routesConstatns.AUTHENTICATION,
-    component: lazyImport('auth'),
+    component: lazyImport('authentication'),
   },
 ];
 /* COMPOENNTS */
