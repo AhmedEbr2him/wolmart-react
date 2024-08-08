@@ -220,6 +220,13 @@ html,
 [data-scheme='dark'] :where(.light-logo, .light-icon) {
   display: block;
 }
+input[type='checkbox'],
+input[type='radio'] {
+  width: fit-content;
+  display: inline-block;
+  margin-inline-end: 1rem;
+  position: relative;
+}
 /**
 * REUSED STYLES
 */
@@ -308,7 +315,26 @@ html,
     }
   }
 }
+.form-group {
+  label {
+    font-size: 1.25rem;
+    line-height: 2.5;
+    display: block;
+    width: 100%;
+    color: var(--text-color);
+  }
+  .form-control {
+    height: 4.7rem;
+    border: 1px solid var(--border-color);
+    padding: 1rem 2rem;
+    border-radius: var(--small-radius);
+    font-size: 1.4rem;
 
+    &::placeholder {
+      font-size: 1.3rem;
+    }
+  }
+}
 [data-scheme='light'] .link-btn {
   &:hover {
     background-color: #262626;

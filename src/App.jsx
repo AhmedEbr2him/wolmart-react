@@ -7,6 +7,7 @@ import { Suspense, lazy } from 'react';
 
 /* PAGES */
 const lazyImport = path => lazy(() => import(`./pages/${path}/index`));
+const routers = createBrowserRouter([{}]);
 
 const routeConfig = [
   {
@@ -36,6 +37,10 @@ const routeConfig = [
   {
     path: routesConstatns.CHECKOUT,
     component: lazyImport('checkout'),
+  },
+  {
+    path: routesConstatns.AUTHENTICATION,
+    component: lazyImport('auth'),
   },
 ];
 /* COMPOENNTS */

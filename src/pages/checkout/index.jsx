@@ -4,6 +4,8 @@ import { BreadcrumbList, CountrySelect, PageHeader, ToolSelectBox } from '../../
 import { useContext, useState } from 'react';
 import { MainContext } from '../../context/MainContext';
 import Images from '../../assets/images/images';
+import { LiaPaypal } from 'react-icons/lia';
+import { FiArrowLeft } from 'react-icons/fi';
 
 const Checkout = () => {
   const { state } = useContext(MainContext);
@@ -155,8 +157,14 @@ const Checkout = () => {
                 <CreditPayment />
               </div>
 
-              <Link to='' className='btn btn-dark next-btn'>
+              <Link to='' className='btn btn-dark order-btn'>
                 Place order
+              </Link>
+              <Link to='' className='btn btn-dark back-btn'>
+                <span>
+                  <FiArrowLeft />
+                </span>
+                Back to cart
               </Link>
             </form>
           </section>
@@ -169,7 +177,6 @@ export default Checkout;
 
 const CreditPayment = () => {
   const [isSelected, setIsSelected] = useState(null);
-  console.log(isSelected);
 
   const hanldeIsSelected = e => {
     const checkedValue = e.target.id;
@@ -179,7 +186,11 @@ const CreditPayment = () => {
 
   return (
     <div className='payment-wrapper'>
-      <div className='payment-type creditcard'>
+      {/* CREDIT CARD */}
+      <div
+        className='payment-type creditcard'
+        data-selected={isSelected === 'credit' ? true : false}
+      >
         <div className='card-value'>
           <input
             type='radio'
@@ -230,8 +241,8 @@ const CreditPayment = () => {
           </div>
         </div>
       </div>
-
-      <div className='payment-type paypal'>
+      {/* PAYPAL */}
+      <div className='payment-type paypal' data-selected={isSelected === 'paypal' ? true : false}>
         <div className='card-value'>
           <input
             type='radio'
@@ -249,7 +260,12 @@ const CreditPayment = () => {
         </div>
 
         <div className='card-content'>
-          <Link to='#'></Link>
+          <Link to='#' className='btn btn-dark'>
+            <span>
+              <LiaPaypal />
+            </span>
+            Login with Paypal
+          </Link>
         </div>
       </div>
     </div>

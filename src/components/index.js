@@ -54,3 +54,9 @@ export { default as CounterSection } from './about/CounterSection';
 export { default as AccordionSection } from './about/AccordionSection';
 /* CART */
 export { default as ProductSummary } from './cart/ProductSummary';
+
+/* AUTH */
+export { default as FormGroup } from './auth/FormGroup';
+export { default as SigninTab } from './auth/SigninTab';
+export { default as SignupTab } from './auth/SignupTab';
+export { default as Password } from './auth/Password';

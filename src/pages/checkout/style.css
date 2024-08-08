@@ -2,25 +2,14 @@
   .field-title {
     font-size: 1.6rem;
   }
-  input[type='checkbox'],
-  input[type='radio'] {
-    width: fit-content;
-    display: inline-block;
-    margin-inline-end: 1rem;
-    position: relative;
-  }
-  .form-group {
-    label {
-      font-size: 1.25rem;
-      line-height: 2.5;
-      display: block;
-      width: 100%;
-      color: var(--text-color);
-    }
-  }
+
   .select-box {
     margin: 0;
   }
+  .toolbox-item {
+    height: auto;
+  }
+
   .head {
     display: flex;
     justify-content: space-between;
@@ -81,17 +70,6 @@
     margin-block: 3rem 2rem;
   }
   .form {
-    .form-control {
-      height: 4.7rem;
-      border: 1px solid var(--border-color);
-      padding: 1rem 2rem;
-      border-radius: var(--small-radius);
-      font-size: 1.4rem;
-
-      &::placeholder {
-        font-size: 1.3rem;
-      }
-    }
     .email-offer-field > input {
       margin-block-end: 1rem;
     }
@@ -103,18 +81,35 @@
   .save-information label {
     font-size: 1.4rem;
   }
+
+  span {
+    height: 100%;
+    display: inline-grid;
+    place-content: center;
+    margin-inline-end: 0.5rem;
+  }
+  svg {
+    vertical-align: middle;
+  }
 }
 .shipping-payment {
+  margin-block-end: 4rem;
+
   .payment-type {
     margin-block-end: 1.8rem;
     max-height: 4.7rem;
-    overflow: hidden;
+    transition: var(--motion-duration-long);
+
+    &[data-selected='true'] {
+      max-height: 50rem;
+    }
   }
   .card-value {
     display: flex;
     border: 1px solid var(--border-color);
     height: 4.7rem;
     padding: 1rem 1.5rem;
+    margin-block-end: 1rem;
     border-radius: var(--small-radius);
 
     label {
@@ -128,5 +123,36 @@
     img {
       width: 12rem;
     }
+  }
+
+  .card-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--motion-duration-long);
+
+    .btn {
+      margin-block-start: 1.8rem;
+      background-color: #0079c1;
+      border-color: #0079c1;
+      cursor: pointer;
+      text-transform: capitalize;
+      &:hover {
+        background-color: #0086d5;
+        border-color: #0086d5;
+      }
+    }
+  }
+  [data-selected='true'] .card-content {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.order-btn {
+  margin-block-end: 1rem;
+
+  &:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #232323;
   }
 }

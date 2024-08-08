@@ -1,0 +1,233 @@
+.container {
+  position: relative;
+}
+.login-popup,
+.password-pane {
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  padding: 3rem 5rem;
+}
+.login-popup {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--border-color);
+
+    .nav-item {
+      text-align: center;
+      padding-block: 1.3rem;
+      text-transform: uppercase;
+      font-weight: var(--weight-extra-bold);
+
+      &.active {
+        border-bottom: 3px solid var(--main-text-color);
+      }
+    }
+  }
+
+  .tab-content {
+    position: relative;
+
+    .tab-pane {
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+
+      &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .form-checkbox {
+    margin-block: 2rem;
+    font-size: 1.4rem;
+    font-weight: var(--weight-medium);
+    color: var(--default-text-color);
+
+    &.sign-in {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &.signup {
+      .form-group {
+        display: flex;
+        align-items: center;
+
+        label {
+          line-height: normal;
+        }
+      }
+    }
+    .password-lost {
+      color: #a94442;
+      font-size: 1.2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  .data-used-information {
+    font-size: 1.3rem;
+    color: var(--default-text-color);
+    margin-block-end: 2rem;
+
+    a {
+      color: var(--main-text-color);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .social-links {
+    p {
+      color: var(--default-text-color);
+      font-weight: var(--weight-medium);
+      text-align: center;
+      margin-block: 2rem;
+      position: relative;
+      overflow: hidden;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1px;
+        background: var(--border-color);
+        z-index: 1;
+      }
+      &::before {
+        left: -2.4rem;
+      }
+      &::after {
+        right: -2.4rem;
+      }
+    }
+
+    .links-list {
+      a {
+        border-width: 1px;
+        border-style: solid;
+        transition: var(--motion-duration-short-2);
+        text-transform: none;
+
+        svg {
+          transition: var(--motion-duration-short-2);
+        }
+
+        &.social-x {
+          border: 1px solid #111111;
+          background-color: #111111;
+          svg {
+            color: #ffffff;
+          }
+
+          &:hover {
+            background-color: #232323;
+            border-color: #232323;
+
+            svg {
+              color: #ffffff;
+            }
+          }
+        }
+
+        &.social-google {
+          border-color: var(--border-color);
+
+          &:hover {
+            background-color: var(--alpha-10);
+            color: var(--primary-color);
+          }
+        }
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+
+      .social-link {
+        display: flex;
+        gap: 0.5rem;
+        width: 100%;
+        margin-block-end: 1.25rem;
+      }
+    }
+  }
+  .tab-content {
+    padding-block: 3.3rem 2.6rem;
+  }
+}
+.vendor {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--motion-duration-long);
+
+  &[data-collapsed='true'] {
+    max-height: 50rem;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.password-pane {
+  background-color: var(--site-background);
+  height: 100%;
+  position: absolute;
+  width: calc(100% - 3rem);
+  z-index: 2;
+  top: 0;
+  scale: 1.1;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--motion-duration-short-2);
+
+  &.active {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back {
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--small-radius);
+    margin-block-end: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    span {
+      display: grid;
+      place-content: center;
+    }
+    svg {
+      vertical-align: middle;
+    }
+  }
+  h4 {
+    font-size: 1.8rem;
+    margin-block-end: 1rem;
+  }
+  p {
+    font-size: 1.4rem;
+    color: var(--default-text-color);
+    margin-block-end: 1.5rem;
+  }
+  input {
+    margin-block-end: 1rem;
+  }
+}
