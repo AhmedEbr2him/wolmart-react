@@ -1,20 +1,16 @@
 import './style.css';
 import { Link } from 'react-router-dom';
 import { BreadcrumbList, CountrySelect, PageHeader, ToolSelectBox } from '../../components';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { MainContext } from '../../context/MainContext';
 import Images from '../../assets/images/images';
 import { LiaPaypal } from 'react-icons/lia';
 import { FiArrowLeft } from 'react-icons/fi';
 import { routesConstatns } from '../../constants/routesConstants';
-import { scrollToTop } from '../../utils/scrollToTop';
 
 const Checkout = () => {
   const { state } = useContext(MainContext);
-  /* SCROLL TO TOP */
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+
   return (
     <article className='checkout'>
       <div className='checkout-wrapper'>

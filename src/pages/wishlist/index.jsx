@@ -1,13 +1,8 @@
-import { useEffect } from 'react';
 import { BreadcrumbList, PageHeader, SocialList, Table } from '../../components';
-import { scrollToTop } from '../../utils/scrollToTop';
+
 import './style.css';
 
 const Wishlist = () => {
-  /* SCROLL TO TOP */
-  useEffect(() => {
-    scrollToTop();
-  }, []);
   return (
     <article className='wishlist'>
       <div className='wishlist-wrapper'>

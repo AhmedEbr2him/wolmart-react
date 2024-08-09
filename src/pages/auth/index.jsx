@@ -5,16 +5,12 @@ import { BreadcrumbList, PageHeader, Password, SigninTab, SignupTab } from '../.
 
 import { FcGoogle } from 'react-icons/fc';
 import { RiTwitterXLine } from 'react-icons/ri';
-import { useEffect, useState } from 'react';
-import { scrollToTop } from '../../utils/scrollToTop';
+import { useState } from 'react';
 
 const Authentication = () => {
   const [activeTab, setActiveTab] = useState('#signin');
   const [passTabActive, setPassTabActive] = useState(false);
-  /* SCROLL TO TOP */
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+
   return (
     <article className='authentication'>
       <div className='container'>

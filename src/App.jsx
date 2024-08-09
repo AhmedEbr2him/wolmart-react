@@ -4,6 +4,9 @@ import { Footer, Header, StickyFooter } from './components';
 import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import { Suspense, lazy } from 'react';
+import Toast from './components/common/Toast';
+import { ToastContext, ToastProvider } from './components/Toast/ToastProvider';
+import useToast from './hooks/useToast';
 
 /* PAGES */
 const lazyImport = path => lazy(() => import(`./pages/${path}/index`));
@@ -49,6 +52,7 @@ const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
 
 const App = () => {
   const { isDrawerActive, isFilterActive } = useContext(MainContext);
+  const { toastMessage } = useToast();
 
   useEffect(() => {
     const handleBody = () => {
@@ -90,6 +94,11 @@ const App = () => {
           ))}
         </Routes>
       </main>
+
+      {toastMessage.isLoading && (
+        <Toast message={toastMessage.message} path={toastMessage.path} type={toastMessage.type} />
+      )}
+
       <Footer />
     </div>
   );

@@ -3,50 +3,12 @@ import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import ProductPrice from './ProductPrice';
 import { TbShoppingCartPlus, TbHeart, TbEye, TbGitCompare } from 'react-icons/tb';
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { MainContext } from '../../context/MainContext';
+
 const Product = ({ data }) => {
   const { id = '', name = '', price = [], images = [], rating = '', reviews = [] } = data;
-
-  const [storedProduct, setStoredProduct] = useState(() => {
-    const savedProducts = localStorage.getItem('savedProducts');
-    return savedProducts
-      ? JSON.parse(savedProducts)
-      : {
-          products: {
-            favorite: {},
-            cart: {},
-          },
-        };
-  });
-
-  const addToFavorite = (product, id) => {
-    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
-    const favoriteProduct = savedFavorite.products.favorite;
-
-    if (favoriteProduct[id]) {
-      delete favoriteProduct[id];
-    } else {
-      favoriteProduct[id] = product;
-    }
-
-    setStoredProduct(savedFavorite);
-  };
-  const addToCart = (product, id) => {
-    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
-    const favoriteProduct = savedFavorite.products.cart;
-
-    if (favoriteProduct[id]) {
-      delete favoriteProduct[id];
-    } else {
-      favoriteProduct[id] = product;
-    }
-
-    setStoredProduct(savedFavorite);
-  };
-  /* RENDER STORED PRODUCT */
-  useEffect(() => {
-    localStorage.setItem('savedProducts', JSON.stringify(storedProduct));
-  }, [storedProduct]);
+  const { addToCart, addToFavorite } = useContext(MainContext);
 
   const actionList = [
     {
@@ -118,4 +80,5 @@ const Product = ({ data }) => {
     </div>
   );
 };
+
 export default Product;

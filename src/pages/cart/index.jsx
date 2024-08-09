@@ -1,14 +1,8 @@
 import './style.css';
 import { BreadcrumbList, PageHeader, ProductSummary, Table } from '../../components/';
 import { FiArrowLeft } from 'react-icons/fi';
-import { useEffect } from 'react';
-import { scrollToTop } from '../../utils/scrollToTop';
 
 const Cart = () => {
-  /* SCROLL TO TOP */
-  useEffect(() => {
-    scrollToTop();
-  }, []);
   return (
     <article className='cart'>
       <div className='container'>

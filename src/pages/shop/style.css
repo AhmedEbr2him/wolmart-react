@@ -74,9 +74,7 @@
     color: var(--main-text-color);
   }
 }
-.slick-slider .slick-dots {
-  bottom: -2.5rem !important;
-}
+
 .section {
   position: relative;
 }
@@ -346,4 +344,8 @@ aside {
   &::-webkit-scrollbar-thumb {
     background-color: var(--alpha-10);
   }
+}
+
+.shop .slick-slider .slick-dots {
+  bottom: -2.5rem !important;
 }

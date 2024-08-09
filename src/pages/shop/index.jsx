@@ -4,8 +4,6 @@ import BreadcrumbList from '../../components/common/BreadcrumbList';
 import LinkBtn from '../../components/common/LinkBtn';
 import Slider from 'react-slick';
 import { Categories, ShopContent } from '../../components';
-import { useEffect } from 'react';
-import { scrollToTop } from '../../utils/scrollToTop';
 
 const Shop = () => {
   const settings = {
@@ -18,10 +16,7 @@ const Shop = () => {
     autoplaySpeed: 4000,
     cssEase: 'ease',
   };
-  /* SCROLL TO TOP */
-  useEffect(() => {
-    scrollToTop();
-  }, []);
+
   return (
     <article className='shop'>
       <div className='container'>

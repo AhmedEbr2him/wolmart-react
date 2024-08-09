@@ -1,5 +1,7 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { ToastContext } from '../components/Toast/ToastProvider';
+import { routesConstatns } from '../constants/routesConstants';
 
 const MainContext = createContext(null);
 
@@ -12,6 +14,7 @@ const MainProviderContext = ({ children }) => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('usa');
   const [state, setStates] = useState([]);
+  const { handleToastMessage } = useContext(ToastContext);
 
   const openDrawer = () => {
     setIsDrawerActive(true);
@@ -66,6 +69,48 @@ const MainProviderContext = ({ children }) => {
     }
   };
 
+  /* ADDED TO CART AND FAVORITE */
+  const [storedProduct, setStoredProduct] = useState(() => {
+    const savedProducts = localStorage.getItem('savedProducts');
+    return savedProducts
+      ? JSON.parse(savedProducts)
+      : {
+          products: {
+            favorite: {},
+            cart: {},
+          },
+        };
+  });
+
+  const addToFavorite = (product, id) => {
+    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
+    const favoriteProduct = savedFavorite.products.favorite;
+
+    if (favoriteProduct[id]) {
+      delete favoriteProduct[id];
+      handleToastMessage('Removed from', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
+    } else {
+      favoriteProduct[id] = product;
+      handleToastMessage('Added to', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
+    }
+    setStoredProduct(savedFavorite);
+  };
+
+  const addToCart = (product, id) => {
+    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
+    const cartProduct = savedFavorite.products.cart;
+
+    if (cartProduct[id]) {
+      delete cartProduct[id];
+      handleToastMessage('Removed from', routesConstatns.CART, 'Cart', true, 3500);
+    } else {
+      cartProduct[id] = product;
+      handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
+    }
+
+    setStoredProduct(savedFavorite);
+  };
+
   useEffect(() => {
     getCountries();
   }, []);
@@ -75,6 +120,11 @@ const MainProviderContext = ({ children }) => {
     const defaultCountry = countries.find(country => country.value === selectedCountry);
     defaultCountry && setStates(defaultCountry.states);
   }, [selectedCountry, countries]);
+
+  /* RENDER STORED PRODUCT */
+  useEffect(() => {
+    localStorage.setItem('savedProducts', JSON.stringify(storedProduct));
+  }, [storedProduct]);
 
   return (
     <MainContext.Provider
@@ -93,6 +143,8 @@ const MainProviderContext = ({ children }) => {
         selectedCountry,
         state,
         handleSelectCountry,
+        addToCart,
+        addToFavorite,
       }}
     >
       {children}

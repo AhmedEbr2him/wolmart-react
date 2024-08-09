@@ -13,8 +13,6 @@ import Slider from 'react-slick';
 import { FaFacebookF } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { SlSocialInstagram } from 'react-icons/sl';
-import { useEffect } from 'react';
-import { scrollToTop } from '../../utils/scrollToTop';
 
 const AboutUs = () => {
   const settings = {
@@ -53,10 +51,6 @@ const AboutUs = () => {
     { label: 'Inestagram', link: '#', icon: <SlSocialInstagram /> },
   ];
 
-  /* SCROLL TO TOP */
-  useEffect(() => {
-    scrollToTop();
-  }, []);
   return (
     <article className='about-us'>
       <div className='page-wrapper'>
