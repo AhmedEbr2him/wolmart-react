@@ -1,8 +1,11 @@
 import './style.css';
 import { BreadcrumbList, PageHeader, ProductSummary, Table } from '../../components/';
 import { FiArrowLeft } from 'react-icons/fi';
+import { useContext } from 'react';
+import { MainContext } from '../../context/MainContext';
 
 const Cart = () => {
+  const { storedProducts, removeFromCart } = useContext(MainContext);
   return (
     <article className='cart'>
       <div className='container'>
@@ -13,7 +16,7 @@ const Cart = () => {
       <div className='container'>
         <div className='products-content'>
           {/* TABLE */}
-          <Table />
+          <Table data={storedProducts.products.cart} removeFromCart={removeFromCart} />
           {/* COUPON */}
           <form className='coupon-form'>
             <h5 className='coupon-title'>Coupon Discount</h5>

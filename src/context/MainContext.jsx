@@ -15,7 +15,7 @@ const MainProviderContext = ({ children }) => {
   const [selectedCountry, setSelectedCountry] = useState('usa');
   const [state, setStates] = useState([]);
   const { handleToastMessage } = useContext(ToastContext);
-  const [storedProducts, setStoredProduct] = useState(() => {
+  const [storedProducts, setStoredProducts] = useState(() => {
     const savedProducts = localStorage.getItem('savedProducts');
     return (
       JSON.parse(savedProducts) || {
@@ -92,7 +92,7 @@ const MainProviderContext = ({ children }) => {
       favoriteProducts.push(product);
       handleToastMessage('Added to', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     }
-    setStoredProduct(savedFavoriteProducts);
+    setStoredProducts(savedFavoriteProducts);
   };
 
   const addToCart = (product, id) => {
@@ -108,7 +108,7 @@ const MainProviderContext = ({ children }) => {
       handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
     }
 
-    setStoredProduct(savedCartProducts);
+    setStoredProducts(savedCartProducts);
   };
   const removeFromCart = id => {
     const cartProducts = storedProducts.products.cart;
@@ -119,7 +119,7 @@ const MainProviderContext = ({ children }) => {
       cartProducts.splice(productIndex, 1);
 
       // Update the state with the new cart
-      setStoredProduct(prevProduct => ({
+      setStoredProducts(prevProduct => ({
         ...prevProduct,
         products: { ...prevProduct.products },
         cart: productIndex,
@@ -138,6 +138,7 @@ const MainProviderContext = ({ children }) => {
       })
     );
   };
+
   useEffect(() => {
     getCountries();
   }, []);
@@ -174,6 +175,7 @@ const MainProviderContext = ({ children }) => {
         addToFavorite,
         storedProducts,
         removeFromCart,
+        setStoredProducts,
       }}
     >
       {children}
