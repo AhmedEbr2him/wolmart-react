@@ -15,8 +15,6 @@ const MainProviderContext = ({ children }) => {
   const [selectedCountry, setSelectedCountry] = useState('usa');
   const [state, setStates] = useState([]);
   const { handleToastMessage } = useContext(ToastContext);
-
-  /* ADDED TO CART AND FAVORITE */
   const [storedProducts, setStoredProduct] = useState(() => {
     const savedProducts = localStorage.getItem('savedProducts');
     return (
@@ -112,7 +110,34 @@ const MainProviderContext = ({ children }) => {
 
     setStoredProduct(savedCartProducts);
   };
+  const removeFromCart = id => {
+    const cartProducts = storedProducts.products.cart;
+    const productIndex = cartProducts.findIndex(item => item.id === id);
 
+    // Remove the product from the array if it exists
+    if (productIndex > -1) {
+      cartProducts.splice(productIndex, 1);
+
+      // Update the state with the new cart
+      setStoredProduct(prevProduct => ({
+        ...prevProduct,
+        products: { ...prevProduct.products },
+        cart: productIndex,
+      }));
+    }
+
+    // Save the updated data to localStorage
+    localStorage.setItem(
+      'savedProducts',
+      JSON.stringify({
+        ...storedProducts,
+        products: {
+          ...storedProducts.products,
+          cart: productIndex,
+        },
+      })
+    );
+  };
   useEffect(() => {
     getCountries();
   }, []);
@@ -148,6 +173,7 @@ const MainProviderContext = ({ children }) => {
         addToCart,
         addToFavorite,
         storedProducts,
+        removeFromCart,
       }}
     >
       {children}
