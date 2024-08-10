@@ -5,7 +5,6 @@ import { useContext, useEffect } from 'react';
 import { MainContext } from './context/MainContext';
 import { Suspense, lazy } from 'react';
 import Toast from './components/common/Toast';
-import { ToastContext, ToastProvider } from './components/Toast/ToastProvider';
 import useToast from './hooks/useToast';
 
 /* PAGES */

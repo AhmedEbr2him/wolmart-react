@@ -7,6 +7,7 @@ import { IoList } from 'react-icons/io5';
 import { FaArrowLeft } from 'react-icons/fa6';
 import { FaArrowRight } from 'react-icons/fa6';
 import SkeletonCard from '../common/SkeletonCard';
+
 const LazyProduct = lazy(() => import('../common/Product'));
 import { selectedList } from '../../constants/mockData';
 import { MainContext } from '../../context/MainContext';
@@ -16,7 +17,7 @@ import ToolSelectBox from '../common/ToolSelectBox';
 const ShopContent = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8;
+  const productsPerPage = 9;
   const indexOfLastProduct = productsPerPage + currentPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = allProducts.slice(indexOfFirstProduct, indexOfLastProduct);

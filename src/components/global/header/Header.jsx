@@ -38,6 +38,8 @@ const Header = () => {
   ];
   const { openDrawer, openCart } = useContext(MainContext);
   const { isScroll } = useIsScroll();
+  const { storedProducts } = useContext(MainContext);
+  const storedProductsLength = storedProducts.products.cart.length;
 
   return (
     <header className={`header ${isScroll ? 'scroll' : ''}`}>
@@ -159,11 +161,15 @@ const Header = () => {
               <FiHeart size={24} />
               <span className='wishlist-label'>Wishlist</span>
             </Link>
-            <Link to='#' role='button' className='small-btn has-state cart-btn' onClick={openCart}>
+            <button
+              aria-label='Open Cart'
+              className='small-btn has-state cart-btn'
+              onClick={openCart}
+            >
               <BiShoppingBag size={24} />
               <span className='cart-label'>Cart</span>
-              <span className='badge'>0</span>
-            </Link>
+              <span className='badge'>{storedProductsLength}</span>
+            </button>
           </div>
         </div>
       </div>

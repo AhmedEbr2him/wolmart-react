@@ -16,6 +16,19 @@ const MainProviderContext = ({ children }) => {
   const [state, setStates] = useState([]);
   const { handleToastMessage } = useContext(ToastContext);
 
+  /* ADDED TO CART AND FAVORITE */
+  const [storedProducts, setStoredProduct] = useState(() => {
+    const savedProducts = localStorage.getItem('savedProducts');
+    return (
+      JSON.parse(savedProducts) || {
+        products: {
+          favorite: [],
+          cart: [],
+        },
+      }
+    );
+  });
+
   const openDrawer = () => {
     setIsDrawerActive(true);
     setIsCartActive(false);
@@ -69,46 +82,35 @@ const MainProviderContext = ({ children }) => {
     }
   };
 
-  /* ADDED TO CART AND FAVORITE */
-  const [storedProduct, setStoredProduct] = useState(() => {
-    const savedProducts = localStorage.getItem('savedProducts');
-    return savedProducts
-      ? JSON.parse(savedProducts)
-      : {
-          products: {
-            favorite: {},
-            cart: {},
-          },
-        };
-  });
-
   const addToFavorite = (product, id) => {
-    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
-    const favoriteProduct = savedFavorite.products.favorite;
+    const savedFavoriteProducts = { ...storedProducts };
+    const favoriteProducts = savedFavoriteProducts.products.favorite;
+    const productIndex = favoriteProducts.findIndex(item => item.id === id);
 
-    if (favoriteProduct[id]) {
-      delete favoriteProduct[id];
+    if (productIndex > -1) {
+      favoriteProducts.splice(productIndex, 1);
       handleToastMessage('Removed from', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     } else {
-      favoriteProduct[id] = product;
+      favoriteProducts.push(product);
       handleToastMessage('Added to', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     }
-    setStoredProduct(savedFavorite);
+    setStoredProduct(savedFavoriteProducts);
   };
 
   const addToCart = (product, id) => {
-    const savedFavorite = JSON.parse(localStorage.getItem('savedProducts'));
-    const cartProduct = savedFavorite.products.cart;
+    const savedCartProducts = JSON.parse(localStorage.getItem('savedProducts'));
+    const cartProducts = savedCartProducts.products.cart;
+    const productIndex = cartProducts.findIndex(item => item.id === id);
 
-    if (cartProduct[id]) {
-      delete cartProduct[id];
-      handleToastMessage('Removed from', routesConstatns.CART, 'Cart', true, 3500);
+    if (productIndex > -1) {
+      cartProducts[productIndex].quantity += 1;
+      handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
     } else {
-      cartProduct[id] = product;
+      cartProducts.push(product);
       handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
     }
 
-    setStoredProduct(savedFavorite);
+    setStoredProduct(savedCartProducts);
   };
 
   useEffect(() => {
@@ -123,8 +125,8 @@ const MainProviderContext = ({ children }) => {
 
   /* RENDER STORED PRODUCT */
   useEffect(() => {
-    localStorage.setItem('savedProducts', JSON.stringify(storedProduct));
-  }, [storedProduct]);
+    localStorage.setItem('savedProducts', JSON.stringify(storedProducts));
+  }, [storedProducts]);
 
   return (
     <MainContext.Provider
@@ -145,6 +147,7 @@ const MainProviderContext = ({ children }) => {
         handleSelectCountry,
         addToCart,
         addToFavorite,
+        storedProducts,
       }}
     >
       {children}
