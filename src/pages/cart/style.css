@@ -4,6 +4,9 @@
     font-size: 1.25rem;
     border-width: 1.4px;
   }
+  .product-price-table span {
+    display: inline-block;
+  }
 }
 .coupon-form {
   padding-block-start: 3rem;
@@ -17,24 +20,30 @@
   .form-control {
     min-height: 4.7rem;
     padding: 1rem 2rem;
-    margin-block-end: 1.25rem;
     border: 1px solid var(--border-color);
     font-size: 1.4rem;
     border-radius: var(--small-radius);
+    margin-block-end: 1rem;
   }
   .btn {
     padding: 1.4rem 2.8rem;
     height: 4.7rem;
     width: 100%;
     border-color: var(--border-color);
+
+    &:hover {
+      border-color: var(--main-text-color);
+    }
   }
 }
 /* PRODUCT SUMMRY */
 .sticky-sidebar {
   position: relative;
+
   .products-summary {
     padding: 2rem 3rem;
     border: 1px solid var(--border-color);
+    margin-block-start: 6.5rem;
     border-radius: var(--small-radius);
   }
   .cart-title {
@@ -130,4 +139,11 @@
       }
     }
   }
+}
+.empty-cart-message {
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-block: 2rem;
+  margin-block-end: 1.5rem;
 }

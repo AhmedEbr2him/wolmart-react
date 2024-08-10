@@ -3,9 +3,13 @@ import { BreadcrumbList, PageHeader, ProductSummary, Table } from '../../compone
 import { FiArrowLeft } from 'react-icons/fi';
 import { useContext } from 'react';
 import { MainContext } from '../../context/MainContext';
+import { Link } from 'react-router-dom';
+import { routesConstatns } from '../../constants/routesConstants';
 
 const Cart = () => {
   const { storedProducts, removeFromCart } = useContext(MainContext);
+  const productsLength = storedProducts.products.cart.length;
+
   return (
     <article className='cart'>
       <div className='container'>
@@ -16,25 +20,31 @@ const Cart = () => {
       <div className='container'>
         <div className='products-content'>
           {/* TABLE */}
-          <Table data={storedProducts.products.cart} removeFromCart={removeFromCart} />
+          {productsLength === 0 && <p className='empty-cart-message'>Cart Is Empty !</p>}
+
+          {productsLength >= 1 && (
+            <Table data={storedProducts.products.cart} removeFromCart={removeFromCart} />
+          )}
           {/* COUPON */}
-          <form className='coupon-form'>
-            <h5 className='coupon-title'>Coupon Discount</h5>
-            <input type='text' className='form-control' placeholder='Enter coupon code here...' />
-            {/* FORM ACTION */}
-            <div className='cart-action'>
+          {productsLength >= 1 && (
+            <form className='coupon-form'>
+              <h5 className='coupon-title'>Coupon Discount</h5>
+              <input type='text' className='form-control' placeholder='Enter coupon code here...' />
               <button className='btn btn-outline apply'>apply</button>
-              <button aria-label='Go to Shop' className='btn btn-dark'>
-                <FiArrowLeft />
-                continue shopping
-              </button>
-            </div>
-          </form>
+            </form>
+          )}
+          {/* FORM ACTION */}
+          <div className='cart-action'>
+            <Link to={routesConstatns.SHOP} className='btn btn-dark'>
+              <FiArrowLeft />
+              continue shopping
+            </Link>
+          </div>
         </div>
 
         <div className='sticky-sidebar'>
           {/* SUMMARY */}
-          <ProductSummary />
+          {productsLength >= 1 && <ProductSummary />}
         </div>
       </div>
     </article>

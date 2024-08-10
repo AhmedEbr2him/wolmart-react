@@ -1,18 +1,30 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import ToolSelectBox from '../common/ToolSelectBox';
 import { FiArrowRight } from 'react-icons/fi';
 import { MainContext } from '../../context/MainContext';
 import CountrySelect from '../common/CountrySelect';
 
 const ProductSummary = () => {
-  const { selectedCountry, state } = useContext(MainContext);
+  const { selectedCountry, state, storedProducts } = useContext(MainContext);
+  const cartProducts = storedProducts.products.cart;
+  const [checkFlatRate, setCheckedFlatRate] = useState(0);
+  const flatRateAmout = 5;
+
+  const subTotalPrice = cartProducts.reduce((accumulator, product) => {
+    const oldPrice = product.price.old;
+    const newPrice = product.price.new;
+
+    return accumulator + (oldPrice || newPrice);
+  }, 0);
+
+  const totalPrice = checkFlatRate ? subTotalPrice + checkFlatRate : subTotalPrice;
 
   return (
     <div className='products-summary'>
       <h3 className='cart-title'>Cart Total</h3>
       <div className='cart-price subtotal'>
         <p>Subtotal</p>
-        <span>$100.00</span>
+        <span>${subTotalPrice.toFixed(2)}</span>
       </div>
 
       <div className='shipping-methods'>
@@ -27,8 +39,15 @@ const ProductSummary = () => {
             <label htmlFor='local_pickup'>local pickup</label>
           </li>
           <li className='shipping-item'>
-            <input type='checkbox' id='flat_rate' name='flat_rate' value='flat_rate' />
-            <label htmlFor='flat_rate'>flat rate: $5.00</label>
+            <input
+              type='checkbox'
+              id='flat_rate'
+              name='flat_rate'
+              checked={!!checkFlatRate}
+              value={flatRateAmout}
+              onChange={() => setCheckedFlatRate(prev => (prev === 0 ? flatRateAmout : 0))}
+            />
+            <label htmlFor='flat_rate'>flat rate: ${flatRateAmout}</label>
           </li>
         </ul>
       </div>
@@ -50,7 +69,7 @@ const ProductSummary = () => {
 
         <div className='cart-price total'>
           <p>Total</p>
-          <span>$100.00</span>
+          <span>${totalPrice.toFixed(2)}</span>
         </div>
         <div className='cart-action'>
           <button className='btn btn-dark checkout'>

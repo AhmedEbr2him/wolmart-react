@@ -111,7 +111,8 @@ const MainProviderContext = ({ children }) => {
     setStoredProducts(savedCartProducts);
   };
   const removeFromCart = id => {
-    const cartProducts = storedProducts.products.cart;
+    const updadtedProducts = { ...storedProducts };
+    const cartProducts = updadtedProducts.products.cart;
     const productIndex = cartProducts.findIndex(item => item.id === id);
 
     // Remove the product from the array if it exists
@@ -119,24 +120,10 @@ const MainProviderContext = ({ children }) => {
       cartProducts.splice(productIndex, 1);
 
       // Update the state with the new cart
-      setStoredProducts(prevProduct => ({
-        ...prevProduct,
-        products: { ...prevProduct.products },
-        cart: productIndex,
-      }));
+      setStoredProducts(updadtedProducts);
     }
-
     // Save the updated data to localStorage
-    localStorage.setItem(
-      'savedProducts',
-      JSON.stringify({
-        ...storedProducts,
-        products: {
-          ...storedProducts.products,
-          cart: productIndex,
-        },
-      })
-    );
+    localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
   };
 
   useEffect(() => {
