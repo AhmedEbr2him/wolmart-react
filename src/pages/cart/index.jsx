@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { routesConstatns } from '../../constants/routesConstants';
 
 const Cart = () => {
-  const { storedProducts, removeFromCart } = useContext(MainContext);
+  const { storedProducts } = useContext(MainContext);
   const productsLength = storedProducts.products.cart.length;
 
   return (
@@ -22,9 +22,7 @@ const Cart = () => {
           {/* TABLE */}
           {productsLength === 0 && <p className='empty-cart-message'>Cart Is Empty !</p>}
 
-          {productsLength >= 1 && (
-            <Table data={storedProducts.products.cart} removeFromCart={removeFromCart} />
-          )}
+          {productsLength >= 1 && <Table data={storedProducts.products.cart} />}
           {/* COUPON */}
           {productsLength >= 1 && (
             <form className='coupon-form'>

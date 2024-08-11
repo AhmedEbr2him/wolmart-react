@@ -49,9 +49,10 @@ const Table = ({ data, wishlist }) => {
 };
 export default Table;
 
-const CartTable = ({ data, wishlist, addToCart, removeFromFavorite }) => {
+const CartTable = ({ data, wishlist, addToCart, removeFromFavorite, removeFromCart }) => {
   const { id, name, images, price, quantity } = data;
   const { handleIncreaseQty, handleDecreaseQty, handleOnChangeQty } = useProductQty();
+  const subtotal = price.new ? price.new * quantity : price.old * quantity;
 
   return (
     <tr key={id} className='table-row'>
@@ -89,7 +90,7 @@ const CartTable = ({ data, wishlist, addToCart, removeFromFavorite }) => {
         </div>
       </td>
       <td className='product-subtotal-table'>
-        <span>${price.old || price.new * quantity}</span>
+        <span>${subtotal.toFixed(2)}</span>
       </td>
 
       <td className='action-product'>
@@ -117,7 +118,7 @@ const CartTable = ({ data, wishlist, addToCart, removeFromFavorite }) => {
         <button
           aria-label='Remove from Cart'
           className='btn btn-dark remove'
-          onClick={() => removeFromFavorite(id)}
+          onClick={() => removeFromFavorite(id) || removeFromCart(id)}
         >
           <span>Remove</span>
           <span>

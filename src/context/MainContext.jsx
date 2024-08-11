@@ -90,9 +90,11 @@ const MainProviderContext = ({ children }) => {
       handleToastMessage('Removed from', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     } else {
       favoriteProducts.push(product);
+
       handleToastMessage('Added to', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     }
     setStoredProducts(savedFavoriteProducts);
+    localStorage.setItem('savedProducts', JSON.stringify(savedFavoriteProducts));
   };
 
   const addToCart = (product, id) => {
@@ -102,9 +104,10 @@ const MainProviderContext = ({ children }) => {
 
     if (productIndex > -1) {
       cartProducts[productIndex].quantity += 1;
+
       handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
     } else {
-      cartProducts.push(product);
+      cartProducts.push({ ...product, quantity: 1 });
       handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
     }
 

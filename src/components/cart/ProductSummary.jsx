@@ -13,8 +13,9 @@ const ProductSummary = () => {
   const subTotalPrice = cartProducts.reduce((accumulator, product) => {
     const oldPrice = product.price.old;
     const newPrice = product.price.new;
+    const productQty = product.quantity;
 
-    return accumulator + (oldPrice || newPrice);
+    return accumulator + (oldPrice || newPrice) * productQty;
   }, 0);
 
   const totalPrice = checkFlatRate ? subTotalPrice + checkFlatRate : subTotalPrice;

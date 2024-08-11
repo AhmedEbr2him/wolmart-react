@@ -809,10 +809,6 @@
   .post {
     padding-bottom: 1rem;
 
-    &:hover img {
-      scale: 1.1;
-    }
-
     .post-title,
     .post-date,
     .post-author {
@@ -823,16 +819,15 @@
         transition: var(--motion-duration-medium-1);
       }
     }
+    &:hover img {
+      scale: 1.1;
+    }
   }
   .post-media {
     overflow: hidden;
-
-    a {
-      border-radius: var(--small-radius);
-    }
+    border-radius: var(--small-radius);
 
     img {
-      border-radius: inherit;
       transition: var(--motion-duration-medium-1);
     }
   }

@@ -701,6 +701,7 @@ ins {
 
   .product-form {
     overflow: hidden;
+    margin-block-start: 0.5rem;
 
     p {
       margin-bottom: 0.5rem;
