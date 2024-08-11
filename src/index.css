@@ -716,7 +716,7 @@ ins {
         border: 1px solid var(--border-color);
         padding: 6px 8px;
         font-size: 1.2rem;
-        width: fit-content;
+        width: max-content;
         transition: var(--motion-duration-short-2);
         border-radius: var(--small-radius);
         cursor: pointer;
@@ -730,10 +730,16 @@ ins {
           width: 100%;
           height: 100%;
         }
-
+        &:hover {
+          color: var(--main-text-color);
+        }
         &:where([data-selected='true'], :hover) {
           border: 1px solid var(--main-text-color);
-          color: var(--main-text-color);
+        }
+        &[data-selected='true'] {
+          background-color: var(--main-text-color);
+          border-color: var(--main-text-color);
+          color: #ffffff;
         }
       }
     }

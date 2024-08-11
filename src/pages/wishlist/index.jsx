@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { BreadcrumbList, PageHeader, SocialList, Table } from '../../components';
 
 import './style.css';
+import { MainContext } from '../../context/MainContext';
 
 const Wishlist = () => {
+  const { storedProducts } = useContext(MainContext);
+
   return (
     <article className='wishlist'>
       <div className='wishlist-wrapper'>
@@ -15,7 +19,7 @@ const Wishlist = () => {
           <div className='container'>
             {/* TABLE */}
             <p className='table-title'>My Wishlist</p>
-            <Table wishlist={true} />
+            <Table wishlist={true} data={storedProducts.products.favorite} />
 
             <div className='share-links'>
               <p>share on:</p>

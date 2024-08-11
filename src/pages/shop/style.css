@@ -29,10 +29,9 @@
 /* SHOP DEFAULT BRANDS */
 .shop-default-brands {
   padding-block: 4rem;
-
-  img {
-    filter: invert(1) brightness(2);
-  }
+}
+[data-scheme='dark'] .shop-default-brands img {
+  filter: invert(1) brightness(2);
 }
 /* CATEGORY */
 .shop-default-category {

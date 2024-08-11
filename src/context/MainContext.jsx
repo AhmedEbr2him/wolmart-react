@@ -96,8 +96,8 @@ const MainProviderContext = ({ children }) => {
   };
 
   const addToCart = (product, id) => {
-    const savedCartProducts = JSON.parse(localStorage.getItem('savedProducts'));
-    const cartProducts = savedCartProducts.products.cart;
+    const updadtedProducts = { ...storedProducts };
+    const cartProducts = updadtedProducts.products.cart;
     const productIndex = cartProducts.findIndex(item => item.id === id);
 
     if (productIndex > -1) {
@@ -108,8 +108,10 @@ const MainProviderContext = ({ children }) => {
       handleToastMessage('Added to', routesConstatns.CART, 'Cart', true, 3500);
     }
 
-    setStoredProducts(savedCartProducts);
+    setStoredProducts(updadtedProducts);
+    localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
   };
+
   const removeFromCart = id => {
     const updadtedProducts = { ...storedProducts };
     const cartProducts = updadtedProducts.products.cart;
@@ -125,7 +127,21 @@ const MainProviderContext = ({ children }) => {
     // Save the updated data to localStorage
     localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
   };
+  const removeFromFavorite = id => {
+    const updadtedProducts = { ...storedProducts };
+    const favoriteProducts = updadtedProducts.products.favorite;
+    const productIndex = favoriteProducts.findIndex(item => item.id === id);
 
+    // Remove the product from the array if it exists
+    if (productIndex > -1) {
+      favoriteProducts.splice(productIndex, 1);
+
+      // Update the state with the new cart
+      setStoredProducts(updadtedProducts);
+    }
+    // Save the updated data to localStorage
+    localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
+  };
   useEffect(() => {
     getCountries();
   }, []);
@@ -163,6 +179,7 @@ const MainProviderContext = ({ children }) => {
         storedProducts,
         removeFromCart,
         setStoredProducts,
+        removeFromFavorite,
       }}
     >
       {children}

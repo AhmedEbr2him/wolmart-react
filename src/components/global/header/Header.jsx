@@ -11,6 +11,7 @@ import { Logo, StickyWrapperContent } from '../../';
 import { useContext } from 'react';
 import { MainContext } from '../../../context/MainContext';
 import { useIsScroll } from '../../../hooks/useIsScroll';
+import { routesConstatns } from '../../../constants/routesConstants';
 
 const Header = () => {
   const currencyList = ['USD', 'EUR', 'EGP'];
@@ -157,13 +158,20 @@ const Header = () => {
               </div>
             </div>
 
-            <Link to='#' className='small-btn wishlist-btn'>
+            <Link
+              to={routesConstatns.CART}
+              role={'button'}
+              title='Go to Cart'
+              className='small-btn has-state wishlist-btn'
+            >
               <FiHeart size={24} />
               <span className='wishlist-label'>Wishlist</span>
             </Link>
+
             <button
               aria-label='Open Cart'
               className='small-btn has-state cart-btn'
+              title='Open Cart'
               onClick={openCart}
             >
               <BiShoppingBag size={24} />

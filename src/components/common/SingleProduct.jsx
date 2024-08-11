@@ -28,6 +28,7 @@ const SingleProduct = ({ data }) => {
     stock = '',
     discount = '',
     sizes = [{}],
+    quantity = '',
   } = data;
 
   const [mainImage, setMainImage] = useState(images[0]?.src);
@@ -139,7 +140,7 @@ const Discount = ({ oldPrice, newPrice, calculateDiscount }) => {
 
   return (
     <div className='product-badge'>
-      <span>{discountAmount}% off</span>
+      <span>{discountAmount}%off</span>
     </div>
   );
 };

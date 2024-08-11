@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import { LuEye } from 'react-icons/lu';
 import { BiShoppingBag } from 'react-icons/bi';
 import { useProductQty } from '../../hooks/useProductQty';
+import { useContext } from 'react';
+import { MainContext } from '../../context/MainContext';
 
-const Table = ({ data, wishlist, removeFromCart }) => {
+const Table = ({ data, wishlist }) => {
   const tableHead = [
     { label: 'Product', class: 'product-table-img', input: true },
     { label: 'Name', class: 'product-table-name' },
@@ -15,7 +17,7 @@ const Table = ({ data, wishlist, removeFromCart }) => {
     { label: 'Subtotal', class: 'product-table-subtotal' },
     { label: 'Action', class: 'product-table-remove' },
   ];
-
+  const { removeFromCart, addToCart, removeFromFavorite } = useContext(MainContext);
   return (
     <div className='table-wrapper'>
       <table className='shop-table cart-table'>
@@ -36,6 +38,8 @@ const Table = ({ data, wishlist, removeFromCart }) => {
               data={product}
               wishlist={wishlist}
               removeFromCart={removeFromCart}
+              addToCart={addToCart}
+              removeFromFavorite={removeFromFavorite}
             />
           ))}
         </tbody>
@@ -45,7 +49,7 @@ const Table = ({ data, wishlist, removeFromCart }) => {
 };
 export default Table;
 
-const CartTable = ({ data, removeFromCart, wishlist }) => {
+const CartTable = ({ data, wishlist, addToCart, removeFromFavorite }) => {
   const { id, name, images, price, quantity } = data;
   const { handleIncreaseQty, handleDecreaseQty, handleOnChangeQty } = useProductQty();
 
@@ -99,7 +103,11 @@ const CartTable = ({ data, removeFromCart, wishlist }) => {
           </button>
         )}
         {wishlist && (
-          <button aria-label='Add to Cart' className='btn btn-dark add-to'>
+          <button
+            aria-label='Add to Cart'
+            className='btn btn-dark add-to'
+            onClick={() => addToCart(data, id)}
+          >
             <span>Add to Cart</span>
             <span>
               <BiShoppingBag />
@@ -109,7 +117,7 @@ const CartTable = ({ data, removeFromCart, wishlist }) => {
         <button
           aria-label='Remove from Cart'
           className='btn btn-dark remove'
-          onClick={() => removeFromCart(id)}
+          onClick={() => removeFromFavorite(id)}
         >
           <span>Remove</span>
           <span>
