@@ -6,7 +6,13 @@ const CountrySelect = () => {
   const { selectedCountry, handleSelectCountry, countries } = useContext(MainContext);
   return (
     <div className='select-box'>
-      <select name='country' id='country' value={selectedCountry} onChange={handleSelectCountry}>
+      <select
+        autoComplete='off'
+        name='country select'
+        id='country'
+        value={selectedCountry}
+        onChange={handleSelectCountry}
+      >
         {countries.map((country, index) => (
           <option key={index} value={country.value}>
             {country.label}

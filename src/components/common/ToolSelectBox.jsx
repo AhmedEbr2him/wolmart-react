@@ -5,7 +5,12 @@ const ToolSelectBox = ({ selectedList, label, selectName, selectId, className })
   return (
     <div className='toolbox-item'>
       {label && <label htmlFor={selectId}>{label}:</label>}
-      <select name={selectName} id={selectId} className={`form-control ${className}`}>
+      <select
+        name={`${selectName}-select`}
+        id={selectId}
+        autoComplete='off'
+        className={`form-control ${className}`}
+      >
         {selectedList.map((item, index) => (
           <option key={index} defaultValue={item.value}>
             {item.label}

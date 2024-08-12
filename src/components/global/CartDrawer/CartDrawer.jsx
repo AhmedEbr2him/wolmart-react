@@ -71,7 +71,7 @@ export default CartDrawer;
 
 const DrawerProduct = ({ data }) => {
   const { id, name, images, price, quantity } = data;
-  const { removeFromCart } = useContext(MainContext);
+  const { removeFromProductList } = useContext(MainContext);
   return (
     <div className='product drawer-product-cart'>
       <div className='drawer-product-price'>
@@ -93,7 +93,10 @@ const DrawerProduct = ({ data }) => {
           </Link>
         ))}
       </figure>
-      <button aria-label='remove product from cart' onClick={() => removeFromCart(id)}>
+      <button
+        aria-label='remove product from cart'
+        onClick={() => removeFromProductList('cart', id)}
+      >
         <CgClose />
       </button>
     </div>

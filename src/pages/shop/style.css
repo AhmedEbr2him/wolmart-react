@@ -96,7 +96,7 @@
   }
 
   .toolbox-left {
-    :where(span, label) {
+    :where(.filter-btn span, label) {
       display: none;
     }
   }

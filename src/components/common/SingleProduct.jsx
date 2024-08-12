@@ -2,14 +2,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import { AiOutlineShopping } from 'react-icons/ai';
-import { IoMdHeartEmpty } from 'react-icons/io';
-import { LiaBalanceScaleSolid } from 'react-icons/lia';
 import { useState } from 'react';
-import { FaFacebookF } from 'react-icons/fa';
-import { BsTwitterX } from 'react-icons/bs';
-import { FaPinterestP } from 'react-icons/fa';
-import { FaWhatsapp } from 'react-icons/fa';
-import { SlSocialInstagram } from 'react-icons/sl';
 import Rating from './Rating';
 import calculateDiscount from '../../utils/calculateDiscount';
 import { useCheckboxState } from '../../hooks/useCheckboxState';
@@ -41,11 +34,11 @@ const SingleProduct = ({ data }) => {
       <div className='product product-single'>
         <div className='product-media'>
           <figure className='product-image' aria-hidden='false'>
-            <img src={mainImage} alt={name} loading='lazy' className='object-cover' />
+            <img src={mainImage} alt={name ?? ''} loading='lazy' className='object-cover' />
           </figure>
           <Discount
-            newPrice={price.new}
-            oldPrice={price.old}
+            newPrice={price?.new}
+            oldPrice={price?.old}
             calculateDiscount={calculateDiscount}
           />
         </div>
@@ -60,12 +53,12 @@ const SingleProduct = ({ data }) => {
                 className='product-thumb-item'
               >
                 <img
-                  src={img.src}
+                  src={img?.src}
                   alt='Product Image'
-                  width={img.width}
-                  height={img.height}
+                  width={img?.width}
+                  height={img?.height}
                   className='object-cover'
-                  onClick={() => setMainImage(images[index].src)}
+                  onClick={() => setMainImage(images[index]?.src)}
                 />
               </button>
             ))}
@@ -74,13 +67,13 @@ const SingleProduct = ({ data }) => {
 
         <div className='prodcut-details'>
           <h2 className='product-title'>
-            <Link to='#'>{name}</Link>
+            <Link to='#'>{name ?? ''}</Link>
           </h2>
           <hr className='horizontal-divider' />
           <div className='product-price'>
-            {price.old > 0 && <del>${price.old}.00</del>}
+            {price?.old > 0 && <del>${price?.old}.00</del>}
             <span>-</span>
-            {price.new > 0 && <ins className='new-price'>${price.new}.00</ins>}
+            {price?.new > 0 && <ins className='new-price'>${price?.new}.00</ins>}
           </div>
           <div className='product-countdown-container'>
             <p>Offer ends in :</p>

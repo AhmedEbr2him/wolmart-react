@@ -17,7 +17,7 @@ const Table = ({ data, wishlist }) => {
     { label: 'Subtotal', class: 'product-table-subtotal' },
     { label: 'Action', class: 'product-table-remove' },
   ];
-  const { removeFromCart, addToCart, removeFromFavorite } = useContext(MainContext);
+  const { removeFromCart, addToCart, removeFromProductList } = useContext(MainContext);
   return (
     <div className='table-wrapper'>
       <table className='shop-table cart-table'>
@@ -39,7 +39,7 @@ const Table = ({ data, wishlist }) => {
               wishlist={wishlist}
               removeFromCart={removeFromCart}
               addToCart={addToCart}
-              removeFromFavorite={removeFromFavorite}
+              removeFromProductList={removeFromProductList}
             />
           ))}
         </tbody>
@@ -49,7 +49,7 @@ const Table = ({ data, wishlist }) => {
 };
 export default Table;
 
-const CartTable = ({ data, wishlist, addToCart, removeFromFavorite, removeFromCart }) => {
+const CartTable = ({ data, wishlist, addToCart, removeFromProductList }) => {
   const { id, name, images, price, quantity } = data;
   const { handleIncreaseQty, handleDecreaseQty, handleOnChangeQty } = useProductQty();
   const subtotal = price.new ? price.new * quantity : price.old * quantity;
@@ -80,7 +80,7 @@ const CartTable = ({ data, wishlist, addToCart, removeFromFavorite, removeFromCa
           </button>
           <input
             type='number'
-            name='Value'
+            name='quantity'
             value={quantity}
             onChange={e => handleOnChangeQty(e, id)}
           />
@@ -118,7 +118,7 @@ const CartTable = ({ data, wishlist, addToCart, removeFromFavorite, removeFromCa
         <button
           aria-label='Remove from Cart'
           className='btn btn-dark remove'
-          onClick={() => removeFromFavorite(id) || removeFromCart(id)}
+          onClick={() => removeFromProductList('cart', id) || removeFromProductList('favorite', id)}
         >
           <span>Remove</span>
           <span>

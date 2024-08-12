@@ -20,7 +20,7 @@ export const useProductQty = () => {
   const handleDecreaseQty = id => {
     // Create a new copy of the stored products to avoid direct mutation
     const productIndex = cartProducts.findIndex(item => item.id === id);
-    if (productIndex !== -1 && cartProducts[productIndex].quantity > 0) {
+    if (productIndex !== -1 && cartProducts[productIndex].quantity > 1) {
       cartProducts[productIndex].quantity -= 1;
     }
     setStoredProducts(updatedProducts);

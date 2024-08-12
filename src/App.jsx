@@ -48,10 +48,12 @@ const routeConfig = [
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
 const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDrawer'));
 const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
+const LazyProductPopupDetali = lazy(() => import('./components/common/ProductPopupDetail'));
 
 const App = () => {
-  const { isDrawerActive, isFilterActive } = useContext(MainContext);
+  const { isDrawerActive, isFilterActive, productId } = useContext(MainContext);
   const { toastMessage } = useToast();
+  console.log(productId);
 
   useEffect(() => {
     const handleBody = () => {
@@ -97,7 +99,7 @@ const App = () => {
       {toastMessage.isLoading && (
         <Toast message={toastMessage.message} path={toastMessage.path} type={toastMessage.type} />
       )}
-
+      <Suspense>{/* <LazyProductPopupDetali /> */}</Suspense>
       <Footer />
     </div>
   );

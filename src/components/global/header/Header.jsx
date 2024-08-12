@@ -159,7 +159,7 @@ const Header = () => {
             </div>
 
             <Link
-              to={routesConstatns.CART}
+              to={routesConstatns.WISHLIST}
               role={'button'}
               title='Go to Cart'
               className='small-btn has-state wishlist-btn'

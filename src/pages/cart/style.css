@@ -140,10 +140,3 @@
     }
   }
 }
-.empty-cart-message {
-  text-align: center;
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-  padding-block: 2rem;
-  margin-block-end: 1.5rem;
-}

@@ -15,6 +15,11 @@ const MainProviderContext = ({ children }) => {
   const [selectedCountry, setSelectedCountry] = useState('usa');
   const [state, setStates] = useState([]);
   const { handleToastMessage } = useContext(ToastContext);
+  const [productId, setProductId] = useState(() => {
+    const savedProductId = localStorage.getItem('product_id');
+    return JSON.parse(savedProductId) || undefined;
+  });
+
   const [storedProducts, setStoredProducts] = useState(() => {
     const savedProducts = localStorage.getItem('savedProducts');
     return (
@@ -89,7 +94,7 @@ const MainProviderContext = ({ children }) => {
       favoriteProducts.splice(productIndex, 1);
       handleToastMessage('Removed from', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     } else {
-      favoriteProducts.push(product);
+      favoriteProducts.push({ ...product, quantity: 1 });
 
       handleToastMessage('Added to', routesConstatns.WISHLIST, 'Wishlist', true, 3500);
     }
@@ -115,35 +120,25 @@ const MainProviderContext = ({ children }) => {
     localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
   };
 
-  const removeFromCart = id => {
+  const removeFromProductList = (type, id) => {
     const updadtedProducts = { ...storedProducts };
-    const cartProducts = updadtedProducts.products.cart;
-    const productIndex = cartProducts.findIndex(item => item.id === id);
+    const productList = updadtedProducts.products[type];
+    const productIndex = productList.findIndex(item => item.id === id);
 
     // Remove the product from the array if it exists
     if (productIndex > -1) {
-      cartProducts.splice(productIndex, 1);
+      productList.splice(productIndex, 1);
 
-      // Update the state with the new cart
+      // Update the state with the new product list
       setStoredProducts(updadtedProducts);
     }
+
     // Save the updated data to localStorage
     localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
   };
-  const removeFromFavorite = id => {
-    const updadtedProducts = { ...storedProducts };
-    const favoriteProducts = updadtedProducts.products.favorite;
-    const productIndex = favoriteProducts.findIndex(item => item.id === id);
 
-    // Remove the product from the array if it exists
-    if (productIndex > -1) {
-      favoriteProducts.splice(productIndex, 1);
-
-      // Update the state with the new cart
-      setStoredProducts(updadtedProducts);
-    }
-    // Save the updated data to localStorage
-    localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
+  const quickView = (_, id) => {
+    setProductId(prevId => ({ ...prevId, id }));
   };
   useEffect(() => {
     getCountries();
@@ -159,6 +154,10 @@ const MainProviderContext = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('savedProducts', JSON.stringify(storedProducts));
   }, [storedProducts]);
+
+  useEffect(() => {
+    localStorage.setItem('product_id', JSON.stringify(productId));
+  }, [productId]);
 
   return (
     <MainContext.Provider
@@ -180,9 +179,10 @@ const MainProviderContext = ({ children }) => {
         addToCart,
         addToFavorite,
         storedProducts,
-        removeFromCart,
         setStoredProducts,
-        removeFromFavorite,
+        removeFromProductList,
+        quickView,
+        productId,
       }}
     >
       {children}

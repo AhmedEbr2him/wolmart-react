@@ -8,7 +8,7 @@ import { MainContext } from '../../context/MainContext';
 
 const Product = ({ data }) => {
   const { id = '', name = '', price = [], images = [], rating = '', reviews = [] } = data;
-  const { addToCart, addToFavorite } = useContext(MainContext);
+  const { addToCart, addToFavorite, quickView } = useContext(MainContext);
 
   const actionList = [
     {
@@ -24,6 +24,7 @@ const Product = ({ data }) => {
     {
       label: 'quick view',
       icon: <TbEye />,
+      onClick: quickView,
     },
     {
       label: 'add to compare',

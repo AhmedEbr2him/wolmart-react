@@ -20,14 +20,19 @@ const Cart = () => {
       <div className='container'>
         <div className='products-content'>
           {/* TABLE */}
-          {productsLength === 0 && <p className='empty-cart-message'>Cart Is Empty !</p>}
+          {productsLength === 0 && <p className='empty-table-message'>Cart Is Empty !</p>}
 
           {productsLength >= 1 && <Table data={storedProducts.products.cart} />}
           {/* COUPON */}
           {productsLength >= 1 && (
             <form className='coupon-form'>
               <h5 className='coupon-title'>Coupon Discount</h5>
-              <input type='text' className='form-control' placeholder='Enter coupon code here...' />
+              <input
+                type='text'
+                name='coupon'
+                className='form-control'
+                placeholder='Enter coupon code here...'
+              />
               <button className='btn btn-outline apply'>apply</button>
             </form>
           )}
