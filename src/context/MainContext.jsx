@@ -9,13 +9,14 @@ const MainProviderContext = ({ children }) => {
   const [isDrawerActive, setIsDrawerActive] = useState(null);
   const [isCartActive, setIsCartActive] = useState(null);
   const [isFilterOpen, setIsFilterOpen] = useState(null);
+  const [isQuickViewActive, setIsQuickViewActive] = useState(null);
 
   /* COUNTRIES */
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('usa');
   const [state, setStates] = useState([]);
   const { handleToastMessage } = useContext(ToastContext);
-  const [productId, setProductId] = useState(() => {
+  const [quickViewData, setQuickViewData] = useState(() => {
     const savedProductId = localStorage.getItem('product_id');
     return JSON.parse(savedProductId) || undefined;
   });
@@ -58,6 +59,10 @@ const MainProviderContext = ({ children }) => {
   };
   const closeFilter = () => {
     setIsFilterOpen(false);
+  };
+
+  const closeQuickView = () => {
+    setIsQuickViewActive(false);
   };
 
   /* CONTRIES */
@@ -137,8 +142,12 @@ const MainProviderContext = ({ children }) => {
     localStorage.setItem('savedProducts', JSON.stringify(updadtedProducts));
   };
 
-  const quickView = (_, id) => {
-    setProductId(prevId => ({ ...prevId, id }));
+  const quickView = data => {
+    setQuickViewData(data);
+    setIsCartActive(false);
+    setIsDrawerActive(false);
+    setIsFilterOpen(false);
+    setIsQuickViewActive(true);
   };
   useEffect(() => {
     getCountries();
@@ -156,8 +165,8 @@ const MainProviderContext = ({ children }) => {
   }, [storedProducts]);
 
   useEffect(() => {
-    localStorage.setItem('product_id', JSON.stringify(productId));
-  }, [productId]);
+    localStorage.setItem('product_id', JSON.stringify(quickViewData));
+  }, [quickViewData]);
 
   return (
     <MainContext.Provider
@@ -182,7 +191,10 @@ const MainProviderContext = ({ children }) => {
         setStoredProducts,
         removeFromProductList,
         quickView,
-        productId,
+        quickViewData,
+
+        closeQuickView,
+        isQuickViewActive,
       }}
     >
       {children}

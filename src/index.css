@@ -1357,11 +1357,75 @@ th:hover {
 /* PRODUCT POPUP */
 .product-popup {
   position: fixed;
-  background: var(--site-background);
   z-index: 99;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--motion-duration-short-2);
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .single-product,
+    .close {
+      scale: 1;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .close {
+    margin-block-end: 1rem;
+    background: var(--scrim);
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    z-index: 99;
+    left: 0.55rem;
+    top: 1.5rem;
+    border-radius: var(--circle-radius);
+    transition: var(--motion-duration-short-2);
+    opacity: 0;
+    visibility: hidden;
+    scale: 1.1;
+
+    svg {
+      color: #ffffff;
+      font-size: 2rem;
+    }
+
+    &:hover {
+      background-color: var(--button-hover-background);
+    }
+  }
+
+  .single-product {
+    background-color: var(--site-background);
+    padding: 2rem;
+    overflow-y: scroll;
+    position: fixed;
+    inset: 0;
+    scale: 1.1;
+    opacity: 0;
+    visibility: hidden;
+    margin: 3rem 1.5rem;
+    transition: var(--motion-duration-short-2);
+    border-radius: var(--small-radius);
+
+    .product-title {
+      margin-block-end: 1rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: var(--alpha-10);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--alpha-20);
+      border-radius: var(--small-radius);
+    }
+  }
 
   .list-type-check li {
     font-size: 1.4rem;
@@ -1380,9 +1444,9 @@ th:hover {
 }
 .product-bm-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  justify-content: space-between;
 
   :where(.brand, .category, .product-sku) {
     display: flex;
@@ -1401,9 +1465,19 @@ th:hover {
     margin-inline-start: 0.5rem;
     color: var(--text-color);
   }
-  .product-meta {
-    display: inherit;
-    flex-direction: inherit;
-    gap: inherit;
+
+  .category {
+    padding-block-end: 0.8rem;
+  }
+}
+.product-short-description .description {
+  margin-block-start: 1rem;
+  h4 {
+    margin-block-end: 0.5rem;
+    color: var(--title-color);
+  }
+  p {
+    font-size: 1.4rem;
+    color: var(--default-text-color);
   }
 }

@@ -1,12 +1,12 @@
 import { FiMinus, FiPlus } from 'react-icons/fi';
 import { useProductQty } from '../../hooks/useProductQty';
 
-const InputPriceGroup = () => {
+const InputPriceGroup = ({ quantity }) => {
   const { handleDecreaseQty, handleIncreaseQty, handleOnChangeQty } = useProductQty();
 
   return (
     <div className='input-group'>
-      <input type='number' name='qantity' defaultValue={1} onChange={handleOnChangeQty} />
+      <input type='number' name='qantity' value={quantity} onChange={handleOnChangeQty} />
       <button className='qty-plus' aria-label='plus' onClick={handleIncreaseQty}>
         <FiPlus />
       </button>

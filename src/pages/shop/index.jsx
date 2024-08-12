@@ -16,7 +16,6 @@ const Shop = () => {
     autoplaySpeed: 4000,
     cssEase: 'ease',
   };
-
   return (
     <article className='shop'>
       <div className='container'>

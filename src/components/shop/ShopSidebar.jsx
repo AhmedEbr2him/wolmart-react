@@ -2,8 +2,9 @@
 import { TfiClose } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
 import { filterItems } from '../../constants/mockData';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MainContext } from '../../context/MainContext';
+import { useStopDocScroll } from '../../hooks/useStopDocScroll';
 
 const ShopSidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState({
@@ -21,7 +22,14 @@ const ShopSidebar = () => {
       [key]: !prevState[key],
     }));
   };
-
+  const { startScroll, stopScroll } = useStopDocScroll();
+  useEffect(() => {
+    if (isFilterOpen) {
+      stopScroll();
+    } else {
+      startScroll();
+    }
+  }, [isFilterOpen, startScroll, stopScroll]);
   return (
     <aside className='sidebar shop-sidebar'>
       {isFilterOpen && (

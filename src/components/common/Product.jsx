@@ -9,7 +9,6 @@ import { MainContext } from '../../context/MainContext';
 const Product = ({ data }) => {
   const { id = '', name = '', price = [], images = [], rating = '', reviews = [] } = data;
   const { addToCart, addToFavorite, quickView } = useContext(MainContext);
-
   const actionList = [
     {
       label: 'add to cart',
