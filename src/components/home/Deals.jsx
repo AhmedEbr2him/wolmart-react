@@ -12,8 +12,6 @@ const Deals = ({ products, topProducts }) => {
     dotsClass: 'slick-dots slick-thumb',
     infinite: true,
     speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
   };
 
   return (

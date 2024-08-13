@@ -24,7 +24,7 @@
   --light-alpha-10: hsla(0, 0%, 0%, 0.1);
   --light-alpha-20: hsla(0, 0%, 0%, 0.2);
   --light-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
+  --light-blur-background: rgba(255, 255, 255, 0.8);
   /* dark colors */
   --dark-site-background: #1c1c1c;
   --dark-section-background: #282828; /* 232323 */
@@ -40,12 +40,15 @@
   --dark-alpha-10: hsla(0, 0%, 100%, 0.1);
   --dark-alpha-20: hsla(0, 0%, 100%, 0.2);
   --dark-box-shadow: 0 5px 20px rgba(255, 255, 255, 0.08);
+  --dark-blur-background: rgba(0, 0, 0, 0.8);
+
   /**
   * CONTAINERS
   */
   --desktop-container: 1336px;
   --laptop-container: 1200px;
   --tablet-container: 992px;
+  --medium-container: 768px;
   --mobile-container: 576px;
 
   /**
@@ -115,6 +118,7 @@
   --alpha-10: var(--light-alpha-10);
   --alpha-20: var(--light-alpha-20);
   --box-shadow: var(--light-box-shadow);
+  --blur-background: var(--light-blur-background);
 }
 [data-scheme='dark'] {
   color-scheme: dark;
@@ -132,6 +136,7 @@
   --alpha-10: var(--dark-alpha-10);
   --alpha-20: var(--dark-alpha-20);
   --box-shadow: var(--dark-box-shadow);
+  --blur-background: var(--dark-blur-background);
 }
 /**
 * RESET
@@ -1199,7 +1204,17 @@ th:hover {
     }
   }
 }
-
+.view,
+.remove {
+  svg {
+    color: var(--primary-color);
+  }
+  &:hover {
+    svg {
+      color: #ffffff;
+    }
+  }
+}
 .cart .cart-action {
   display: flex;
   flex-direction: column;
@@ -1479,5 +1494,22 @@ th:hover {
   p {
     font-size: 1.4rem;
     color: var(--default-text-color);
+  }
+}
+/*-----------------------------*\
+  - MEDIA QUERIES
+\*-----------------------------*/
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: var(--medium-container);
+  }
+  .title-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      margin: 0;
+    }
   }
 }

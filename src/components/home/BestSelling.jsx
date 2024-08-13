@@ -12,8 +12,17 @@ const BestSelling = ({ data }) => {
     dotsClass: 'slick-dots slick-thumb',
     infinite: false,
     speed: 800,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (

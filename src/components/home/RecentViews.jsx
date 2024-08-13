@@ -5,10 +5,30 @@ import Slider from 'react-slick';
 
 const RecentViews = ({ products }) => {
   const settings = {
-    slidesToShow: 2,
+    slidesToShow: 4,
     speed: 500,
     infinite: false,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
   return (
     <section className='section recent-views-section' data-lazy-trigger>

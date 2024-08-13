@@ -41,7 +41,7 @@ const routeConfig = [
   },
   {
     path: routesConstatns.AUTHENTICATION,
-    component: lazyImport('authentication'),
+    component: lazyImport('auth'),
   },
 ];
 /* COMPOENNTS */
@@ -53,7 +53,6 @@ const LazyProductPopupDetalil = lazy(() => import('./components/common/ProductPo
 const App = () => {
   const { isDrawerActive, isFilterActive, quickViewData } = useContext(MainContext);
   const { toastMessage } = useToast();
-  console.log(quickViewData);
 
   useEffect(() => {
     const handleBody = () => {

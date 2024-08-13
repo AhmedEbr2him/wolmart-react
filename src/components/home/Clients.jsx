@@ -8,7 +8,15 @@ const Clients = () => {
     speed: 500,
     infinite: false,
     rows: 2,
-    slidesPerRow: 2,
+    slidesPerRow: 3,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesPerRow: 2,
+        },
+      },
+    ],
   };
   return (
     <section className='section client-section-wrapper' data-lazy-trigger>

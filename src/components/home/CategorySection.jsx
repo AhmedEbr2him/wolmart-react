@@ -35,9 +35,27 @@ const CategorySection = () => {
     dots: false,
     infinite: false,
     speed: 800,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    swipeToSlide: true,
+    slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+    ],
   };
 
   return (

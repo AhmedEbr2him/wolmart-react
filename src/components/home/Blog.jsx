@@ -23,10 +23,30 @@ const Blog = () => {
     fetchPosts();
   }, []);
   const settings = {
-    slidesToShow: 1,
+    slidesToShow: 3,
     speed: 500,
     infinite: true,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   return (
     <section className='section blog-section' data-lazy-trigger>

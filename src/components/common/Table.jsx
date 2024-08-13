@@ -17,7 +17,8 @@ const Table = ({ data, wishlist }) => {
     { label: 'Subtotal', class: 'product-table-subtotal' },
     { label: 'Action', class: 'product-table-remove' },
   ];
-  const { removeFromCart, addToCart, removeFromProductList } = useContext(MainContext);
+  const { removeFromCart, addToCart, removeFromProductList, quickView } = useContext(MainContext);
+
   return (
     <div className='table-wrapper'>
       <table className='shop-table cart-table'>
@@ -40,6 +41,7 @@ const Table = ({ data, wishlist }) => {
               removeFromCart={removeFromCart}
               addToCart={addToCart}
               removeFromProductList={removeFromProductList}
+              quickView={quickView}
             />
           ))}
         </tbody>
@@ -49,7 +51,7 @@ const Table = ({ data, wishlist }) => {
 };
 export default Table;
 
-const CartTable = ({ data, wishlist, addToCart, removeFromProductList }) => {
+const CartTable = ({ data, wishlist, addToCart, removeFromProductList, quickView }) => {
   const { id, name, images, price, quantity } = data;
   const { handleIncreaseQty, handleDecreaseQty, handleOnChangeQty } = useProductQty();
   const subtotal = price.new ? price.new * quantity : price.old * quantity;
@@ -96,7 +98,11 @@ const CartTable = ({ data, wishlist, addToCart, removeFromProductList }) => {
       <td className='action-product'>
         {/* WISHLIST IS FOR WISH LIST PAGE BUTTONS */}
         {wishlist && (
-          <button aria-label='Quick View' className='btn btn-dark view'>
+          <button
+            aria-label='Quick View'
+            className='btn btn-dark view'
+            onClick={() => quickView(data)}
+          >
             <span>Quick view</span>
             <span>
               <LuEye />

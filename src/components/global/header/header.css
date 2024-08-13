@@ -45,6 +45,7 @@
       white-space: nowrap;
       animation: marquee 10s linear infinite;
       top: 50%;
+      color: var(--primary-color);
     }
   }
 
@@ -121,7 +122,8 @@
 .header-middle {
   padding-block: 14px;
   height: 72px;
-  background: var(--site-background);
+  background-color: var(--site-background);
+  backdrop-filter: blur(1rem);
   transition: var(--motion-duration-medium-1);
 
   .container {
@@ -166,13 +168,13 @@
     }
   }
 
-  &.scroll {
-    transition: var(--motion-duration-medium-1) var(--motion-easing-ease-in-out);
-  }
-
   .right-part {
     display: flex;
     align-items: center;
+
+    svg {
+      color: var(--primary-color);
+    }
   }
 }
 .sticky-content-wrapper {

@@ -20,8 +20,6 @@ const ProductPopupDetail = ({ data }) => {
     category = '',
     rating = '',
     reviews = '',
-    stock = '',
-    discount = '',
     sizes = [{}],
     quantity = '',
     colors = [{}],

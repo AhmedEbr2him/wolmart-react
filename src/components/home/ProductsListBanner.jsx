@@ -18,17 +18,18 @@ const ProductsListBanner = ({ sectionTitle, to, banner, h5, h3, span, products, 
     <section className='section banner-products' data-lazy-trigger>
       <div className='container'>
         <TitleLink title={sectionTitle} to={to} />
-      </div>
-      <div className='section-banner'>
-        <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={white} />
 
-        <div className='products-list-wrapper'>
-          <div className='products-list'>
-            <Slider {...settings}>
-              {products?.slice(0, 8).map((product, index) => (
-                <Product key={index} data={product} />
-              ))}
-            </Slider>
+        <div className='section-banner'>
+          <BannerBackground image={banner} h5={h5} h3={h3} span={span} white={white} />
+
+          <div className='products-list-wrapper'>
+            <div className='products-list'>
+              <Slider {...settings}>
+                {products?.slice(0, 8).map((product, index) => (
+                  <Product key={index} data={product} />
+                ))}
+              </Slider>
+            </div>
           </div>
         </div>
       </div>

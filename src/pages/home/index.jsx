@@ -100,11 +100,7 @@ const Home = () => {
         <LazyIntroSection />
       </Suspense>
 
-      <Suspense Suspense>
-        <LazyCategoryBanner />
-      </Suspense>
-
-      <Suspense Suspense>
+      <Suspense>
         <LazyFeaturesSection />
       </Suspense>
 

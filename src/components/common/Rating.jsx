@@ -12,7 +12,7 @@ const Rating = ({ rating, reviews }) => {
         {Array.from({ length: maxRating }).map((_, index) => (
           <StarRating key={index} filled={index < fillStars} />
         ))}
-        <span className='tooltip'>{rating.toFixed(1)}</span>
+        <span className='tooltip'>{rating && rating?.toFixed(1)}</span>
       </div>
       {reviews && (
         <Link to='#' className='rating-reviews'>

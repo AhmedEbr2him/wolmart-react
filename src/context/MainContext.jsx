@@ -18,7 +18,7 @@ const MainProviderContext = ({ children }) => {
   const { handleToastMessage } = useContext(ToastContext);
   const [quickViewData, setQuickViewData] = useState(() => {
     const savedProductId = localStorage.getItem('product_id');
-    return JSON.parse(savedProductId) || undefined;
+    return JSON.parse(savedProductId) || {};
   });
 
   const [storedProducts, setStoredProducts] = useState(() => {
@@ -192,7 +192,6 @@ const MainProviderContext = ({ children }) => {
         removeFromProductList,
         quickView,
         quickViewData,
-
         closeQuickView,
         isQuickViewActive,
       }}
