@@ -163,9 +163,12 @@
   .widget-title {
     margin-bottom: 1rem;
     padding-block-end: 6px;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 2rem;
     font-weight: var(--weight-semi-bold);
+  }
+  .widget:not(:first-child) .widget-title {
+    text-transform: uppercase;
   }
   .tel {
     margin-bottom: 1rem;
@@ -313,5 +316,32 @@
 
   .footer-top {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .footer-top {
+    grid-template-columns: repeat(5, 1fr);
+
+    .widget:first-child {
+      grid-column: 1 / 3;
+
+      .widget-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    .desc {
+      margin-block-end: 2.5rem;
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .footer-right {
+      flex-direction: row;
+    }
   }
 }

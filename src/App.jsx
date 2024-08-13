@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
 import { Footer, Header, StickyFooter } from './components';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { MainContext } from './context/MainContext';
 import { Suspense, lazy } from 'react';
 import Toast from './components/common/Toast';
@@ -44,6 +44,7 @@ const routeConfig = [
     component: lazyImport('auth'),
   },
 ];
+
 /* COMPOENNTS */
 const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/MobileDrawer'));
 const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDrawer'));
@@ -53,7 +54,21 @@ const LazyProductPopupDetalil = lazy(() => import('./components/common/ProductPo
 const App = () => {
   const { isDrawerActive, isFilterActive, quickViewData } = useContext(MainContext);
   const { toastMessage } = useToast();
+  const [isStickFooterVisible, setIsStickyFooterVisible] = useState(true);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 876) {
+        setIsStickyFooterVisible(false);
+      } else {
+        setIsStickyFooterVisible(true);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   useEffect(() => {
     const handleBody = () => {
       if (isDrawerActive) {
@@ -75,7 +90,7 @@ const App = () => {
         <LazyScrimOverlay />
       </Suspense>
 
-      <StickyFooter />
+      {!!isStickFooterVisible && <StickyFooter />}
       <Header />
 
       {/* MAIN PAGES */}

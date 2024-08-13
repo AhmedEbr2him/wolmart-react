@@ -639,7 +639,11 @@ ins {
 .single-product {
   margin-inline: 10px;
   position: relative;
-
+  .product-media-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
   figure {
     border-radius: var(--small-radius);
     border: none;
@@ -673,7 +677,7 @@ ins {
   .product {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 1rem;
   }
   .product-title {
     margin-block-start: 2.4rem;
@@ -1511,5 +1515,32 @@ th:hover {
     a {
       margin: 0;
     }
+  }
+}
+@media only screen and (min-width: 876px) {
+  .container {
+    max-width: 876px;
+  }
+  .app {
+    padding-block-end: 0;
+  }
+  .single-product .product {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: var(--tablet-container);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: var(--laptop-container);
+  }
+}
+@media only screen and (min-width: 1336px) {
+  .container {
+    max-width: var(--desktop-container);
   }
 }

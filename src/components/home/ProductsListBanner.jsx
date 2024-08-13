@@ -7,12 +7,34 @@ import TitleLink from '../common/TitleLink';
 const ProductsListBanner = ({ sectionTitle, to, banner, h5, h3, span, products, white }) => {
   const settings = {
     className: 'center',
-    slidesToShow: 2,
+    slidesToShow: 4,
     speed: 500,
-    infinite: false,
+    infinite: true,
     rows: 1,
     slidesPerRow: 2,
     dots: true,
+    InitalSlide: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 1199,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   };
   return (
     <section className='section banner-products' data-lazy-trigger>

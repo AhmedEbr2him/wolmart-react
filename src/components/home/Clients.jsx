@@ -4,16 +4,22 @@ import SectionTitle from '../common/SectionTitle';
 
 const Clients = () => {
   const settings = {
-    slidesToShow: 1,
+    slidesToShow: 4,
     speed: 500,
     infinite: false,
     rows: 2,
-    slidesPerRow: 3,
+    slidesPerRow: 1,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 900,
         settings: {
-          slidesPerRow: 2,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
         },
       },
     ],

@@ -123,20 +123,22 @@ const Home = () => {
       <Suspense>
         <div className='banner-wrapper'>
           <Suspense>
-            <LazyBanner
-              image={Images.banners.Banenr_1}
-              backgroundColor={'#3B4B48'}
-              h5={'Natural Process'}
-              h3={'Cosmetic Makeup Professional'}
-              underline='true'
-            />
-            <LazyBanner
-              image={Images.banners.Banenr_2}
-              backgroundColor={'#E5E5E5'}
-              h5={'Trending Now'}
-              h3={"Women's Lifestyle Collection"}
-              underline='true'
-            />
+            <div className='container'>
+              <LazyBanner
+                image={Images.banners.Banenr_1}
+                backgroundColor={'#3B4B48'}
+                h5={'Natural Process'}
+                h3={'Cosmetic Makeup Professional'}
+                underline='true'
+              />
+              <LazyBanner
+                image={Images.banners.Banenr_2}
+                backgroundColor={'#E5E5E5'}
+                h5={'Trending Now'}
+                h3={"Women's Lifestyle Collection"}
+                underline='true'
+              />
+            </div>
           </Suspense>
         </div>
         <LazyProductsListBanner
@@ -179,14 +181,16 @@ const Home = () => {
               <sub>OFF</sub>
             </div>
             <div className='banner-info'>
-              <h3 className='banner-title'>for today&apos;s fashion</h3>
-              <p>
-                Use code
-                <span>black 1234</span>
-                to get best offer.
-              </p>
+              <div className='info-wrapper'>
+                <h3 className='banner-title'>for today&apos;s fashion</h3>
+                <p>
+                  Use code
+                  <span>black 1234</span>
+                  to get best offer.
+                </p>
+              </div>
+              <LazyLinkBtn className='btn btn-outline' label='shop now' classType='btn-outline' />
             </div>
-            <LazyLinkBtn className='btn btn-outline' label='shop now' classType='btn-outline' />
           </div>
         </div>
       </div>

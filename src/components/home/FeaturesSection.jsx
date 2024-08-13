@@ -8,33 +8,43 @@ const FeaturesSection = () => {
   return (
     <section className='section features' data-lazy-trigger>
       <div className='container'>
-        <div className='feature-box'>
-          <div className='icon'>
-            <TbTruckDelivery />
+        <div className='features-wrapper'>
+          <div className='feature-box'>
+            <div className='icon'>
+              <TbTruckDelivery />
+            </div>
+            <div className='info'>
+              <h4 className='box-title'>free shipping & returns</h4>
+              <p>For all orders over $99</p>
+            </div>
           </div>
-          <h4 className='box-title'>free shipping & returns</h4>
-          <p>For all orders over $99</p>
-        </div>
-        <div className='feature-box'>
-          <div className='icon'>
-            <RiSecurePaymentLine />
+          <div className='feature-box'>
+            <div className='icon'>
+              <RiSecurePaymentLine />
+            </div>
+            <div className='info'>
+              <h4 className='box-title'>secure payment</h4>
+              <p>We ensure secure payment</p>
+            </div>
           </div>
-          <h4 className='box-title'>secure payment</h4>
-          <p>We ensure secure payment</p>
-        </div>
-        <div className='feature-box'>
-          <div className='icon'>
-            <TbCreditCardRefund />
+          <div className='feature-box'>
+            <div className='icon'>
+              <TbCreditCardRefund />
+            </div>
+            <div className='info'>
+              <h4 className='box-title'>mony back guarantee</h4>
+              <p>Any back within 30 days</p>
+            </div>
           </div>
-          <h4 className='box-title'>mony back guarantee</h4>
-          <p>Any back within 30 days</p>
-        </div>
-        <div className='feature-box'>
-          <div className='icon'>
-            <TfiHeadphoneAlt />
+          <div className='feature-box'>
+            <div className='icon'>
+              <TfiHeadphoneAlt />
+            </div>
+            <div className='info'>
+              <h4 className='box-title'>customer support</h4>
+              <p>Call or email us 24/7</p>
+            </div>
           </div>
-          <h4 className='box-title'>customer support</h4>
-          <p>Call or email us 24/7</p>
         </div>
       </div>
     </section>

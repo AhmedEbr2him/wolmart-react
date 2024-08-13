@@ -11,12 +11,6 @@ const RecentViews = ({ products }) => {
     dots: true,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
@@ -33,36 +27,38 @@ const RecentViews = ({ products }) => {
   return (
     <section className='section recent-views-section' data-lazy-trigger>
       <div className='section-wrapper'>
-        <SectionTitle title='your recent views' />
+        <div className='container'>
+          <SectionTitle title='your recent views' />
 
-        <div className='recent-views-products'>
-          <Slider {...settings}>
-            {products?.slice(0, 7).map((product, index) => {
-              const { name, images } = product;
-              return (
-                <div key={index} className='product'>
-                  {images?.map((img, index) => (
-                    <figure key={index} className='product-media'>
-                      <Link to='#'>
-                        <img
-                          src={img.src_1}
-                          alt={name}
-                          className='object-cover'
-                          width='130'
-                          height='146'
-                          style={{ backgroundImage: 'var(--primary-color)' }}
-                        />
-                      </Link>
-                    </figure>
-                  ))}
+          <div className='recent-views-products'>
+            <Slider {...settings}>
+              {products?.slice(0, 7).map((product, index) => {
+                const { name, images } = product;
+                return (
+                  <div key={index} className='product'>
+                    {images?.map((img, index) => (
+                      <figure key={index} className='product-media'>
+                        <Link to='#'>
+                          <img
+                            src={img.src_1}
+                            alt={name}
+                            className='object-cover'
+                            width='130'
+                            height='146'
+                            style={{ backgroundImage: 'var(--primary-color)' }}
+                          />
+                        </Link>
+                      </figure>
+                    ))}
 
-                  <h4 className='product-name'>
-                    <Link to='#'>{name}</Link>
-                  </h4>
-                </div>
-              );
-            })}
-          </Slider>
+                    <h4 className='product-name'>
+                      <Link to='#'>{name}</Link>
+                    </h4>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       </div>
     </section>

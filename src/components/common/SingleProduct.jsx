@@ -32,39 +32,40 @@ const SingleProduct = ({ data }) => {
   return (
     <div className='single-product'>
       <div className='product product-single'>
-        <div className='product-media'>
-          <figure className='product-image' aria-hidden='false'>
-            <img src={mainImage} alt={name ?? ''} loading='lazy' className='object-cover' />
-          </figure>
-          <Discount
-            newPrice={price?.new}
-            oldPrice={price?.old}
-            calculateDiscount={calculateDiscount}
-          />
-        </div>
+        <div className='product-media-wrapper'>
+          <div className='product-media'>
+            <figure className='product-image' aria-hidden='false'>
+              <img src={mainImage} alt={name ?? ''} loading='lazy' className='object-cover' />
+            </figure>
+            <Discount
+              newPrice={price?.new}
+              oldPrice={price?.old}
+              calculateDiscount={calculateDiscount}
+            />
+          </div>
 
-        <div className='product-thumb'>
-          <div className='thumb-list'>
-            {images?.map((img, index) => (
-              <button
-                key={index}
-                role='img'
-                aria-label='Product thumb'
-                className='product-thumb-item'
-              >
-                <img
-                  src={img?.src}
-                  alt='Product Image'
-                  width={img?.width}
-                  height={img?.height}
-                  className='object-cover'
-                  onClick={() => setMainImage(images[index]?.src)}
-                />
-              </button>
-            ))}
+          <div className='product-thumb'>
+            <div className='thumb-list'>
+              {images?.map((img, index) => (
+                <button
+                  key={index}
+                  role='img'
+                  aria-label='Product thumb'
+                  className='product-thumb-item'
+                >
+                  <img
+                    src={img?.src}
+                    alt='Product Image'
+                    width={img?.width}
+                    height={img?.height}
+                    className='object-cover'
+                    onClick={() => setMainImage(images[index]?.src)}
+                  />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-
         <div className='prodcut-details'>
           <h2 className='product-title'>
             <Link to='#'>{name ?? ''}</Link>
