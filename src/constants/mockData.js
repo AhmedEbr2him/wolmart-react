@@ -343,5 +343,429 @@ const filterItems = {
     { label: 'Yellow', value: 'yellow', to: '#' },
   ],
 };
+const mainMenuList = [
+  { label: 'Home', path: routesConstatns.HOME },
+  { label: 'Blog', path: '/blog' },
+  { label: 'About us', path: routesConstatns.ABOUT_US },
+  { label: 'Contact', path: routesConstatns.CONTACT_US },
+  { label: 'FAQ', path: '/faq' },
+  { label: 'Pages', path: '/pages' },
+];
+const megaMenuList = {
+  fashion: [
+    {
+      label: 'Women',
+      megaMenu: [
+        {
+          to: 'new_arrival',
+          label: 'New Arrivals',
+        },
 
-export { categories, selectedList, filterItems };
+        {
+          to: 'best_sellers',
+          label: 'Best Sellers',
+        },
+        {
+          to: 'trending',
+          label: 'Trending',
+        },
+        {
+          to: 'clothing',
+          label: 'Clothing',
+        },
+        {
+          to: 'shoes',
+          label: 'Shoes',
+        },
+        {
+          to: 'bags',
+          label: 'Bags',
+        },
+        {
+          to: 'accessories',
+          label: 'Accessories',
+        },
+        {
+          to: 'jewelry_and_watches',
+          label: 'Jewelry & Watches',
+        },
+      ],
+    },
+    {
+      label: 'Men',
+      megaMenu: [
+        {
+          to: 'new_arrival',
+          label: 'New Arrivals',
+        },
+
+        {
+          to: 'best_sellers',
+          label: 'Best Sellers',
+        },
+        {
+          to: 'trending',
+          label: 'Trending',
+        },
+        {
+          to: 'clothing',
+          label: 'Clothing',
+        },
+        {
+          to: 'shoes',
+          label: 'Shoes',
+        },
+        {
+          to: 'bags',
+          label: 'Bags',
+        },
+        {
+          to: 'accessories',
+          label: 'Accessories',
+        },
+        {
+          to: 'jewelry_and_watches',
+          label: 'Jewelry & Watches',
+        },
+      ],
+    },
+  ],
+  homeAndGarden: [
+    {
+      label: 'Bedroom',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Beds, Frames & Bases',
+        },
+
+        {
+          to: '#',
+          label: 'Dressers',
+        },
+
+        {
+          to: '#',
+          label: 'Nightstands',
+        },
+
+        {
+          to: '#',
+          label: 'Kids Beds & Headboards',
+        },
+
+        {
+          to: '#',
+          label: 'Armoires',
+        },
+      ],
+      label2: 'Living Room',
+      megaMenu2: [
+        {
+          to: '#',
+          label: 'Coffee Tables',
+        },
+
+        {
+          to: '#',
+          label: 'Chairs',
+        },
+
+        {
+          to: '#',
+          label: 'Tables',
+        },
+
+        {
+          to: '#',
+          label: 'Futons & Sofa Beds',
+        },
+
+        {
+          to: '#',
+          label: 'Cabinets & Chests',
+        },
+      ],
+    },
+
+    {
+      label: 'Office',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Office Chairs',
+        },
+
+        {
+          to: '#',
+          label: 'Desks',
+        },
+
+        {
+          to: '#',
+          label: 'Bookcases',
+        },
+
+        {
+          to: '#',
+          label: 'File Cabinets',
+        },
+        {
+          to: '#',
+          label: 'Breakroom Tables',
+        },
+      ],
+      label2: 'Kitchen & Dining',
+      megaMenu2: [
+        {
+          to: '#',
+          label: 'Dining Sets',
+        },
+
+        {
+          to: '#',
+          label: 'Kitchen Storage Cabinets',
+        },
+
+        {
+          to: '#',
+          label: 'Bakers Racks',
+        },
+
+        {
+          to: '#',
+          label: 'Dining Chairs',
+        },
+
+        {
+          to: '#',
+          label: 'Dining Room Tables',
+        },
+
+        {
+          to: '#',
+          label: 'Bar Stools',
+        },
+      ],
+    },
+  ],
+  electronics: [
+    {
+      label: 'Laptops & Computers',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Desktop Computers',
+        },
+
+        {
+          to: '#',
+          label: 'Monitors',
+        },
+
+        {
+          to: '#',
+          label: 'Laptops',
+        },
+
+        {
+          to: '#',
+          label: 'Hard Drives & Storage',
+        },
+
+        {
+          to: '#',
+          label: 'Computer Accessories',
+        },
+      ],
+      label2: 'TV & Video',
+      megaMenu2: [
+        {
+          to: '#',
+          label: 'TVs',
+        },
+
+        {
+          to: '#',
+          label: 'Home Audio Speakers',
+        },
+
+        {
+          to: '#',
+          label: 'Projectors',
+        },
+
+        {
+          to: '#',
+          label: 'Media Streaming Devices',
+        },
+      ],
+    },
+
+    {
+      label: 'Digital Cameras',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Digital SLR Cameras',
+        },
+
+        {
+          to: '#',
+          label: 'Sports & Action Cameras',
+        },
+
+        {
+          to: '#',
+          label: 'Camera Lenses',
+        },
+
+        {
+          to: '#',
+          label: 'Photo Printer',
+        },
+        {
+          to: '#',
+          label: 'Digital Memory Cards',
+        },
+      ],
+      label2: 'Cell Phones',
+      megaMenu2: [
+        {
+          to: '#',
+          label: 'Carrier Phones',
+        },
+
+        {
+          to: '#',
+          label: 'Unlocked Phones',
+        },
+
+        {
+          to: '#',
+          label: 'Phone & Cellphone Cases',
+        },
+
+        {
+          to: '#',
+          label: 'Cellphone Chargers',
+        },
+      ],
+    },
+  ],
+  furnaiture: [
+    {
+      label: 'Furniture',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Sofas & Couches',
+        },
+
+        {
+          to: '#',
+          label: 'Armchairs',
+        },
+
+        {
+          to: '#',
+          label: 'Bed Frames',
+        },
+
+        {
+          to: '#',
+          label: 'Beside Tables',
+        },
+
+        {
+          to: '#',
+          label: 'Dressing Tables',
+        },
+      ],
+    },
+    {
+      label: 'Lighting',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Light Bulbs',
+        },
+
+        {
+          to: '#',
+          label: 'Lamps',
+        },
+
+        {
+          to: '#',
+          label: 'Celling Lights',
+        },
+
+        {
+          to: '#',
+          label: 'Wall Lights',
+        },
+        {
+          to: '#',
+          label: 'Bathroom Lighting',
+        },
+      ],
+    },
+    {
+      label: 'Home Accessories',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Decorative Accessories',
+        },
+
+        {
+          to: '#',
+          label: 'Candals & Holders',
+        },
+
+        {
+          to: '#',
+          label: 'Home Fragrance',
+        },
+
+        {
+          to: '#',
+          label: 'Mirrors',
+        },
+        {
+          to: '#',
+          label: 'Clocks',
+        },
+      ],
+    },
+    {
+      label: 'Garden & Outdoors',
+      megaMenu: [
+        {
+          to: '#',
+          label: 'Garden Furniture',
+        },
+
+        {
+          to: '#',
+          label: 'Lawn Mowers',
+        },
+
+        {
+          to: '#',
+          label: 'Pressure Washers',
+        },
+        {
+          to: '#',
+          label: 'All Garden Tools',
+        },
+        {
+          to: '#',
+          label: 'Outdoor Dining',
+        },
+      ],
+    },
+  ],
+};
+export { categories, selectedList, filterItems, mainMenuList, megaMenuList };

@@ -81,6 +81,13 @@ import member_2 from './aboutus/members/5.jpg';
 import member_3 from './aboutus/members/6.jpg';
 import member_4 from './aboutus/members/7.jpg';
 
+/* HEADER BANNERS */
+import header_banner_1 from './banners/banner-2.jpg';
+import header_banner_2 from './banners/banner-3.jpg';
+import header_banner_3 from './banners/banner-4.jpg';
+import header_banner_4 from './banners/banner-5.jpg';
+import header_banner_5 from './banners/banner-6.jpg';
+
 const Images = {
   flags: { en, fr },
   logo: { lightLogo, darkLogo },
@@ -111,6 +118,11 @@ const Images = {
     Banenr_5,
     Banner_fashion,
     Banner_shop_1,
+    header_banner_1,
+    header_banner_2,
+    header_banner_3,
+    header_banner_4,
+    header_banner_5,
   },
 
   categories: {

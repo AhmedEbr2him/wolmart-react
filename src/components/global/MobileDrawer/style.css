@@ -175,7 +175,7 @@
     border-bottom: 1px solid var(--border-color);
   }
 }
-.list-item a {
+.list-item > a {
   padding: 12px 12px;
   display: flex;
   justify-content: space-between;

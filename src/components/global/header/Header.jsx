@@ -12,6 +12,7 @@ import { useContext } from 'react';
 import { MainContext } from '../../../context/MainContext';
 import { useIsScroll } from '../../../hooks/useIsScroll';
 import { routesConstatns } from '../../../constants/routesConstants';
+import { RiSearchLine } from 'react-icons/ri';
 
 const Header = () => {
   const currencyList = ['USD', 'EUR', 'EGP'];
@@ -138,8 +139,10 @@ const Header = () => {
               <button
                 type='submit'
                 aria-label='submit form button'
-                className='btn btn-search'
-              ></button>
+                className='btn btn-search has-state'
+              >
+                <RiSearchLine />
+              </button>
             </form>
           </div>
           <div className='right-part'>

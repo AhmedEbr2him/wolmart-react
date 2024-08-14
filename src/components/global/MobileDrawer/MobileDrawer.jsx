@@ -10,17 +10,9 @@ import ListItem from '../../ListItem.jsx';
 import PropTypes from 'prop-types';
 import { Theme } from '../../';
 import { useStopDocScroll } from '../../../hooks/useStopDocScroll.js';
-import { routesConstatns } from '../../../constants/routesConstants.js';
+import { mainMenuList } from '../../../constants/mockData.js';
 
 const MobileDrawer = () => {
-  const mainMenuList = [
-    { label: 'Home', path: routesConstatns.HOME },
-    { label: 'Blog', path: routesConstatns.HOME },
-    { label: 'About us', path: routesConstatns.ABOUT_US },
-    { label: 'Contact', path: routesConstatns.CONTACT_US },
-    { label: 'FAQ', path: routesConstatns.HOME },
-    { label: 'Pages', path: routesConstatns.HOME },
-  ];
   const [activeTab, setActiveTab] = useState('main-menu');
   const { isDrawerActive, closeDrawer } = useContext(MainContext);
   const { startScroll, stopScroll } = useStopDocScroll();
