@@ -24,18 +24,6 @@ const Home = () => {
   const [fashionProducts, setFashionProducts] = useState([]);
   const [techProducts, setTechProducts] = useState([]);
   const [homeProducts, setHomeProducts] = useState([]);
-  const [isLoaded, setIsLoaded] = useState({
-    intro: false,
-    featrues: false,
-    categoryBanner: false,
-    deals: false,
-    categorySection: false,
-    popularDepartments: false,
-    productListBanner: false,
-    client: false,
-    blog: false,
-    recentViews: false,
-  });
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -67,35 +55,9 @@ const Home = () => {
   }, [products]);
 
   /* CREATE LAZY LOAD RESOURCES */
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          const { target } = entry;
-          const key = target.getAttribute('[data-lazy-trigger]');
-          if (key) {
-            setIsLoaded(prevState => ({ ...prevState, [key]: true }));
-            observer.unobserve(target);
-          }
-        }
-      },
-      { threshold: 0 }
-    );
-
-    const targets = document.querySelectorAll('[data-lazy-trigger]');
-    targets.forEach(target => {
-      if (target) {
-        observer.observe(target);
-      }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   return (
-    <article className='home'>
+    <>
       <Suspense>
         <LazyIntroSection />
       </Suspense>
@@ -219,7 +181,7 @@ const Home = () => {
       <Suspense>
         <LazyRecentViews products={homeProducts} />
       </Suspense>
-    </article>
+    </>
   );
 };
 export default Home;

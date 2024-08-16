@@ -345,7 +345,7 @@ const filterItems = {
 };
 const mainMenuList = [
   { label: 'Home', path: routesConstatns.HOME },
-  { label: 'Blog', path: '/blog' },
+  { label: 'Shop', path: routesConstatns.SHOP },
   { label: 'About us', path: routesConstatns.ABOUT_US },
   { label: 'Contact', path: routesConstatns.CONTACT_US },
   { label: 'FAQ', path: '/faq' },

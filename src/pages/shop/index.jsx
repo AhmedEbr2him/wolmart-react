@@ -7,14 +7,43 @@ import { Categories, ShopContent } from '../../components';
 
 const Shop = () => {
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 7,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     cssEase: 'ease',
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
   return (
     <article className='shop'>

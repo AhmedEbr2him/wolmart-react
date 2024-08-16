@@ -3,7 +3,7 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { PiPhoneCall } from 'react-icons/pi';
 import { FiHeart } from 'react-icons/fi';
 import { BiShoppingBag } from 'react-icons/bi';
-import { LuUser } from 'react-icons/lu';
+import { LuMoon, LuSunMedium, LuUser } from 'react-icons/lu';
 import { RiMenu2Fill } from 'react-icons/ri';
 import Images from '../../../assets/images/images';
 import { Link } from 'react-router-dom';
@@ -13,6 +13,7 @@ import { MainContext } from '../../../context/MainContext';
 import { useIsScroll } from '../../../hooks/useIsScroll';
 import { routesConstatns } from '../../../constants/routesConstants';
 import { RiSearchLine } from 'react-icons/ri';
+import { useThemeSwitch } from '../../../hooks/useThemeSwitch';
 
 const Header = () => {
   const currencyList = ['USD', 'EUR', 'EGP'];
@@ -42,6 +43,7 @@ const Header = () => {
   const { isScroll } = useIsScroll();
   const { storedProducts } = useContext(MainContext);
   const storedProductsLength = storedProducts.products.cart.length;
+  const { changeTheme, isDark } = useThemeSwitch();
 
   return (
     <header className={`header ${isScroll ? 'scroll' : ''}`}>
@@ -53,6 +55,23 @@ const Header = () => {
 
           <div className='right-part'>
             <div className='menu'>
+              <div className='top-links'>
+                <Link to='#' aria-label='account link'>
+                  <span>My Account</span>
+                </Link>
+                <div className='auth'>
+                  <LuUser size={16} />
+                  <Link to='#' aria-label='sign in link'>
+                    <span>Sign In</span>
+                  </Link>
+                  <span className='delimiter'>/</span>
+                  <Link to='#' aria-label='sign in link'>
+                    <span>Register</span>
+                  </Link>
+                </div>
+              </div>
+              <span className='divider'></span>
+
               <div className='dropdown'>
                 <button className='dropdown-button' aria-label='dropdown list button'>
                   <span>USD</span>
@@ -83,26 +102,6 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <span className='divider'></span>
-            <div className='top-links'>
-              <Link to='#' aria-label='blog link'>
-                <span> Blog</span>
-              </Link>
-              <Link to='#' aria-label='content us link'>
-                <span>Content Us</span>
-              </Link>
-              <Link to='#' aria-label='account link'>
-                <span>My Account</span>
-              </Link>
-              <Link to='#' aria-label='sign in link'>
-                <span>Sign In</span>
-                <LuUser />
-              </Link>
-              <span className='delimiter'>/</span>
-              <Link to='#' aria-label='sign in link'>
-                <span>Register</span>
-              </Link>
-            </div>
           </div>
         </div>
       </div>
@@ -112,7 +111,7 @@ const Header = () => {
           <div className='left-part'>
             <button
               aria-label='toggle menu button'
-              className='small-btn has-state'
+              className='small-btn'
               onClick={() => openDrawer()}
             >
               <RiMenu2Fill size={24} />
@@ -136,11 +135,7 @@ const Header = () => {
                 name='search'
                 placeholder='Search Products...'
               />
-              <button
-                type='submit'
-                aria-label='submit form button'
-                className='btn btn-search has-state'
-              >
+              <button type='submit' aria-label='submit form button' className='btn btn-search'>
                 <RiSearchLine />
               </button>
             </form>
@@ -148,7 +143,7 @@ const Header = () => {
           <div className='right-part'>
             <div className='header-call'>
               <Link to='tel:#' className='call-icon'>
-                <PiPhoneCall size={24} />
+                <PiPhoneCall size={32} />
               </Link>
               <div className='call-info'>
                 <h4 className='chat'>
@@ -161,11 +156,21 @@ const Header = () => {
               </div>
             </div>
 
+            <button
+              aria-label={`Go to ${isDark ? 'light' : 'dark'} mode`}
+              className='small-btn theme-btn'
+              onClick={changeTheme}
+            >
+              <LuMoon className='dark-icon' size={24} />
+              <LuSunMedium className='light-icon' size={24} />
+
+              <span className='wishlist-label'>Theme</span>
+            </button>
             <Link
               to={routesConstatns.WISHLIST}
               role={'button'}
               title='Go to Cart'
-              className='small-btn has-state wishlist-btn'
+              className='small-btn wishlist-btn'
             >
               <FiHeart size={24} />
               <span className='wishlist-label'>Wishlist</span>
@@ -173,7 +178,7 @@ const Header = () => {
 
             <button
               aria-label='Open Cart'
-              className='small-btn has-state cart-btn'
+              className='small-btn cart-btn'
               title='Open Cart'
               onClick={openCart}
             >

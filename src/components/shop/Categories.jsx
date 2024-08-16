@@ -38,12 +38,42 @@ const Categories = () => {
     },
   ];
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 8,
     slidesToScroll: 1,
+
     cssEase: 'ease',
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
 
   return (
@@ -53,7 +83,13 @@ const Categories = () => {
           <div key={index} className='category'>
             <figure className='category-media'>
               <Link to='#'>
-                <img src={category.img} alt={category.label} width='190' height='190' />
+                <img
+                  src={category.img}
+                  alt={category.label}
+                  width='190'
+                  height='190'
+                  className='object-cover'
+                />
               </Link>
             </figure>
             <div className='category-content'>

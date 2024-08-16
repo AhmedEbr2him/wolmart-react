@@ -5,21 +5,30 @@ import Slider from 'react-slick';
 
 const RecentViews = ({ products }) => {
   const settings = {
-    slidesToShow: 4,
+    slidesToShow: 7,
     speed: 500,
     infinite: false,
-    dots: true,
+    dots: false,
     responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        },
+      },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
+          dots: false,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
+          dots: false,
         },
       },
     ],

@@ -5,9 +5,21 @@ import ProductPrice from './ProductPrice';
 import { TbShoppingCartPlus, TbHeart, TbEye, TbGitCompare } from 'react-icons/tb';
 import { useContext } from 'react';
 import { MainContext } from '../../context/MainContext';
+import { AiOutlineShopping } from 'react-icons/ai';
+import { IoMdHeartEmpty } from 'react-icons/io';
+import { LiaBalanceScaleSolid } from 'react-icons/lia';
 
-const Product = ({ data }) => {
-  const { id = '', name = '', price = [], images = [], rating = '', reviews = [] } = data;
+const Product = ({ data, hasDesc = false, hasListAction = false }) => {
+  const {
+    id = '',
+    name = '',
+    price = [],
+    images = [],
+    rating = '',
+    reviews = [],
+    description = '',
+    category = '',
+  } = data;
   const { addToCart, addToFavorite, quickView } = useContext(MainContext);
   const actionList = [
     {
@@ -56,7 +68,7 @@ const Product = ({ data }) => {
         ))}
       </figure>
 
-      <div className='product-action-vertical'>
+      <div className={`product-action ${hasDesc ? 'horizontal' : 'vertical'}`}>
         {actionList.map((item, index) => (
           <button
             key={index}
@@ -71,11 +83,34 @@ const Product = ({ data }) => {
       </div>
 
       <div className='product-details'>
+        <Link to='#' className='category'>
+          {hasDesc && category}
+        </Link>
         <h4 className='product-name'>
           <Link to='#'>{name}</Link>
         </h4>
         <Rating rating={rating} reviews={reviews} />
         <ProductPrice price={price} />
+        <div className='description'>
+          <p>{hasDesc && description}</p>
+        </div>
+
+        {hasListAction && (
+          <div className='list-action'>
+            <button aria-label='submit button' className='btn btn-primary cart-btn'>
+              <AiOutlineShopping size={24} />
+              <span>Add to Cart</span>
+            </button>
+            <button aria-label='favorite' className='small-btn favorite-btn'>
+              <IoMdHeartEmpty size={24} />
+              <span className='tooltip'>Add to Favorite</span>
+            </button>
+            <button aria-label='compare' className='small-btn compare-btn'>
+              <LiaBalanceScaleSolid size={24} />
+              <span className='tooltip'>Add to Comparison</span>
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

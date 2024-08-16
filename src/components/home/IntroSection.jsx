@@ -37,7 +37,7 @@ const FirstSlide = () => {
   return (
     <div className='intro-slide banner first-banner'>
       <div className='container'>
-        <figure className='banner-img fade-in'>
+        <figure className='banner-img'>
           <img
             src={Images.introSection.shoe}
             alt='banner'
@@ -48,12 +48,12 @@ const FirstSlide = () => {
           />
         </figure>
         <div className={'banner-content'}>
-          <h5 className='banner-subtitle fade-in'>
+          <h5 className='banner-subtitle'>
             custom&nbsp;
             <span>men&prime;s</span>
           </h5>
-          <h3 className='banner-title fade-in'>running shoes</h3>
-          <p className='fade-in'>
+          <h3 className='banner-title'>running shoes</h3>
+          <p>
             sale up to <span>30% off</span>
           </p>
 

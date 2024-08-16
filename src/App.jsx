@@ -101,7 +101,7 @@ const App = () => {
               key={path}
               path={path}
               element={
-                <Suspense fallback={<div>...Loading</div>}>
+                <Suspense fallback={null}>
                   <Component />
                 </Suspense>
               }

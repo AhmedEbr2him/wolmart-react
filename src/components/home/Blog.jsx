@@ -23,7 +23,7 @@ const Blog = () => {
     fetchPosts();
   }, []);
   const settings = {
-    slidesToShow: 3,
+    slidesToShow: 4,
     speed: 500,
     infinite: true,
     dots: true,
@@ -31,7 +31,7 @@ const Blog = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
         },
       },
       {

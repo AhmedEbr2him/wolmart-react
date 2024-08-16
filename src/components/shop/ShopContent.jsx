@@ -25,6 +25,7 @@ const ShopContent = () => {
   const [isLoading, setIsLoading] = useState(true);
   const sectionRef = useRef(null);
   const { isScroll } = useIsScroll();
+  const [isList, setIsList] = useState(false);
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
@@ -75,12 +76,12 @@ const ShopContent = () => {
       <ShopSidebar />
       <div className='main-content'>
         <div className={`filter-content-wrapper ${isScroll ? '' : 'fixed'}`}>
-          <Navigation />
+          <Navigation setIsList={setIsList} isList={isList} />
         </div>
 
         {/* PRODUCTS */}
         <div className='products-wrapper'>
-          <ProductsList isLoading={isLoading} currentProducts={currentProducts} />
+          <ProductsList isLoading={isLoading} currentProducts={currentProducts} isList={isList} />
         </div>
 
         {/* PAGINATION */}
@@ -115,7 +116,7 @@ const ShopContent = () => {
   );
 };
 /* NAVIGATION */
-const Navigation = () => {
+const Navigation = ({ isList, setIsList }) => {
   const { openFilter } = useContext(MainContext);
 
   return (
@@ -145,11 +146,17 @@ const Navigation = () => {
         />
 
         <div className='toolbox-item btn-group'>
-          <button className='icon-mod-grid btn-layout'>
-            <BsFillGrid3X3GapFill />
+          <button
+            className={`small-btn icon-mod-grid btn-layout ${isList ? '' : 'active'}`}
+            onClick={() => setIsList(false)}
+          >
+            <BsFillGrid3X3GapFill size={24} />
           </button>
-          <button className='icon-mod-list btn-layout'>
-            <FaThList />
+          <button
+            className={`small-btn icon-mod-list btn-layout ${isList ? 'active' : ''}`}
+            onClick={() => setIsList(true)}
+          >
+            <FaThList size={24} />
           </button>
         </div>
       </div>
@@ -158,9 +165,9 @@ const Navigation = () => {
 };
 
 /* PRODUCTS LIST */
-const ProductsList = ({ isLoading, currentProducts }) => {
+const ProductsList = ({ isLoading, currentProducts, isList }) => {
   return (
-    <div className='products-list'>
+    <div className={`products-list ${isList ? 'list' : ''}`}>
       {isLoading ? (
         <>
           {currentProducts?.map((_, index) => (
@@ -171,7 +178,7 @@ const ProductsList = ({ isLoading, currentProducts }) => {
         <>
           {currentProducts?.map((product, index) => (
             <Suspense key={index} fallback={<SkeletonCard />}>
-              <LazyProduct data={product} />
+              <LazyProduct data={product} hasDesc={true} hasListAction={true} />
             </Suspense>
           ))}
         </>
