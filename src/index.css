@@ -1657,6 +1657,9 @@ th:hover {
       font-size: 1.8rem;
     }
   }
+  thead {
+    border-block-start: 0;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
