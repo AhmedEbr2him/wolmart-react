@@ -8,11 +8,34 @@ const CounterSection = () => {
   const [hasReached, setHasReached] = useState(false);
 
   const settings = {
-    slidesToShow: 1,
+    slidesToShow: 3,
     speed: 500,
     infinite: false,
-    dots: true,
-    beforeChange: (current, next) => setCurrentSlide(next),
+    dots: false,
+
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        },
+      },
+    ],
   };
   const counterList = [
     {

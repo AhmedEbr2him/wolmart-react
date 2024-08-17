@@ -347,7 +347,7 @@ aside .sidebar-close {
     background-color: var(--alpha-10);
   }
 }
-.slick-slider .slick-track {
+.shop .slick-slider .slick-track {
   display: flex;
   gap: 2rem;
 }

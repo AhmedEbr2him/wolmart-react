@@ -1605,6 +1605,17 @@ th:hover {
   .title-link-wrapper a {
     margin: 0;
   }
+
+  .product-popup .single-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    gap: 5rem;
+    max-height: 100%;
+  }
+  .product-popup .single-product .product-media {
+    order: 0;
+  }
 }
 
 @media only screen and (min-width: 876px) {

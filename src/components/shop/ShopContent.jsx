@@ -17,7 +17,7 @@ import ToolSelectBox from '../common/ToolSelectBox';
 const ShopContent = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 9;
+  const productsPerPage = 8;
   const indexOfLastProduct = productsPerPage + currentPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = allProducts.slice(indexOfFirstProduct, indexOfLastProduct);

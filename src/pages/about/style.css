@@ -21,6 +21,7 @@
     margin-block-end: 1.3rem;
     color: var(--primary-color);
     line-height: 3.8rem;
+    max-width: 100%;
   }
   p {
     font-size: 1.4rem;
@@ -31,6 +32,7 @@
   }
   figure {
     border-radius: var(--large-radius);
+
     img {
       border-radius: inherit;
     }
@@ -164,9 +166,15 @@
     align-items: center;
     gap: 2rem;
   }
+  figure {
+    width: 12rem;
+    height: 12rem;
+    display: grid;
+    place-content: center;
+  }
   p {
     font-size: 2rem;
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-medium);
     width: 85%;
     line-height: 3.2rem;
     margin: 0 auto;
@@ -242,6 +250,78 @@
     }
   }
 }
+
 .about-us .slick-slider .slick-dots {
   bottom: -1.5rem;
+}
+.member-section .slick-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .page-content .title {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  .content-title-section p,
+  .page-content p {
+    margin-inline: auto;
+    max-width: 57rem;
+  }
+  .page-content :where(.customer-service-section .section-wrapper, .boost-wrapper) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .boost-wrapper,
+  .awards-wrapper .title,
+  .boost-section {
+    margin-block-end: 4rem;
+  }
+  .boost-wrapper .details .title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .boost-wrapper .details p {
+    line-height: 1.8;
+    margin-block-end: 2rem;
+  }
+  .awards-wrapper .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .awards-wrapper p {
+    font-size: 1.6rem;
+  }
+  .member-section .title {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .page-content .boost-wrapper .details p {
+      margin-inline: unset;
+    }
+    .count-section .counter-text p {
+      max-width: 35rem;
+    }
+    .boost-wrapper .details .title {
+      font-size: 3.5rem;
+      line-height: 4.5rem;
+    }
+    .page-content .title {
+      max-width: 75rem;
+      margin: 0 auto 1.3rem;
+    }
+
+    .page-content .customer-service-section .title {
+      font-size: 3.5rem;
+    }
+  }
+}
+@media only screen and (min-width: 1299px) {
+  .page-content :where(.customer-service-section .section-wrapper, .boost-wrapper) {
+    align-items: center;
+  }
 }
