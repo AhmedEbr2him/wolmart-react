@@ -110,10 +110,40 @@ const InformationBoxItems = () => {
     },
   ];
   const settings = {
-    slidesToShow: 1,
+    slidesToShow: 4,
     speed: 500,
     infinite: false,
-    dots: true,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
+        },
+      },
+
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>
