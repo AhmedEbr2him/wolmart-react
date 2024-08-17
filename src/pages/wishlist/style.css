@@ -1,10 +1,6 @@
 .wishlist {
   .action-product {
     padding-inline: 1rem;
-    min-height: 8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
 
     button {
       border-width: 1px;
@@ -50,4 +46,27 @@
   border-bottom: 1px solid var(--border-color);
   padding-block: 2rem;
   margin-block-end: 1.5rem;
+}
+.wishlist td :where(span, button) {
+  display: inline-block;
+}
+.wishlist .action-product button {
+  margin: auto 0.25rem;
+}
+.wishlist .table-wrapper {
+  max-height: 60rem;
+}
+.wishlist td {
+  width: 5%;
+}
+
+@media only screen and (min-width: 992px) {
+  .wishlist .share-links {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .wishlist .share-links p {
+    margin: unset;
+    max-width: fit-content;
+  }
 }

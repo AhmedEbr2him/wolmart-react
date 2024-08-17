@@ -1610,11 +1610,33 @@ th:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-content: center;
-    gap: 5rem;
+    gap: 2rem;
     max-height: 100%;
   }
   .product-popup .single-product .product-media {
     order: 0;
+  }
+  .product-popup .single-product {
+    max-width: 80rem;
+    max-height: 45rem;
+    margin: auto;
+  }
+  .product-popup .single-product .prodcut-details {
+    height: 32rem;
+    overflow-y: scroll;
+    padding-inline-end: 1rem;
+  }
+  .product-popup .single-product {
+    overflow: hidden;
+  }
+  .product-popup .single-product .prodcut-details::-webkit-scrollbar {
+    width: 4px;
+  }
+  .product-popup .single-product .prodcut-details::-webkit-scrollbar-track {
+    background-color: var(--alpha-10);
+  }
+  .product-popup .single-product .prodcut-details::-webkit-scrollbar-thumb {
+    background-color: var(--alpha-20);
   }
 }
 
@@ -1637,6 +1659,16 @@ th:hover {
   .container {
     max-width: var(--tablet-container);
   }
+  .product-popup .single-product {
+    max-width: 100rem;
+    max-height: 55rem;
+    margin: auto;
+  }
+  .product-popup .single-product .prodcut-details {
+    height: 42rem;
+    overflow-y: scroll;
+  }
+
   .single-product .product-media-wrapper {
     flex-direction: row;
   }
@@ -1656,6 +1688,12 @@ th:hover {
     svg {
       font-size: 1.8rem;
     }
+  }
+  .table-wrapper {
+    max-height: 32rem;
+  }
+  table {
+    height: 100%;
   }
   thead {
     border-block-start: 0;

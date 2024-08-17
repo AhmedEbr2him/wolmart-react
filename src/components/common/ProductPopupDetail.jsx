@@ -51,27 +51,7 @@ const ProductPopupDetail = ({ data }) => {
             <img src={images[0].src_1} alt={name ?? ''} loading='lazy' className='object-cover' />
           </figure>
         </div>
-        {/* <div className='product-thumb'>
-        <div className='thumb-list'>
-          {images?.map((img, index) => (
-            <button
-              key={index}
-              role='img'
-              aria-label='Product thumb'
-              className='product-thumb-item'
-            >
-              <img
-                src={img?.src}
-                alt='Product Image'
-                width={img?.width}
-                height={img?.height}
-                className='object-cover'
-                onClick={() => setMainImage(images[index]?.src)}
-              />
-            </button>
-          ))}
-        </div>
-      </div> */}
+
         <div className='prodcut-details'>
           <h2 className='product-title'>
             <Link to='#'>{name ?? ''}</Link>
