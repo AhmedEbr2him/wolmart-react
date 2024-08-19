@@ -395,6 +395,9 @@ aside .sidebar-close {
   .shop-content .btn-group .small-btn.active svg {
     color: var(--primary-color-color);
   }
+  .sidebar-content {
+    width: 32rem;
+  }
 }
 @media only screen and (min-width: 992px) {
   .shop-content .products-wrapper .products-list {

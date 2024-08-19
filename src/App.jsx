@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { routesConstatns } from './constants/routesConstants';
-import { Footer, Header, StickyFooter } from './components';
+import { Header, StickyFooter } from './components';
 import { useContext, useEffect, useState } from 'react';
 import { MainContext } from './context/MainContext';
 import { Suspense, lazy } from 'react';
@@ -50,7 +50,8 @@ const LazyMobileDrawer = lazy(() => import('./components/global/MobileDrawer/Mob
 const LazyCartDrawer = lazy(() => import('./components/global/CartDrawer/CartDrawer'));
 const LazyScrimOverlay = lazy(() => import('./components/common/ScrimOverlay'));
 const LazyProductPopupDetalil = lazy(() => import('./components/common/ProductPopupDetail'));
-
+const LazyFooter = lazy(() => import('./components/global/footer/index'));
+const LazyScrollToTop = lazy(() => import('./components/global/ScrollToTop'));
 const App = () => {
   const { isDrawerActive, isFilterActive, quickViewData } = useContext(MainContext);
   const { toastMessage } = useToast();
@@ -89,7 +90,6 @@ const App = () => {
         {/* SCRIM */}
         <LazyScrimOverlay />
       </Suspense>
-
       {!!isStickFooterVisible && <StickyFooter />}
       <Header />
 
@@ -116,7 +116,12 @@ const App = () => {
       <Suspense>
         <LazyProductPopupDetalil data={quickViewData} />
       </Suspense>
-      <Footer />
+      <Suspense>
+        <LazyScrollToTop />
+      </Suspense>
+      <Suspense>
+        <LazyFooter />
+      </Suspense>
     </div>
   );
 };

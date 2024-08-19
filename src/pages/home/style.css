@@ -1,5 +1,6 @@
 .intro-slide {
-  min-height: 520px;
+  min-height: 52rem;
+  max-height: auto;
 }
 .banner {
   position: relative;
