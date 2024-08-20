@@ -331,8 +331,12 @@
     padding-block: 1.4rem;
     font-size: 1.4rem;
     font-weight: var(--weight-semi-bold);
+    transition: color var(--motion-duration-short-2);
   }
-
+  .sticky-content-wrapper .right-part a:hover {
+    color: var(--main-text-color);
+    transition: color var(--motion-duration-short-2);
+  }
   .sticky-content-wrapper .category-toggle {
     display: flex;
     align-items: center;

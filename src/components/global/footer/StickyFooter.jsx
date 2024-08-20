@@ -21,7 +21,7 @@ const StickyFooter = () => {
     },
     {
       label: 'Account',
-      to: '#',
+      to: routesConstatns.AUTHENTICATION,
       icon: <BiUser size={size} />,
     },
     {
